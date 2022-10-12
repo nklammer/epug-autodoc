@@ -1,0 +1,7 @@
+perf\_curve module
+=================
+
+.. automodule:: perf_curve
+   :members:
+   :undoc-members:
+   :show-inheritance:

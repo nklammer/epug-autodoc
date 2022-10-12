@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>perf_curve module &mdash; epug 0.2 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> epug
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">air_systems</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">epug</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>perf_curve module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/perf_curve.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="perf-curve-module">
+<h1>perf_curve module<a class="headerlink" href="#perf-curve-module" title="Permalink to this heading"></a></h1>
+<span class="target" id="module-perf_curve"></span><dl class="py class">
+<dt class="sig sig-object py" id="perf_curve.Fan_Curve">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">perf_curve.</span></span><span class="sig-name descname"><span class="pre">Fan_Curve</span></span><a class="headerlink" href="#perf_curve.Fan_Curve" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A data container class. Contains fan curve coefficients.</p>
+<p>Fan curves are needed for any variable drive fans in air loops.
+See the EnergyPlus object documentation for 
+<a class="reference external" href="https://bigladdersoftware.com/epx/docs/9-1/input-output-reference/group-fans.html#fanvariablevolume">Fan:VariableVolume</a>.</p>
+<p class="rubric">Notes</p>
+<p>The fan curve equation used by EnergyPlus is</p>
+<div class="math notranslate nohighlight">
+\[PLF = C_1 + C_2(FF^1) + C_3(FF^2) + C_4(FF^3)\]</div>
+<p>giving the fraction of full load power (PLF in W/W units) as a function
+of flow fraction (FF in CFM/CFM units). Flow fraction is the air mass
+flow rate divided by the maximum air mass flow rate.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="perf_curve.Fan_Curve.fan_curve_coefficients">
+<span class="sig-name descname"><span class="pre">fan_curve_coefficients</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'90.1</span> <span class="pre">Appendix</span> <span class="pre">G</span> <span class="pre">Fan':</span> <span class="pre">[0.0013,</span> <span class="pre">0.147,</span> <span class="pre">0.9506,</span> <span class="pre">-0.0998],</span> <span class="pre">'Constant</span> <span class="pre">Volume':</span> <span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">0],</span> <span class="pre">'Typical</span> <span class="pre">VSD':</span> <span class="pre">[0.047182815,</span> <span class="pre">0.130541742,</span> <span class="pre">-0.117286942,</span> <span class="pre">0.940313747],</span> <span class="pre">'VSD</span> <span class="pre">with</span> <span class="pre">SP</span> <span class="pre">Reset':</span> <span class="pre">[0.27827882,</span> <span class="pre">0.026583195,</span> <span class="pre">-0.0870687,</span> <span class="pre">1.03091975]}</span></em><a class="headerlink" href="#perf_curve.Fan_Curve.fan_curve_coefficients" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="perf_curve.Pump_Curve">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">perf_curve.</span></span><span class="sig-name descname"><span class="pre">Pump_Curve</span></span><a class="headerlink" href="#perf_curve.Pump_Curve" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A data container class. Contains pump curve coefficients.</p>
+<p>Pumps curves are needed for any variable speed pumps in plant and condenser loops.
+See the EnergyPlus object documentation for 
+<a class="reference external" href="https://bigladdersoftware.com/epx/docs/9-1/input-output-reference/group-pumps.html#pumpvariablespeed">Pump:VariableSpeed</a>.</p>
+<p class="rubric">Notes</p>
+<p>The pump curve equation used by EnergyPlus is</p>
+<div class="math notranslate nohighlight">
+\[FractionFullLoadPower = C_1 + C_2(PLR^1) + C_3(PLR^2) + C_4(PLR^3)\]</div>
+<p>giving the fraction of full load power (W/W units) as a function
+of part load ratio (in GPM/GPM units).</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="perf_curve.Pump_Curve.pump_curve_coefficients">
+<span class="sig-name descname"><span class="pre">pump_curve_coefficients</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'Variable</span> <span class="pre">Speed':</span> <span class="pre">[0.084926143,</span> <span class="pre">0.18976705,</span> <span class="pre">0.17646786,</span> <span class="pre">0.54883895]}</span></em><a class="headerlink" href="#perf_curve.Pump_Curve.pump_curve_coefficients" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Noah Klammer.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
