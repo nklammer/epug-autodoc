@@ -1,0 +1,21 @@
+bpp.schedules package
+=====================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bpp.schedules.os_schedules
+   bpp.schedules.schedule_functions
+   bpp.schedules.schedule_library
+   bpp.schedules.schedules
+
+Module contents
+---------------
+
+.. automodule:: bpp.schedules
+   :members:
+   :undoc-members:
+   :show-inheritance:

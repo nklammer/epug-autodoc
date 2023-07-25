@@ -1,0 +1,7 @@
+src.bpp.air\_systems.primary\_air\_system module
+================================================
+
+.. automodule:: src.bpp.air_systems.primary_air_system
+   :members:
+   :undoc-members:
+   :show-inheritance:

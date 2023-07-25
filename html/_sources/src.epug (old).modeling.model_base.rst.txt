@@ -1,0 +1,7 @@
+src.epug \(old\).modeling.model\_base module
+============================================
+
+.. automodule:: src.epug (old).modeling.model_base
+   :members:
+   :undoc-members:
+   :show-inheritance:

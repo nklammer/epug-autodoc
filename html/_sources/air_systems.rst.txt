@@ -1,40 +1,16 @@
-air\_systems package documentation
-==================================
+air\_systems package
+====================
 
 Submodules
 ----------
 
-air\_systems.baseline\_system module
-------------------------------------
+.. toctree::
+   :maxdepth: 4
 
-.. automodule:: air_systems.baseline_system
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-air\_systems.fan module
------------------------
-
-.. automodule:: air_systems.fan
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-air\_systems.primary\_air\_system module
-----------------------------------------
-
-.. automodule:: air_systems.primary_air_system
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-air\_systems.zone\_hvac module
-------------------------------
-
-.. automodule:: air_systems.zone_hvac
-   :members:
-   :undoc-members:
-   :show-inheritance:
+   air_systems.baseline_system
+   air_systems.fan
+   air_systems.primary_air_system
+   air_systems.zone_hvac
 
 Module contents
 ---------------

@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bpp.air_systems.zone_hvac module &mdash; EPUG air_systems test 0.0.2 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> EPUG air_systems test
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">bpp.air_systems.zone_hvac module</a><ul>
+<li><a class="reference internal" href="#routine-listings">Routine Listings</a></li>
+<li><a class="reference internal" href="#bpp.air_systems.zone_hvac.BaseboardHeater"><code class="docutils literal notranslate"><span class="pre">BaseboardHeater</span></code></a><ul>
+<li><a class="reference internal" href="#bpp.air_systems.zone_hvac.BaseboardHeater.set_values"><code class="docutils literal notranslate"><span class="pre">BaseboardHeater.set_values()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.air_systems.zone_hvac.BaseboardHeater.write_os_heating_coil"><code class="docutils literal notranslate"><span class="pre">BaseboardHeater.write_os_heating_coil()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.air_systems.zone_hvac.BaseboardHeater.write_to_os"><code class="docutils literal notranslate"><span class="pre">BaseboardHeater.write_to_os()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bpp.air_systems.zone_hvac.ChilledBeam"><code class="docutils literal notranslate"><span class="pre">ChilledBeam</span></code></a><ul>
+<li><a class="reference internal" href="#bpp.air_systems.zone_hvac.ChilledBeam.set_values"><code class="docutils literal notranslate"><span class="pre">ChilledBeam.set_values()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.air_systems.zone_hvac.ChilledBeam.write_os_heating_coil"><code class="docutils literal notranslate"><span class="pre">ChilledBeam.write_os_heating_coil()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.air_systems.zone_hvac.ChilledBeam.write_to_os"><code class="docutils literal notranslate"><span class="pre">ChilledBeam.write_to_os()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bpp.air_systems.zone_hvac.ReheatTerminal"><code class="docutils literal notranslate"><span class="pre">ReheatTerminal</span></code></a><ul>
+<li><a class="reference internal" href="#bpp.air_systems.zone_hvac.ReheatTerminal.set_values"><code class="docutils literal notranslate"><span class="pre">ReheatTerminal.set_values()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.air_systems.zone_hvac.ReheatTerminal.write_os_heating_coil"><code class="docutils literal notranslate"><span class="pre">ReheatTerminal.write_os_heating_coil()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.air_systems.zone_hvac.ReheatTerminal.write_to_os"><code class="docutils literal notranslate"><span class="pre">ReheatTerminal.write_to_os()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bpp.air_systems.zone_hvac.TerminalFanCoilUnit"><code class="docutils literal notranslate"><span class="pre">TerminalFanCoilUnit</span></code></a><ul>
+<li><a class="reference internal" href="#bpp.air_systems.zone_hvac.TerminalFanCoilUnit.set_values"><code class="docutils literal notranslate"><span class="pre">TerminalFanCoilUnit.set_values()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.air_systems.zone_hvac.TerminalFanCoilUnit.write_os_heating_coil"><code class="docutils literal notranslate"><span class="pre">TerminalFanCoilUnit.write_os_heating_coil()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.air_systems.zone_hvac.TerminalFanCoilUnit.write_to_os"><code class="docutils literal notranslate"><span class="pre">TerminalFanCoilUnit.write_to_os()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bpp.air_systems.zone_hvac.WaterSourceHeatPump"><code class="docutils literal notranslate"><span class="pre">WaterSourceHeatPump</span></code></a><ul>
+<li><a class="reference internal" href="#bpp.air_systems.zone_hvac.WaterSourceHeatPump.set_values"><code class="docutils literal notranslate"><span class="pre">WaterSourceHeatPump.set_values()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.air_systems.zone_hvac.WaterSourceHeatPump.write_os_heating_coil"><code class="docutils literal notranslate"><span class="pre">WaterSourceHeatPump.write_os_heating_coil()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.air_systems.zone_hvac.WaterSourceHeatPump.write_to_os"><code class="docutils literal notranslate"><span class="pre">WaterSourceHeatPump.write_to_os()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bpp.air_systems.zone_hvac.ZoneHVAC"><code class="docutils literal notranslate"><span class="pre">ZoneHVAC</span></code></a><ul>
+<li><a class="reference internal" href="#bpp.air_systems.zone_hvac.ZoneHVAC.set_values"><code class="docutils literal notranslate"><span class="pre">ZoneHVAC.set_values()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.air_systems.zone_hvac.ZoneHVAC.write_os_heating_coil"><code class="docutils literal notranslate"><span class="pre">ZoneHVAC.write_os_heating_coil()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bpp.air_systems.zone_hvac.define_zone_hvac_types_to_override_reheat_terminal_default"><code class="docutils literal notranslate"><span class="pre">define_zone_hvac_types_to_override_reheat_terminal_default()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.air_systems.zone_hvac.write_zone_hvac"><code class="docutils literal notranslate"><span class="pre">write_zone_hvac()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">EPUG air_systems test</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>bpp.air_systems.zone_hvac module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/bpp.air_systems.zone_hvac.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-bpp.air_systems.zone_hvac">
+<span id="bpp-air-systems-zone-hvac-module"></span><h1>bpp.air_systems.zone_hvac module<a class="headerlink" href="#module-bpp.air_systems.zone_hvac" title="Permalink to this heading"></a></h1>
+<p>Module for generating the secondary Zone HVAC systems.</p>
+<section id="routine-listings">
+<h2>Routine Listings<a class="headerlink" href="#routine-listings" title="Permalink to this heading"></a></h2>
+<p>class ZoneHVAC
+class ReheatTerminal(ZoneHVAC)
+class TerminalFanCoilUnit(ZoneHVAC)
+class ChilledBeam(ZoneHVAC)
+class WaterSourceHeatPump(ZoneHVAC)
+class BaseboardHeater(ZoneHVAC)
+method write_zone_hvac
+method define_zone_hvac_types_to_override_reheat_terminal_default</p>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.BaseboardHeater">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.zone_hvac.</span></span><span class="sig-name descname"><span class="pre">BaseboardHeater</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'41c182c3-83a8-46df-bb05-340b159b65ac'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.BaseboardHeater" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bpp.air_systems.zone_hvac.ZoneHVAC" title="bpp.air_systems.zone_hvac.ZoneHVAC"><code class="xref py py-class docutils literal notranslate"><span class="pre">ZoneHVAC</span></code></a></p>
+<p>An object class for a baseboard heater that inherits from <cite>ZoneHVAC</cite></p>
+<p>See attributes of <cite>ZoneHVAC</cite> class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>id</strong><span class="classifier">str, optional</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.air_systems.zone_hvac.BaseboardHeater.set_values" title="bpp.air_systems.zone_hvac.BaseboardHeater.set_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_values</span></code></a>(input_values)</p></td>
+<td><p>updates <cite>__dict__</cite> of the <cite>ZoneHVAC</cite> object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#bpp.air_systems.zone_hvac.BaseboardHeater.write_os_heating_coil" title="bpp.air_systems.zone_hvac.BaseboardHeater.write_os_heating_coil"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_os_heating_coil</span></code></a>(model)</p></td>
+<td><p>Write OpenStudio heating coil.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.air_systems.zone_hvac.BaseboardHeater.write_to_os" title="bpp.air_systems.zone_hvac.BaseboardHeater.write_to_os"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_to_os</span></code></a>(model)</p></td>
+<td><p>writes <cite>BaseboardHeater</cite> object to openstudio model in memory</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.BaseboardHeater.set_values">
+<span class="sig-name descname"><span class="pre">set_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.BaseboardHeater.set_values" title="Permalink to this definition"></a></dt>
+<dd><p>updates <cite>__dict__</cite> of the <cite>ZoneHVAC</cite> object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>input_values</strong><span class="classifier">dict</span></dt><dd><p>A dictionary of values</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.BaseboardHeater.write_os_heating_coil">
+<span class="sig-name descname"><span class="pre">write_os_heating_coil</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.BaseboardHeater.write_os_heating_coil" title="Permalink to this definition"></a></dt>
+<dd><p>Write OpenStudio heating coil.</p>
+<p>_extended_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>model</strong><span class="classifier">openstudio model</span></dt><dd><p>an openstudio model object in memory</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>heating_coil</dt><dd><p>An openstudio object of various class</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.CoilHeatingElectric</span></code></dt><dd><p>the openstudio wrapper for the EnergyPlus object</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.CoilHeatingWater</span></code></dt><dd><p>the openstudio wrapper for the EnergyPlus object</p>
+</dd>
+</dl>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.BaseboardHeater.write_to_os">
+<span class="sig-name descname"><span class="pre">write_to_os</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.BaseboardHeater.write_to_os" title="Permalink to this definition"></a></dt>
+<dd><p>writes <cite>BaseboardHeater</cite> object to openstudio model in memory</p>
+<p>_extended_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>model</strong><span class="classifier">openstudio model</span></dt><dd><p>an openstudio model in memory</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>baseboard</strong><span class="classifier">openstudio object</span></dt><dd><p>either openstudio.model.ZoneHVACBaseboardRadiantConvectiveWater
+or openstudio.model.ZoneHVACBaseboardRadiantConvectiveElectric</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.ZoneHVACBaseboardRadiantConvectiveWater</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.ZoneHVACBaseboardRadiantConvectiveElectric</span></code></dt><dd></dd>
+</dl>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.ChilledBeam">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.zone_hvac.</span></span><span class="sig-name descname"><span class="pre">ChilledBeam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'0fa0e446-e5af-4c5b-b442-48b9a62ed946'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.ChilledBeam" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bpp.air_systems.zone_hvac.ZoneHVAC" title="bpp.air_systems.zone_hvac.ZoneHVAC"><code class="xref py py-class docutils literal notranslate"><span class="pre">ZoneHVAC</span></code></a></p>
+<p>An object class for a chilled beam that inherits from <cite>ZoneHVAC</cite></p>
+<p>See attributes of <cite>ZoneHVAC</cite> class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>id</strong><span class="classifier">str, optional</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.air_systems.zone_hvac.ChilledBeam.set_values" title="bpp.air_systems.zone_hvac.ChilledBeam.set_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_values</span></code></a>(input_values)</p></td>
+<td><p>updates <cite>__dict__</cite> of the <cite>ZoneHVAC</cite> object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#bpp.air_systems.zone_hvac.ChilledBeam.write_os_heating_coil" title="bpp.air_systems.zone_hvac.ChilledBeam.write_os_heating_coil"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_os_heating_coil</span></code></a>(model)</p></td>
+<td><p>Write OpenStudio heating coil.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.air_systems.zone_hvac.ChilledBeam.write_to_os" title="bpp.air_systems.zone_hvac.ChilledBeam.write_to_os"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_to_os</span></code></a>(model)</p></td>
+<td><p>writes <cite>ChilledBeam</cite> object to openstudio model in memory</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.ChilledBeam.set_values">
+<span class="sig-name descname"><span class="pre">set_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.ChilledBeam.set_values" title="Permalink to this definition"></a></dt>
+<dd><p>updates <cite>__dict__</cite> of the <cite>ZoneHVAC</cite> object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>input_values</strong><span class="classifier">dict</span></dt><dd><p>A dictionary of values</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.ChilledBeam.write_os_heating_coil">
+<span class="sig-name descname"><span class="pre">write_os_heating_coil</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.ChilledBeam.write_os_heating_coil" title="Permalink to this definition"></a></dt>
+<dd><p>Write OpenStudio heating coil.</p>
+<p>_extended_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>model</strong><span class="classifier">openstudio model</span></dt><dd><p>an openstudio model object in memory</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>heating_coil</dt><dd><p>An openstudio object of various class</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.CoilHeatingElectric</span></code></dt><dd><p>the openstudio wrapper for the EnergyPlus object</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.CoilHeatingWater</span></code></dt><dd><p>the openstudio wrapper for the EnergyPlus object</p>
+</dd>
+</dl>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.ChilledBeam.write_to_os">
+<span class="sig-name descname"><span class="pre">write_to_os</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.ChilledBeam.write_to_os" title="Permalink to this definition"></a></dt>
+<dd><p>writes <cite>ChilledBeam</cite> object to openstudio model in memory</p>
+<p>_extended_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>model</strong><span class="classifier">openstudio model</span></dt><dd><p>an openstudio model in memory</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>chilled_beam</strong><span class="classifier">openstudio ZoneHVACFourPipeFanCoil object</span></dt><dd><p>_description_</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.CoilCoolingWater</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.ZoneHVACFourPipeFanCoil</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.AirTerminalSingleDuctInletSideMixer</span></code></dt><dd></dd>
+<dt><a class="reference internal" href="#bpp.air_systems.zone_hvac.ZoneHVAC.write_os_heating_coil" title="bpp.air_systems.zone_hvac.ZoneHVAC.write_os_heating_coil"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ZoneHVAC.write_os_heating_coil</span></code></a></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fan.write_to_os</span></code></dt><dd></dd>
+</dl>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.ReheatTerminal">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.zone_hvac.</span></span><span class="sig-name descname"><span class="pre">ReheatTerminal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'26de88c9-f150-4336-8f6b-8ad3d2ef0949'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.ReheatTerminal" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bpp.air_systems.zone_hvac.ZoneHVAC" title="bpp.air_systems.zone_hvac.ZoneHVAC"><code class="xref py py-class docutils literal notranslate"><span class="pre">ZoneHVAC</span></code></a></p>
+<p>An object class for a reheat terminal that inherits from <cite>ZoneHVAC</cite></p>
+<p>See attributes of <cite>ZoneHVAC</cite> class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>id</strong><span class="classifier">str, optional</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.air_systems.zone_hvac.ReheatTerminal.set_values" title="bpp.air_systems.zone_hvac.ReheatTerminal.set_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_values</span></code></a>(input_values)</p></td>
+<td><p>updates <cite>__dict__</cite> of the <cite>ZoneHVAC</cite> object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#bpp.air_systems.zone_hvac.ReheatTerminal.write_os_heating_coil" title="bpp.air_systems.zone_hvac.ReheatTerminal.write_os_heating_coil"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_os_heating_coil</span></code></a>(model)</p></td>
+<td><p>Write OpenStudio heating coil.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.air_systems.zone_hvac.ReheatTerminal.write_to_os" title="bpp.air_systems.zone_hvac.ReheatTerminal.write_to_os"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_to_os</span></code></a>(model)</p></td>
+<td><p>writes ReheatTerminal object to openstudio model in memory</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.ReheatTerminal.set_values">
+<span class="sig-name descname"><span class="pre">set_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.ReheatTerminal.set_values" title="Permalink to this definition"></a></dt>
+<dd><p>updates <cite>__dict__</cite> of the <cite>ZoneHVAC</cite> object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>input_values</strong><span class="classifier">dict</span></dt><dd><p>A dictionary of values</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.ReheatTerminal.write_os_heating_coil">
+<span class="sig-name descname"><span class="pre">write_os_heating_coil</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.ReheatTerminal.write_os_heating_coil" title="Permalink to this definition"></a></dt>
+<dd><p>Write OpenStudio heating coil.</p>
+<p>_extended_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>model</strong><span class="classifier">openstudio model</span></dt><dd><p>an openstudio model object in memory</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>heating_coil</dt><dd><p>An openstudio object of various class</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.CoilHeatingElectric</span></code></dt><dd><p>the openstudio wrapper for the EnergyPlus object</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.CoilHeatingWater</span></code></dt><dd><p>the openstudio wrapper for the EnergyPlus object</p>
+</dd>
+</dl>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.ReheatTerminal.write_to_os">
+<span class="sig-name descname"><span class="pre">write_to_os</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.ReheatTerminal.write_to_os" title="Permalink to this definition"></a></dt>
+<dd><p>writes ReheatTerminal object to openstudio model in memory</p>
+<p>_extended_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>model</strong><span class="classifier">openstudio model</span></dt><dd><p>an openstudio model in memory</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>vav_terminal</strong><span class="classifier">openstudio AirTerminalSingleDuctVAVReheat object</span></dt><dd><p>_description_</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.AirTerminalSingleDuctVAVReheat</span></code></dt><dd></dd>
+</dl>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.TerminalFanCoilUnit">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.zone_hvac.</span></span><span class="sig-name descname"><span class="pre">TerminalFanCoilUnit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'6a37355e-2815-4fb5-b653-9e73bfc1a690'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.TerminalFanCoilUnit" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bpp.air_systems.zone_hvac.ZoneHVAC" title="bpp.air_systems.zone_hvac.ZoneHVAC"><code class="xref py py-class docutils literal notranslate"><span class="pre">ZoneHVAC</span></code></a></p>
+<p>An object class for a terminal fan coil unit that inherits from <cite>ZoneHVAC</cite></p>
+<p>See attributes of <cite>ZoneHVAC</cite> class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>id</strong><span class="classifier">str, optional</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.air_systems.zone_hvac.TerminalFanCoilUnit.set_values" title="bpp.air_systems.zone_hvac.TerminalFanCoilUnit.set_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_values</span></code></a>(input_values)</p></td>
+<td><p>updates <cite>__dict__</cite> of the <cite>ZoneHVAC</cite> object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#bpp.air_systems.zone_hvac.TerminalFanCoilUnit.write_os_heating_coil" title="bpp.air_systems.zone_hvac.TerminalFanCoilUnit.write_os_heating_coil"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_os_heating_coil</span></code></a>(model)</p></td>
+<td><p>Write OpenStudio heating coil.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.air_systems.zone_hvac.TerminalFanCoilUnit.write_to_os" title="bpp.air_systems.zone_hvac.TerminalFanCoilUnit.write_to_os"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_to_os</span></code></a>(model)</p></td>
+<td><p>writes <cite>TerminalFanCoilUnit</cite> object to openstudio model in memory</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.TerminalFanCoilUnit.set_values">
+<span class="sig-name descname"><span class="pre">set_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.TerminalFanCoilUnit.set_values" title="Permalink to this definition"></a></dt>
+<dd><p>updates <cite>__dict__</cite> of the <cite>ZoneHVAC</cite> object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>input_values</strong><span class="classifier">dict</span></dt><dd><p>A dictionary of values</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.TerminalFanCoilUnit.write_os_heating_coil">
+<span class="sig-name descname"><span class="pre">write_os_heating_coil</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.TerminalFanCoilUnit.write_os_heating_coil" title="Permalink to this definition"></a></dt>
+<dd><p>Write OpenStudio heating coil.</p>
+<p>_extended_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>model</strong><span class="classifier">openstudio model</span></dt><dd><p>an openstudio model object in memory</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>heating_coil</dt><dd><p>An openstudio object of various class</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.CoilHeatingElectric</span></code></dt><dd><p>the openstudio wrapper for the EnergyPlus object</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.CoilHeatingWater</span></code></dt><dd><p>the openstudio wrapper for the EnergyPlus object</p>
+</dd>
+</dl>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.TerminalFanCoilUnit.write_to_os">
+<span class="sig-name descname"><span class="pre">write_to_os</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.TerminalFanCoilUnit.write_to_os" title="Permalink to this definition"></a></dt>
+<dd><p>writes <cite>TerminalFanCoilUnit</cite> object to openstudio model in memory</p>
+<p>_extended_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>model</strong><span class="classifier">openstudio model</span></dt><dd><p>an openstudio model in memory</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>fan_coil_unit</strong><span class="classifier">openstudio ZoneHVACFourPipeFanCoil object</span></dt><dd><p>_description_</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.CoilCoolingWater</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.ZoneHVACFourPipeFanCoil</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.AirTerminalSingleDuctInletSideMixer</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fan.write_to_os</span></code></dt><dd></dd>
+</dl>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.WaterSourceHeatPump">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.zone_hvac.</span></span><span class="sig-name descname"><span class="pre">WaterSourceHeatPump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'a8a3cd50-66b5-4aa9-a096-78166fc5e4a7'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.WaterSourceHeatPump" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bpp.air_systems.zone_hvac.ZoneHVAC" title="bpp.air_systems.zone_hvac.ZoneHVAC"><code class="xref py py-class docutils literal notranslate"><span class="pre">ZoneHVAC</span></code></a></p>
+<p>An object class for a water source heat pump that inherits from <cite>ZoneHVAC</cite></p>
+<p>See attributes of <cite>ZoneHVAC</cite> class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>id</strong><span class="classifier">str, optional</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Attributes</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>heat_pump_cooling_COP</strong><span class="classifier">float</span></dt><dd><p>The heat pump COP at rating conditions, by default 3.8</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.air_systems.zone_hvac.WaterSourceHeatPump.set_values" title="bpp.air_systems.zone_hvac.WaterSourceHeatPump.set_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_values</span></code></a>(input_values)</p></td>
+<td><p>updates <cite>__dict__</cite> of the <cite>ZoneHVAC</cite> object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#bpp.air_systems.zone_hvac.WaterSourceHeatPump.write_os_heating_coil" title="bpp.air_systems.zone_hvac.WaterSourceHeatPump.write_os_heating_coil"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_os_heating_coil</span></code></a>(model)</p></td>
+<td><p>Write OpenStudio heating coil.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.air_systems.zone_hvac.WaterSourceHeatPump.write_to_os" title="bpp.air_systems.zone_hvac.WaterSourceHeatPump.write_to_os"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_to_os</span></code></a>(model)</p></td>
+<td><p>writes <cite>WaterSourceHeatPump</cite> object to openstudio model in memory</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.WaterSourceHeatPump.set_values">
+<span class="sig-name descname"><span class="pre">set_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.WaterSourceHeatPump.set_values" title="Permalink to this definition"></a></dt>
+<dd><p>updates <cite>__dict__</cite> of the <cite>ZoneHVAC</cite> object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>input_values</strong><span class="classifier">dict</span></dt><dd><p>A dictionary of values</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.WaterSourceHeatPump.write_os_heating_coil">
+<span class="sig-name descname"><span class="pre">write_os_heating_coil</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.WaterSourceHeatPump.write_os_heating_coil" title="Permalink to this definition"></a></dt>
+<dd><p>Write OpenStudio heating coil.</p>
+<p>_extended_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>model</strong><span class="classifier">openstudio model</span></dt><dd><p>an openstudio model object in memory</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>heating_coil</dt><dd><p>An openstudio object of various class</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.CoilHeatingElectric</span></code></dt><dd><p>the openstudio wrapper for the EnergyPlus object</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.CoilHeatingWater</span></code></dt><dd><p>the openstudio wrapper for the EnergyPlus object</p>
+</dd>
+</dl>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.WaterSourceHeatPump.write_to_os">
+<span class="sig-name descname"><span class="pre">write_to_os</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.WaterSourceHeatPump.write_to_os" title="Permalink to this definition"></a></dt>
+<dd><p>writes <cite>WaterSourceHeatPump</cite> object to openstudio model in memory</p>
+<p>_extended_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>model</strong><span class="classifier">openstudio model</span></dt><dd><p>an openstudio model in memory</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>wshp</strong><span class="classifier">openstudio ZoneHVACWaterToAirHeatPump object</span></dt><dd><p>_description_</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.CoilCoolingWaterToAirHeatPumpEquationFit</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.CoilHeatingWaterToAirHeatPumpEquationFit</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.CoilHeatingElectric</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.FanOnOff</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.AirTerminalSingleDuctInletSideMixer</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.ZoneHVACWaterToAirHeatPump</span></code></dt><dd></dd>
+</dl>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.ZoneHVAC">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.zone_hvac.</span></span><span class="sig-name descname"><span class="pre">ZoneHVAC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'b32a54d4-fd65-4695-8668-4bc8883a92bb'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.ZoneHVAC" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>An object class to represent Zone HVAC systems.</p>
+<p>_extended_summary_</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>id</strong><span class="classifier">str, optional</span></dt><dd><p>A unique GUID string</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Attributes</dt>
+<dd class="field-even"><dl>
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd></dd>
+<dt><strong>uuid</strong><span class="classifier">str</span></dt><dd><p>A unique GUID string</p>
+</dd>
+<dt><strong>zone_name</strong><span class="classifier">str</span></dt><dd><p>Name of the zone associated to the Zone HVAC.</p>
+</dd>
+<dt><strong>zone</strong><span class="classifier">openstudio zone</span></dt><dd><p>An openstudio zone object</p>
+</dd>
+<dt><strong>airflow</strong><span class="classifier">int</span></dt><dd><p>The airflow in {ft^3/min}</p>
+</dd>
+<dt><strong>minimum_flow_fraction</strong><span class="classifier">float</span></dt><dd><p>The minimum flow fraction of the system {%}</p>
+</dd>
+<dt><strong>heating_coil</strong><span class="classifier">str</span></dt><dd><p>One of [‘Electric’, …]</p>
+</dd>
+<dt><strong>heating_coil_plant_loop</strong></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>heating_capacity</strong><span class="classifier">float</span></dt><dd><p>Units of {Btu/hour}</p>
+</dd>
+<dt><strong>cooling_coil</strong></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>cooling_coil_plant_loop</strong></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>cooling_capacity</strong><span class="classifier">float</span></dt><dd><p>Units of {Btu/hour}</p>
+</dd>
+<dt><strong>entered_supply_fan_power_value</strong><span class="classifier">float</span></dt><dd><p>Fan Power Value modified by user-specified units</p>
+</dd>
+<dt><strong>entered_supply_fan_power_unit</strong><span class="classifier">str</span></dt><dd><p>Units to associate to the above parameter. One of [‘kW/cfm’, …]</p>
+</dd>
+<dt><strong>supply_fan_performance</strong><span class="classifier">str</span></dt><dd><p>One of [‘90.1 Appendix G Fan’, …]</p>
+</dd>
+<dt><strong>fan</strong><span class="classifier"><cite>Fan</cite> object</span></dt><dd><p>_description_</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.air_systems.zone_hvac.ZoneHVAC.set_values" title="bpp.air_systems.zone_hvac.ZoneHVAC.set_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_values</span></code></a>(input_values)</p></td>
+<td><p>updates <cite>__dict__</cite> of the <cite>ZoneHVAC</cite> object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#bpp.air_systems.zone_hvac.ZoneHVAC.write_os_heating_coil" title="bpp.air_systems.zone_hvac.ZoneHVAC.write_os_heating_coil"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_os_heating_coil</span></code></a>(model)</p></td>
+<td><p>Write OpenStudio heating coil.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.ZoneHVAC.set_values">
+<span class="sig-name descname"><span class="pre">set_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.ZoneHVAC.set_values" title="Permalink to this definition"></a></dt>
+<dd><p>updates <cite>__dict__</cite> of the <cite>ZoneHVAC</cite> object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>input_values</strong><span class="classifier">dict</span></dt><dd><p>A dictionary of values</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.ZoneHVAC.write_os_heating_coil">
+<span class="sig-name descname"><span class="pre">write_os_heating_coil</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.ZoneHVAC.write_os_heating_coil" title="Permalink to this definition"></a></dt>
+<dd><p>Write OpenStudio heating coil.</p>
+<p>_extended_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>model</strong><span class="classifier">openstudio model</span></dt><dd><p>an openstudio model object in memory</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>heating_coil</dt><dd><p>An openstudio object of various class</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.CoilHeatingElectric</span></code></dt><dd><p>the openstudio wrapper for the EnergyPlus object</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.CoilHeatingWater</span></code></dt><dd><p>the openstudio wrapper for the EnergyPlus object</p>
+</dd>
+</dl>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.define_zone_hvac_types_to_override_reheat_terminal_default">
+<span class="sig-prename descclassname"><span class="pre">bpp.air_systems.zone_hvac.</span></span><span class="sig-name descname"><span class="pre">define_zone_hvac_types_to_override_reheat_terminal_default</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.define_zone_hvac_types_to_override_reheat_terminal_default" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a list of strings of Zone HVAC system types</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>zone_hvac_types</strong><span class="classifier">list of str</span></dt><dd><p>A list of strings of Zone HVAC system types.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.write_zone_hvac">
+<span class="sig-prename descclassname"><span class="pre">bpp.air_systems.zone_hvac.</span></span><span class="sig-name descname"><span class="pre">write_zone_hvac</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'358bae0e-3e3f-43a7-9a4c-445aa3fc22fe'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.write_zone_hvac" title="Permalink to this definition"></a></dt>
+<dd><p>Determines which child class to write based on the type</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>type</strong><span class="classifier">str</span></dt><dd><p>One of [‘Reheat Terminal’, ‘Fan Coil Unit’, ‘Chilled Beam’, ‘Water Source Heat Pump’, ‘BaseboardHeater’, …]</p>
+</dd>
+<dt><strong>id</strong><span class="classifier">str, optional</span></dt><dd><p>Unique GUID, by default str(uuid.uuid4())</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>zone_hvac</dt><dd><p>An object of various child class of <cite>ZoneHVAC</cite></p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Noah K.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

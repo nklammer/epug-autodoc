@@ -1,0 +1,7 @@
+src.bpp.reporting.ZoneComponentLoadReport module
+================================================
+
+.. automodule:: src.bpp.reporting.ZoneComponentLoadReport
+   :members:
+   :undoc-members:
+   :show-inheritance:

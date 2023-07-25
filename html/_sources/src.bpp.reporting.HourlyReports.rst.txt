@@ -1,0 +1,7 @@
+src.bpp.reporting.HourlyReports module
+======================================
+
+.. automodule:: src.bpp.reporting.HourlyReports
+   :members:
+   :undoc-members:
+   :show-inheritance:

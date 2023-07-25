@@ -1,0 +1,7 @@
+bpp.reporting.UtilityRates module
+=================================
+
+.. automodule:: bpp.reporting.UtilityRates
+   :members:
+   :undoc-members:
+   :show-inheritance:

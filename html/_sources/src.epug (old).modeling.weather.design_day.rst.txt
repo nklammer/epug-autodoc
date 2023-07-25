@@ -1,0 +1,7 @@
+src.epug \(old\).modeling.weather.design\_day module
+====================================================
+
+.. automodule:: src.epug (old).modeling.weather.design_day
+   :members:
+   :undoc-members:
+   :show-inheritance:

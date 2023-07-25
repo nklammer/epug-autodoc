@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bpp.air_systems.primary_air_system module &mdash; EPUG air_systems test 0.0.2 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> EPUG air_systems test
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">bpp.air_systems.primary_air_system module</a><ul>
+<li><a class="reference internal" href="#routine-listings">Routine Listings</a></li>
+<li><a class="reference internal" href="#bpp.air_systems.primary_air_system.FanCoilUnit"><code class="docutils literal notranslate"><span class="pre">FanCoilUnit</span></code></a><ul>
+<li><a class="reference internal" href="#bpp.air_systems.primary_air_system.FanCoilUnit.all_air"><code class="docutils literal notranslate"><span class="pre">FanCoilUnit.all_air()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.air_systems.primary_air_system.FanCoilUnit.set_values"><code class="docutils literal notranslate"><span class="pre">FanCoilUnit.set_values()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.air_systems.primary_air_system.FanCoilUnit.write_to_os"><code class="docutils literal notranslate"><span class="pre">FanCoilUnit.write_to_os()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bpp.air_systems.primary_air_system.PackagedSingleZone"><code class="docutils literal notranslate"><span class="pre">PackagedSingleZone</span></code></a><ul>
+<li><a class="reference internal" href="#bpp.air_systems.primary_air_system.PackagedSingleZone.all_air"><code class="docutils literal notranslate"><span class="pre">PackagedSingleZone.all_air()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.air_systems.primary_air_system.PackagedSingleZone.set_values"><code class="docutils literal notranslate"><span class="pre">PackagedSingleZone.set_values()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.air_systems.primary_air_system.PackagedSingleZone.write_to_os"><code class="docutils literal notranslate"><span class="pre">PackagedSingleZone.write_to_os()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bpp.air_systems.primary_air_system.PrimaryAirSystem"><code class="docutils literal notranslate"><span class="pre">PrimaryAirSystem</span></code></a><ul>
+<li><a class="reference internal" href="#bpp.air_systems.primary_air_system.PrimaryAirSystem.all_air"><code class="docutils literal notranslate"><span class="pre">PrimaryAirSystem.all_air()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.air_systems.primary_air_system.PrimaryAirSystem.set_values"><code class="docutils literal notranslate"><span class="pre">PrimaryAirSystem.set_values()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.air_systems.primary_air_system.PrimaryAirSystem.write_to_os"><code class="docutils literal notranslate"><span class="pre">PrimaryAirSystem.write_to_os()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bpp.air_systems.primary_air_system.UnitHeater"><code class="docutils literal notranslate"><span class="pre">UnitHeater</span></code></a><ul>
+<li><a class="reference internal" href="#bpp.air_systems.primary_air_system.UnitHeater.all_air"><code class="docutils literal notranslate"><span class="pre">UnitHeater.all_air()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.air_systems.primary_air_system.UnitHeater.set_values"><code class="docutils literal notranslate"><span class="pre">UnitHeater.set_values()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.air_systems.primary_air_system.UnitHeater.write_to_os"><code class="docutils literal notranslate"><span class="pre">UnitHeater.write_to_os()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bpp.air_systems.primary_air_system.VAVSystem"><code class="docutils literal notranslate"><span class="pre">VAVSystem</span></code></a><ul>
+<li><a class="reference internal" href="#bpp.air_systems.primary_air_system.VAVSystem.all_air"><code class="docutils literal notranslate"><span class="pre">VAVSystem.all_air()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.air_systems.primary_air_system.VAVSystem.set_values"><code class="docutils literal notranslate"><span class="pre">VAVSystem.set_values()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.air_systems.primary_air_system.VAVSystem.write_to_os"><code class="docutils literal notranslate"><span class="pre">VAVSystem.write_to_os()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bpp.air_systems.primary_air_system.write_primary_air_system"><code class="docutils literal notranslate"><span class="pre">write_primary_air_system()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">EPUG air_systems test</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>bpp.air_systems.primary_air_system module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/bpp.air_systems.primary_air_system.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-bpp.air_systems.primary_air_system">
+<span id="bpp-air-systems-primary-air-system-module"></span><h1>bpp.air_systems.primary_air_system module<a class="headerlink" href="#module-bpp.air_systems.primary_air_system" title="Permalink to this heading"></a></h1>
+<p>Module for generating the primary HVAC system.</p>
+<section id="routine-listings">
+<h2>Routine Listings<a class="headerlink" href="#routine-listings" title="Permalink to this heading"></a></h2>
+<p>class PrimaryAirSystem
+class VAVSystem(PrimaryAirSystem)
+class PackagedSingleZone(PrimaryAirSystem)
+class FanCoilUnit(PrimaryAirSystem)
+class UnitHeater(PrimaryAirSystem)
+method write_primary_air_system</p>
+<p class="rubric">Notes</p>
+<p>Reference: openstudio prototype systems:
+<a class="reference external" href="https://github.com/NREL/openstudio-standards/blob/ce0d0f9b005fc17c22204acab366be4caf7ef79f/lib/openstudio-standards/prototypes/common/objects/Prototype.hvac_systems.rb">https://github.com/NREL/openstudio-standards/blob/ce0d0f9b005fc17c22204acab366be4caf7ef79f/lib/openstudio-standards/prototypes/common/objects/Prototype.hvac_systems.rb</a></p>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="bpp.air_systems.primary_air_system.FanCoilUnit">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.primary_air_system.</span></span><span class="sig-name descname"><span class="pre">FanCoilUnit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'57ba333f-eede-4c8c-bf91-40ccb481a679'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.primary_air_system.FanCoilUnit" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bpp.air_systems.primary_air_system.PrimaryAirSystem" title="bpp.air_systems.primary_air_system.PrimaryAirSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrimaryAirSystem</span></code></a></p>
+<p>An object class for fan coil units. Inherits from <cite>PrimaryAirSystem</cite> class.</p>
+<p>See <cite>PrimaryAirSystem</cite> class attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>id</strong><span class="classifier">str</span></dt><dd><p>Unique ID string.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.air_systems.primary_air_system.FanCoilUnit.all_air" title="bpp.air_systems.primary_air_system.FanCoilUnit.all_air"><code class="xref py py-obj docutils literal notranslate"><span class="pre">all_air</span></code></a>()</p></td>
+<td><p>Tests if <cite>type</cite> attribute is an all-air system</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#bpp.air_systems.primary_air_system.FanCoilUnit.set_values" title="bpp.air_systems.primary_air_system.FanCoilUnit.set_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_values</span></code></a>(input_values)</p></td>
+<td><p>updates the <cite>__dict__</cite> of the object and writes Fan object</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.air_systems.primary_air_system.FanCoilUnit.write_to_os" title="bpp.air_systems.primary_air_system.FanCoilUnit.write_to_os"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_to_os</span></code></a>(model)</p></td>
+<td><p>Writes the <cite>FanCoilUnit</cite> object to the openstudio model in memory.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.primary_air_system.FanCoilUnit.all_air">
+<span class="sig-name descname"><span class="pre">all_air</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.primary_air_system.FanCoilUnit.all_air" title="Permalink to this definition"></a></dt>
+<dd><p>Tests if <cite>type</cite> attribute is an all-air system</p>
+<p>If <cite>type</cite> attribute passes test, the attribute <cite>all_air_system</cite> is set to <cite>True</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.primary_air_system.FanCoilUnit.set_values">
+<span class="sig-name descname"><span class="pre">set_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.primary_air_system.FanCoilUnit.set_values" title="Permalink to this definition"></a></dt>
+<dd><p>updates the <cite>__dict__</cite> of the object and writes Fan object</p>
+<p>Currently written only for all-air systems. Work in progress.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>input_values</strong><span class="classifier">dict</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.primary_air_system.FanCoilUnit.write_to_os">
+<span class="sig-name descname"><span class="pre">write_to_os</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.primary_air_system.FanCoilUnit.write_to_os" title="Permalink to this definition"></a></dt>
+<dd><p>Writes the <cite>FanCoilUnit</cite> object to the openstudio model in memory.</p>
+<p>_extended_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>model</strong><span class="classifier">openstudio model</span></dt><dd><p>The openstudio model object in memory.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>fan_coil_units</strong><span class="classifier">list</span></dt><dd><p>A list of <cite>ZoneHVACFourPipeFanCoil</cite> objects</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.CoilCoolingWater</span></code></dt><dd><p>the openstudio wrapper for the EnergyPlus object</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.CoilHeatingElectric</span></code></dt><dd><p>the openstudio wrapper for the EnergyPlus object</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.CoilHeatingWater</span></code></dt><dd><p>the openstudio wrapper for the EnergyPlus object</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.ZoneHVACFourPipeFanCoil</span></code></dt><dd><p>the openstudio wrapper for the EnergyPlus object</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fan.write_to_os</span></code></dt><dd></dd>
+</dl>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="bpp.air_systems.primary_air_system.PackagedSingleZone">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.primary_air_system.</span></span><span class="sig-name descname"><span class="pre">PackagedSingleZone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.primary_air_system.PackagedSingleZone" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bpp.air_systems.primary_air_system.PrimaryAirSystem" title="bpp.air_systems.primary_air_system.PrimaryAirSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrimaryAirSystem</span></code></a></p>
+<p>An object class for packaged single zone systems. Inherits from <cite>PrimaryAirSystem</cite> class.</p>
+<p>See <cite>PrimaryAirSystem</cite> class attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>id</strong><span class="classifier">str</span></dt><dd><p>A unique GUID string.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.air_systems.primary_air_system.PackagedSingleZone.all_air" title="bpp.air_systems.primary_air_system.PackagedSingleZone.all_air"><code class="xref py py-obj docutils literal notranslate"><span class="pre">all_air</span></code></a>()</p></td>
+<td><p>Tests if <cite>type</cite> attribute is an all-air system</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#bpp.air_systems.primary_air_system.PackagedSingleZone.set_values" title="bpp.air_systems.primary_air_system.PackagedSingleZone.set_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_values</span></code></a>(input_values)</p></td>
+<td><p>updates the <cite>__dict__</cite> of the object and writes Fan object</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.air_systems.primary_air_system.PackagedSingleZone.write_to_os" title="bpp.air_systems.primary_air_system.PackagedSingleZone.write_to_os"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_to_os</span></code></a>(model)</p></td>
+<td><p>writes the PackagedSingleZone object to an openstudio model in memory.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.primary_air_system.PackagedSingleZone.all_air">
+<span class="sig-name descname"><span class="pre">all_air</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.primary_air_system.PackagedSingleZone.all_air" title="Permalink to this definition"></a></dt>
+<dd><p>Tests if <cite>type</cite> attribute is an all-air system</p>
+<p>If <cite>type</cite> attribute passes test, the attribute <cite>all_air_system</cite> is set to <cite>True</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.primary_air_system.PackagedSingleZone.set_values">
+<span class="sig-name descname"><span class="pre">set_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.primary_air_system.PackagedSingleZone.set_values" title="Permalink to this definition"></a></dt>
+<dd><p>updates the <cite>__dict__</cite> of the object and writes Fan object</p>
+<p>Currently written only for all-air systems. Work in progress.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>input_values</strong><span class="classifier">dict</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.primary_air_system.PackagedSingleZone.write_to_os">
+<span class="sig-name descname"><span class="pre">write_to_os</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.primary_air_system.PackagedSingleZone.write_to_os" title="Permalink to this definition"></a></dt>
+<dd><p>writes the PackagedSingleZone object to an openstudio model in memory.</p>
+<p>_extended_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>model</strong><span class="classifier">openstudio model</span></dt><dd><p>The openstudio model object in memory</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>packaged_single_zone_systems</strong><span class="classifier">list</span></dt><dd><p>A list of openstudio <cite>AirLoopHVAC</cite> objects</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.AirLoopHVAC</span></code></dt><dd><p>the openstudio wrapper for the EnergyPlus object <cite>AirLoopHVAC</cite></p>
+</dd>
+</dl>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="bpp.air_systems.primary_air_system.PrimaryAirSystem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.primary_air_system.</span></span><span class="sig-name descname"><span class="pre">PrimaryAirSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'64bbc7bd-f5e9-419e-a453-5193d9830d16'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.primary_air_system.PrimaryAirSystem" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Object class to represent the primary air system of the building.</p>
+<p>_extended_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>id</strong><span class="classifier">str, optional</span></dt><dd><p>The UUID of the object.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Attributes</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>uuid</strong><span class="classifier">str</span></dt><dd></dd>
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd></dd>
+<dt><strong>zoning</strong><span class="classifier">str</span></dt><dd><p>One of [‘Multizone’, ‘One per Zone’, ‘Packaged Single Zone’, ‘Fan Coil Unit’, ‘Unit Heater’, …]</p>
+</dd>
+<dt><strong>type</strong><span class="classifier">str</span></dt><dd><p>One of [‘100% OA VAV with Reheat’, ‘Return Air VAV with Reheat’, …]</p>
+</dd>
+<dt><strong>all_air_system</strong><span class="classifier">bool</span></dt><dd><p>Is is an all air system? aka uses air as the primary conditioning medium</p>
+</dd>
+<dt><strong>economizer</strong><span class="classifier">float</span></dt><dd><p>Air-side economizer high limit in units of {°F}.</p>
+</dd>
+<dt><strong>evaporative_cooling</strong><span class="classifier">str</span></dt><dd><p>evaporative cooling</p>
+</dd>
+<dt><strong>humidifier</strong><span class="classifier">str</span></dt><dd><p>_description</p>
+</dd>
+<dt><strong>energy_recovery</strong><span class="classifier">str</span></dt><dd><p>energy recovery</p>
+</dd>
+<dt><strong>sensible_effectiveness</strong><span class="classifier">float</span></dt><dd><p>sensible effectiveness of the energy recovery</p>
+</dd>
+<dt><strong>latent_effectiveness</strong><span class="classifier">float</span></dt><dd><p>latent effectiveness of the energy recovery</p>
+</dd>
+<dt><strong>minimum_zone_flow</strong><span class="classifier">int</span></dt><dd><p>minimum zone flow</p>
+</dd>
+<dt><strong>entered_supply_fan_power_value</strong><span class="classifier">float</span></dt><dd><p>supply fan power</p>
+</dd>
+<dt><strong>entered_supply_fan_power_unit</strong><span class="classifier">str</span></dt><dd><p>units associated to supply fan power above</p>
+</dd>
+<dt><strong>supply_fan_performance</strong><span class="classifier">str</span></dt><dd><p>One of [‘’, ‘’, …]</p>
+</dd>
+<dt><strong>supply_fan</strong><span class="classifier">Fan</span></dt><dd><p>Supply fan</p>
+</dd>
+<dt><strong>supply_airflow</strong><span class="classifier">int</span></dt><dd><p>Supply airflow {ft^3/min}</p>
+</dd>
+<dt><strong>outdoor_airflow</strong><span class="classifier">int</span></dt><dd><p>Outdoor airflow {ft^3/min}</p>
+</dd>
+<dt><strong>entered_return_fan_power_value</strong><span class="classifier">float</span></dt><dd><p>_description</p>
+</dd>
+<dt><strong>entered_return_fan_power_unit</strong><span class="classifier">str</span></dt><dd><p>_description</p>
+</dd>
+<dt><strong>return_fan_performance</strong><span class="classifier">str</span></dt><dd><p>_description</p>
+</dd>
+<dt><strong>return_fan</strong><span class="classifier">Fan</span></dt><dd><p>Return fan</p>
+</dd>
+<dt><strong>return_airflow</strong><span class="classifier">int</span></dt><dd><p>Return airflow {ft^3/min}</p>
+</dd>
+<dt><strong>heating_coil</strong><span class="classifier">str</span></dt><dd><p>Preheat/main heating coil</p>
+</dd>
+<dt><strong>heating_coil_plant_loop</strong></dt><dd><p>_description</p>
+</dd>
+<dt><strong>central_heating_efficiency</strong><span class="classifier">float</span></dt><dd><p>COP {%}</p>
+</dd>
+<dt><strong>preheat_temperature</strong><span class="classifier">int</span></dt><dd><p>preheat coil exiting air temperature setpoint {°F}</p>
+</dd>
+<dt><strong>cooling_coil</strong><span class="classifier">str</span></dt><dd><p>Cooling coil</p>
+</dd>
+<dt><strong>cooling_coil_plant_loop</strong></dt><dd><p>_description</p>
+</dd>
+<dt><strong>cooling_efficiency</strong><span class="classifier">float</span></dt><dd><p>COP {%}</p>
+</dd>
+<dt><strong>cooling_supply_air_temperature</strong><span class="classifier">int</span></dt><dd><p>_description</p>
+</dd>
+<dt><strong>supply_air_temperature_reset</strong><span class="classifier">int</span></dt><dd><p>Supply air temperature reset {°F}</p>
+</dd>
+<dt><strong>reheat_coil</strong><span class="classifier">str</span></dt><dd><p>reheat coils</p>
+</dd>
+<dt><strong>reheat_coil_plant_loop</strong></dt><dd><p>_description</p>
+</dd>
+<dt><strong>reheat_temperature</strong><span class="classifier">int</span></dt><dd><p>_description</p>
+</dd>
+<dt><strong>project</strong></dt><dd><p>_description</p>
+</dd>
+<dt><strong>zone_list</strong><span class="classifier">list</span></dt><dd><p>_description</p>
+</dd>
+<dt><strong>zone</strong></dt><dd><p>_description</p>
+</dd>
+<dt><strong>individual_system_name</strong></dt><dd><p>_description</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.air_systems.primary_air_system.PrimaryAirSystem.all_air" title="bpp.air_systems.primary_air_system.PrimaryAirSystem.all_air"><code class="xref py py-obj docutils literal notranslate"><span class="pre">all_air</span></code></a>()</p></td>
+<td><p>Tests if <cite>type</cite> attribute is an all-air system</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#bpp.air_systems.primary_air_system.PrimaryAirSystem.set_values" title="bpp.air_systems.primary_air_system.PrimaryAirSystem.set_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_values</span></code></a>(input_values)</p></td>
+<td><p>updates the <cite>__dict__</cite> of the object and writes Fan object</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.air_systems.primary_air_system.PrimaryAirSystem.write_to_os" title="bpp.air_systems.primary_air_system.PrimaryAirSystem.write_to_os"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_to_os</span></code></a>(model)</p></td>
+<td><p>write PrimaryAirSystem object to OpenStudio</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.primary_air_system.PrimaryAirSystem.all_air">
+<span class="sig-name descname"><span class="pre">all_air</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.primary_air_system.PrimaryAirSystem.all_air" title="Permalink to this definition"></a></dt>
+<dd><p>Tests if <cite>type</cite> attribute is an all-air system</p>
+<p>If <cite>type</cite> attribute passes test, the attribute <cite>all_air_system</cite> is set to <cite>True</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.primary_air_system.PrimaryAirSystem.set_values">
+<span class="sig-name descname"><span class="pre">set_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.primary_air_system.PrimaryAirSystem.set_values" title="Permalink to this definition"></a></dt>
+<dd><p>updates the <cite>__dict__</cite> of the object and writes Fan object</p>
+<p>Currently written only for all-air systems. Work in progress.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>input_values</strong><span class="classifier">dict</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.primary_air_system.PrimaryAirSystem.write_to_os">
+<span class="sig-name descname"><span class="pre">write_to_os</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.primary_air_system.PrimaryAirSystem.write_to_os" title="Permalink to this definition"></a></dt>
+<dd><p>write PrimaryAirSystem object to OpenStudio</p>
+<p>Work in progress.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="bpp.air_systems.primary_air_system.UnitHeater">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.primary_air_system.</span></span><span class="sig-name descname"><span class="pre">UnitHeater</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.primary_air_system.UnitHeater" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bpp.air_systems.primary_air_system.PrimaryAirSystem" title="bpp.air_systems.primary_air_system.PrimaryAirSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrimaryAirSystem</span></code></a></p>
+<p>An object class for unit heaters/space heaters. Inherits from <cite>PrimaryAirSystem</cite> class.</p>
+<p>See <cite>PrimaryAirSystem</cite> class attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>id</strong><span class="classifier">str</span></dt><dd><p>Unique ID string.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.air_systems.primary_air_system.UnitHeater.all_air" title="bpp.air_systems.primary_air_system.UnitHeater.all_air"><code class="xref py py-obj docutils literal notranslate"><span class="pre">all_air</span></code></a>()</p></td>
+<td><p>Tests if <cite>type</cite> attribute is an all-air system</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#bpp.air_systems.primary_air_system.UnitHeater.set_values" title="bpp.air_systems.primary_air_system.UnitHeater.set_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_values</span></code></a>(input_values)</p></td>
+<td><p>updates the <cite>__dict__</cite> of the object and writes Fan object</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.air_systems.primary_air_system.UnitHeater.write_to_os" title="bpp.air_systems.primary_air_system.UnitHeater.write_to_os"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_to_os</span></code></a>(model)</p></td>
+<td><p>Writes the <cite>UnitHeaters</cite> object to the openstudio model in memory.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.primary_air_system.UnitHeater.all_air">
+<span class="sig-name descname"><span class="pre">all_air</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.primary_air_system.UnitHeater.all_air" title="Permalink to this definition"></a></dt>
+<dd><p>Tests if <cite>type</cite> attribute is an all-air system</p>
+<p>If <cite>type</cite> attribute passes test, the attribute <cite>all_air_system</cite> is set to <cite>True</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.primary_air_system.UnitHeater.set_values">
+<span class="sig-name descname"><span class="pre">set_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.primary_air_system.UnitHeater.set_values" title="Permalink to this definition"></a></dt>
+<dd><p>updates the <cite>__dict__</cite> of the object and writes Fan object</p>
+<p>Currently written only for all-air systems. Work in progress.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>input_values</strong><span class="classifier">dict</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.primary_air_system.UnitHeater.write_to_os">
+<span class="sig-name descname"><span class="pre">write_to_os</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.primary_air_system.UnitHeater.write_to_os" title="Permalink to this definition"></a></dt>
+<dd><p>Writes the <cite>UnitHeaters</cite> object to the openstudio model in memory.</p>
+<p>_extended_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>model</strong><span class="classifier">openstudio model</span></dt><dd><p>The openstudio model object in memory.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>unit_heaters</strong><span class="classifier">list</span></dt><dd><p>A list of <cite>ZoneHVACUnitHeater</cite> objects</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.CoilHeatingElectric</span></code></dt><dd><p>the openstudio wrapper for the EnergyPlus object</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.CoilHeatingWater</span></code></dt><dd><p>the openstudio wrapper for the EnergyPlus object</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.ZoneHVACUnitHeater</span></code></dt><dd><p>the openstudio wrapper for the EnergyPlus object</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fan.write_to_os</span></code></dt><dd></dd>
+</dl>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="bpp.air_systems.primary_air_system.VAVSystem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.primary_air_system.</span></span><span class="sig-name descname"><span class="pre">VAVSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.primary_air_system.VAVSystem" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bpp.air_systems.primary_air_system.PrimaryAirSystem" title="bpp.air_systems.primary_air_system.PrimaryAirSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrimaryAirSystem</span></code></a></p>
+<p>Class object for a VAV System that inherits attributes from a <cite>PrimaryAirSystem</cite> class.</p>
+<p>See the attributes for the <cite>PrimaryAirSystem</cite> class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>id</strong><span class="classifier">str</span></dt><dd><p>A unique GUID string.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.air_systems.primary_air_system.VAVSystem.all_air" title="bpp.air_systems.primary_air_system.VAVSystem.all_air"><code class="xref py py-obj docutils literal notranslate"><span class="pre">all_air</span></code></a>()</p></td>
+<td><p>Tests if <cite>type</cite> attribute is an all-air system</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#bpp.air_systems.primary_air_system.VAVSystem.set_values" title="bpp.air_systems.primary_air_system.VAVSystem.set_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_values</span></code></a>(input_values)</p></td>
+<td><p>updates the <cite>__dict__</cite> of the object and writes Fan object</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.air_systems.primary_air_system.VAVSystem.write_to_os" title="bpp.air_systems.primary_air_system.VAVSystem.write_to_os"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_to_os</span></code></a>(model)</p></td>
+<td><p>writes a <cite>VAVSystem</cite> object to OpenStudio in memory</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.primary_air_system.VAVSystem.all_air">
+<span class="sig-name descname"><span class="pre">all_air</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.primary_air_system.VAVSystem.all_air" title="Permalink to this definition"></a></dt>
+<dd><p>Tests if <cite>type</cite> attribute is an all-air system</p>
+<p>If <cite>type</cite> attribute passes test, the attribute <cite>all_air_system</cite> is set to <cite>True</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.primary_air_system.VAVSystem.set_values">
+<span class="sig-name descname"><span class="pre">set_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.primary_air_system.VAVSystem.set_values" title="Permalink to this definition"></a></dt>
+<dd><p>updates the <cite>__dict__</cite> of the object and writes Fan object</p>
+<p>Currently written only for all-air systems. Work in progress.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>input_values</strong><span class="classifier">dict</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.air_systems.primary_air_system.VAVSystem.write_to_os">
+<span class="sig-name descname"><span class="pre">write_to_os</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.primary_air_system.VAVSystem.write_to_os" title="Permalink to this definition"></a></dt>
+<dd><p>writes a <cite>VAVSystem</cite> object to OpenStudio in memory</p>
+<p>Sizes on total load. Adds a preheat coil.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>model</strong><span class="classifier">openstudio model</span></dt><dd><p>an openstudio model object in memory</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>air_loop_hvac</dt><dd><p>An OpenStudio <cite>AirLoopHVAC</cite> object</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.AirLoopHVAC</span></code></dt><dd><p>the openstudio wrapper for the EnergyPlus object <cite>AirLoopHVAC</cite></p>
+</dd>
+</dl>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.air_systems.primary_air_system.write_primary_air_system">
+<span class="sig-prename descclassname"><span class="pre">bpp.air_systems.primary_air_system.</span></span><span class="sig-name descname"><span class="pre">write_primary_air_system</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'d8d196a3-21db-4ad3-ae01-76043bdbc61b'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.primary_air_system.write_primary_air_system" title="Permalink to this definition"></a></dt>
+<dd><p>Determines which child class to write based on the <cite>type</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>type</strong><span class="classifier">str</span></dt><dd><p>One of [‘100% OA VAV with Reheat’, ‘Return Air VAV with Reheat’, ‘Packaged Single Zone’, ‘Fan Coil Unit’, ‘Unit Heater’,  …]</p>
+</dd>
+<dt><strong>id</strong><span class="classifier">str, optional</span></dt><dd><p>_description_, by default str(uuid.uuid4())</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>air_system</dt><dd><p>Object of varying <cite>PrimaryAirSystem</cite> child class</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Noah K.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+src.epug \(old\).modeling package
+=================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   src.epug (old).modeling.general
+   src.epug (old).modeling.thermal_zone
+   src.epug (old).modeling.weather
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   src.epug (old).modeling.model
+   src.epug (old).modeling.model_base
+
+Module contents
+---------------
+
+.. automodule:: src.epug (old).modeling
+   :members:
+   :undoc-members:
+   :show-inheritance:

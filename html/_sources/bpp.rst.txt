@@ -1,0 +1,29 @@
+bpp package
+===========
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bpp.air_systems
+   bpp.reporting
+   bpp.schedules
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bpp.constant
+   bpp.entry
+
+Module contents
+---------------
+
+.. automodule:: bpp
+   :members:
+   :undoc-members:
+   :show-inheritance:

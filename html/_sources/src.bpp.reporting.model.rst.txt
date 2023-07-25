@@ -1,0 +1,7 @@
+src.bpp.reporting.model module
+==============================
+
+.. automodule:: src.bpp.reporting.model
+   :members:
+   :undoc-members:
+   :show-inheritance:

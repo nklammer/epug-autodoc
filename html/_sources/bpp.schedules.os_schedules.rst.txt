@@ -1,0 +1,7 @@
+bpp.schedules.os\_schedules module
+==================================
+
+.. automodule:: bpp.schedules.os_schedules
+   :members:
+   :undoc-members:
+   :show-inheritance:

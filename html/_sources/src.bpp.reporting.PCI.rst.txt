@@ -1,0 +1,7 @@
+src.bpp.reporting.PCI module
+============================
+
+.. automodule:: src.bpp.reporting.PCI
+   :members:
+   :undoc-members:
+   :show-inheritance:

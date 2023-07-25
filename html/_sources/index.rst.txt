@@ -1,23 +1,14 @@
-.. EPUG Test documentation master file, created by
-   sphinx-quickstart on Tue Jul 18 14:36:53 2023.
+.. AEI EPUG documentation master file, created by
+   sphinx-quickstart on Wed Jul 19 16:05:53 2023.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to EPUG Test's documentation!
-=====================================
+Welcome to AEI EPUG's documentation!
+====================================
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
    :caption: Contents:
-
-   intro
-   air_systems
-   air_systems.baseline_system
-   air_systems.fan
-   air_systems.primary_air_system
-   air_systems.zone_hvac
-   modules
-   api
 
 
 

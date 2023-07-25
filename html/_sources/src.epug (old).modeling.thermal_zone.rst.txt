@@ -1,0 +1,18 @@
+src.epug \(old\).modeling.thermal\_zone package
+===============================================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   src.epug (old).modeling.thermal_zone.simple_thermal_zone
+
+Module contents
+---------------
+
+.. automodule:: src.epug (old).modeling.thermal_zone
+   :members:
+   :undoc-members:
+   :show-inheritance:

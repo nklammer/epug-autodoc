@@ -1,0 +1,18 @@
+src.epug \(old\).modeling.weather package
+=========================================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   src.epug (old).modeling.weather.design_day
+
+Module contents
+---------------
+
+.. automodule:: src.epug (old).modeling.weather
+   :members:
+   :undoc-members:
+   :show-inheritance:
