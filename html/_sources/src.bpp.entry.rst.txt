@@ -1,7 +1,0 @@
-src.bpp.entry module
-====================
-
-.. automodule:: src.bpp.entry
-   :members:
-   :undoc-members:
-   :show-inheritance:

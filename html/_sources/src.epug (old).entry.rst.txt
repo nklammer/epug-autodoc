@@ -1,7 +1,0 @@
-src.epug \(old\).entry module
-=============================
-
-.. automodule:: src.epug (old).entry
-   :members:
-   :undoc-members:
-   :show-inheritance:

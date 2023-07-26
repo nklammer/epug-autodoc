@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bpp.architecture.create_default_constructions module &mdash; EPUG air_systems test 0.0.2 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> EPUG air_systems test
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">bpp.architecture.create_default_constructions module</a><ul>
+<li><a class="reference internal" href="#bpp.architecture.create_default_constructions.write_default_exterior_wall"><code class="docutils literal notranslate"><span class="pre">write_default_exterior_wall()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.architecture.create_default_constructions.write_default_insulation_material"><code class="docutils literal notranslate"><span class="pre">write_default_insulation_material()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.architecture.create_default_constructions.write_default_interior_ceiling"><code class="docutils literal notranslate"><span class="pre">write_default_interior_ceiling()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.architecture.create_default_constructions.write_default_interior_floor"><code class="docutils literal notranslate"><span class="pre">write_default_interior_floor()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.architecture.create_default_constructions.write_default_interior_wall"><code class="docutils literal notranslate"><span class="pre">write_default_interior_wall()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.architecture.create_default_constructions.write_default_roof"><code class="docutils literal notranslate"><span class="pre">write_default_roof()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.architecture.create_default_constructions.write_default_slab"><code class="docutils literal notranslate"><span class="pre">write_default_slab()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.architecture.create_default_constructions.write_library_material"><code class="docutils literal notranslate"><span class="pre">write_library_material()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.architecture.create_default_constructions.write_simplified_window"><code class="docutils literal notranslate"><span class="pre">write_simplified_window()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">EPUG air_systems test</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>bpp.architecture.create_default_constructions module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/bpp.architecture.create_default_constructions.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-bpp.architecture.create_default_constructions">
+<span id="bpp-architecture-create-default-constructions-module"></span><h1>bpp.architecture.create_default_constructions module<a class="headerlink" href="#module-bpp.architecture.create_default_constructions" title="Permalink to this heading"></a></h1>
+<p>Module for creating default construction objects for the model.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.architecture.create_default_constructions.write_default_exterior_wall">
+<span class="sig-prename descclassname"><span class="pre">bpp.architecture.create_default_constructions.</span></span><span class="sig-name descname"><span class="pre">write_default_exterior_wall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r_value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_objects</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.create_default_constructions.write_default_exterior_wall" title="Permalink to this definition"></a></dt>
+<dd><p>Writes default exterior wall construction</p>
+<p>_extended_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>r_value</strong><span class="classifier">float</span></dt><dd><p>Units of {h-ft^2-°F/Btu}</p>
+</dd>
+<dt><strong>model_objects</strong><span class="classifier">_type_</span></dt><dd><p>_description_</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>exterior_wall_construction</strong><span class="classifier">bpp.architecture.construction.Construction object</span></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>model_objects</strong><span class="classifier">_type_</span></dt><dd><p>_description_</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>_description_</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.architecture.create_default_constructions.write_default_insulation_material">
+<span class="sig-prename descclassname"><span class="pre">bpp.architecture.create_default_constructions.</span></span><span class="sig-name descname"><span class="pre">write_default_insulation_material</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">material_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.create_default_constructions.write_default_insulation_material" title="Permalink to this definition"></a></dt>
+<dd><p>Writes an insulation material with layers from OpenStudio defaults and thickness adjusted based on an R-value input</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>material_name</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>r_value</strong><span class="classifier">float</span></dt><dd><p>Units of {h-ft^2-°F/Btu}</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>insulation_material</strong><span class="classifier">bpp.architecture.material.Material object</span></dt><dd><p>_description_</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.architecture.create_default_constructions.write_default_interior_ceiling">
+<span class="sig-prename descclassname"><span class="pre">bpp.architecture.create_default_constructions.</span></span><span class="sig-name descname"><span class="pre">write_default_interior_ceiling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_objects</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.create_default_constructions.write_default_interior_ceiling" title="Permalink to this definition"></a></dt>
+<dd><p>writes the default interior ceiling construction</p>
+<p>_extended_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>model_objects</strong><span class="classifier">_type_, optional</span></dt><dd><p>_description_, by default None</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>ceiling_construction</strong><span class="classifier">bpp.architecture.construction.Construction object</span></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>model_objects</strong><span class="classifier">_type_</span></dt><dd><p>_description_</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>_description_</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.architecture.create_default_constructions.write_default_interior_floor">
+<span class="sig-prename descclassname"><span class="pre">bpp.architecture.create_default_constructions.</span></span><span class="sig-name descname"><span class="pre">write_default_interior_floor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_objects</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.create_default_constructions.write_default_interior_floor" title="Permalink to this definition"></a></dt>
+<dd><p>writes default interior floor construction</p>
+<p>_extended_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>model_objects</strong><span class="classifier">_type_, optional</span></dt><dd><p>_description_, by default None</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>floor_construction</strong><span class="classifier">bpp.architecture.construction.Construction object</span></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>model_objects</strong><span class="classifier">_type_</span></dt><dd><p>_description_</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>_description_</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.architecture.create_default_constructions.write_default_interior_wall">
+<span class="sig-prename descclassname"><span class="pre">bpp.architecture.create_default_constructions.</span></span><span class="sig-name descname"><span class="pre">write_default_interior_wall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_objects</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.create_default_constructions.write_default_interior_wall" title="Permalink to this definition"></a></dt>
+<dd><p>writes default interior wall construction</p>
+<p>_extended_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>model_objects</strong><span class="classifier">_type_, optional</span></dt><dd><p>_description_, by default None</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>interior_wall_construction</strong><span class="classifier">bpp.architecture.construction.Construction object</span></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>model_objects</strong><span class="classifier">_type_</span></dt><dd><p>_description_</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>_description_</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.architecture.create_default_constructions.write_default_roof">
+<span class="sig-prename descclassname"><span class="pre">bpp.architecture.create_default_constructions.</span></span><span class="sig-name descname"><span class="pre">write_default_roof</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r_value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_objects</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.create_default_constructions.write_default_roof" title="Permalink to this definition"></a></dt>
+<dd><p>writes default roof construction</p>
+<p>_extended_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>r_value</strong><span class="classifier">float</span></dt><dd><p>Units of {h-ft^2-°F/Btu}</p>
+</dd>
+<dt><strong>model_objects</strong><span class="classifier">_type_</span></dt><dd><p>_description_</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>roof_construction</strong><span class="classifier">bpp.architecture.construction.Construction object</span></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>model_objects</strong><span class="classifier">_type_</span></dt><dd><p>_description_</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>_description_</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.architecture.create_default_constructions.write_default_slab">
+<span class="sig-prename descclassname"><span class="pre">bpp.architecture.create_default_constructions.</span></span><span class="sig-name descname"><span class="pre">write_default_slab</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_objects</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.create_default_constructions.write_default_slab" title="Permalink to this definition"></a></dt>
+<dd><p>writes default slab construction</p>
+<p>_extended_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>model_objects</strong><span class="classifier">_type_</span></dt><dd><p>_description_</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>slab_construction</strong><span class="classifier">bpp.architecture.construction.Construction object</span></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>model_objects</strong><span class="classifier">_type_</span></dt><dd><p>_description_</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>_description_</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.architecture.create_default_constructions.write_library_material">
+<span class="sig-prename descclassname"><span class="pre">bpp.architecture.create_default_constructions.</span></span><span class="sig-name descname"><span class="pre">write_library_material</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">material_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.create_default_constructions.write_library_material" title="Permalink to this definition"></a></dt>
+<dd><p>Write a library material.</p>
+<p>Intended as a temporary library for default material properties while a more detailed approach is developed</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>material_name</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>material</strong><span class="classifier">bpp.architecture.material.Material object</span></dt><dd><p>_description_</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.architecture.create_default_constructions.write_simplified_window">
+<span class="sig-prename descclassname"><span class="pre">bpp.architecture.create_default_constructions.</span></span><span class="sig-name descname"><span class="pre">write_simplified_window</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u_value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shgc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_objects</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.create_default_constructions.write_simplified_window" title="Permalink to this definition"></a></dt>
+<dd><p>writes a simplified window</p>
+<p>_extended_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>u_value</strong><span class="classifier">float</span></dt><dd><p>Units of {Btu/h-ft^2-°F}</p>
+</dd>
+<dt><strong>shgc</strong><span class="classifier">float</span></dt><dd><p>Units of {%}</p>
+</dd>
+<dt><strong>vt</strong><span class="classifier">float</span></dt><dd><p>Units of {%}</p>
+</dd>
+<dt><strong>model_objects</strong><span class="classifier">_type_</span></dt><dd><p>_description_</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>window_construction</strong><span class="classifier">bpp.architecture.sub_surface_construction.SubSurfaceConstruction object</span></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>model_objects</strong><span class="classifier">_type_</span></dt><dd><p>_description_</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>_description_</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Noah K.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

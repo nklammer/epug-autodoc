@@ -1,7 +1,0 @@
-src.bpp.reporting.EnergyEndUses module
-======================================
-
-.. automodule:: src.bpp.reporting.EnergyEndUses
-   :members:
-   :undoc-members:
-   :show-inheritance:

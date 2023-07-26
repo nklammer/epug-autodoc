@@ -8,6 +8,7 @@ Subpackages
    :maxdepth: 4
 
    bpp.air_systems
+   bpp.architecture
    bpp.reporting
    bpp.schedules
 

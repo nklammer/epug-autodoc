@@ -1,7 +1,0 @@
-air\_systems.fan module
-=======================
-
-.. automodule:: air_systems.fan
-   :members:
-   :undoc-members:
-   :show-inheritance:

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bpp.architecture.construction module &mdash; EPUG air_systems test 0.0.2 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> EPUG air_systems test
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">bpp.architecture.construction module</a><ul>
+<li><a class="reference internal" href="#bpp.architecture.construction.Construction"><code class="docutils literal notranslate"><span class="pre">Construction</span></code></a><ul>
+<li><a class="reference internal" href="#bpp.architecture.construction.Construction.set_values"><code class="docutils literal notranslate"><span class="pre">Construction.set_values()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.architecture.construction.Construction.write_to_os"><code class="docutils literal notranslate"><span class="pre">Construction.write_to_os()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">EPUG air_systems test</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>bpp.architecture.construction module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/bpp.architecture.construction.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-bpp.architecture.construction">
+<span id="bpp-architecture-construction-module"></span><h1>bpp.architecture.construction module<a class="headerlink" href="#module-bpp.architecture.construction" title="Permalink to this heading"></a></h1>
+<p>Module for creating constructions for the model.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="bpp.architecture.construction.Construction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.architecture.construction.</span></span><span class="sig-name descname"><span class="pre">Construction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'59e73558-04a8-415e-99aa-cc5d0d1a19fc'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.construction.Construction" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>_summary_</p>
+<p>_extended_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>id</strong><span class="classifier">str, optional</span></dt><dd><p>The UUID of the object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>_description_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>uuid</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>material_layers</strong><span class="classifier">list</span></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>material_layer_names</strong><span class="classifier">list of str</span></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>material_thicknesses</strong><span class="classifier">list of type</span></dt><dd><p>Units of {inches}</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.architecture.construction.Construction.set_values" title="bpp.architecture.construction.Construction.set_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_values</span></code></a>(input_values)</p></td>
+<td><p>Updates <cite>__dict__</cite> of Construction object with <cite>input_values</cite></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#bpp.architecture.construction.Construction.write_to_os" title="bpp.architecture.construction.Construction.write_to_os"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_to_os</span></code></a>(model)</p></td>
+<td><p>Method to write constructions from materials</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.architecture.construction.Construction.set_values">
+<span class="sig-name descname"><span class="pre">set_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.construction.Construction.set_values" title="Permalink to this definition"></a></dt>
+<dd><p>Updates <cite>__dict__</cite> of Construction object with <cite>input_values</cite></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.architecture.construction.Construction.write_to_os">
+<span class="sig-name descname"><span class="pre">write_to_os</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.construction.Construction.write_to_os" title="Permalink to this definition"></a></dt>
+<dd><p>Method to write constructions from materials</p>
+<p>Gets materials currently in the model.
+Read the material objects from the model
+and store the material name to list.
+If the material is not in the model,
+execute function that writes a new material.
+Implements a materials vector to distinguish
+between opaque and other layers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>model</strong><span class="classifier">openstudio.model</span></dt><dd><p>model in memory</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>construction</strong><span class="classifier">openstudio.model.Construction object</span></dt><dd><p>_description_</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.getMaterialByName</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.Construction</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.MaterialVector</span></code></dt><dd></dd>
+</dl>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Noah K.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

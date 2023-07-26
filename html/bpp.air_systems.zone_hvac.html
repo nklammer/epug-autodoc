@@ -40,7 +40,6 @@
               <!-- Local TOC -->
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">bpp.air_systems.zone_hvac module</a><ul>
-<li><a class="reference internal" href="#routine-listings">Routine Listings</a></li>
 <li><a class="reference internal" href="#bpp.air_systems.zone_hvac.BaseboardHeater"><code class="docutils literal notranslate"><span class="pre">BaseboardHeater</span></code></a><ul>
 <li><a class="reference internal" href="#bpp.air_systems.zone_hvac.BaseboardHeater.set_values"><code class="docutils literal notranslate"><span class="pre">BaseboardHeater.set_values()</span></code></a></li>
 <li><a class="reference internal" href="#bpp.air_systems.zone_hvac.BaseboardHeater.write_os_heating_coil"><code class="docutils literal notranslate"><span class="pre">BaseboardHeater.write_os_heating_coil()</span></code></a></li>
@@ -109,20 +108,9 @@
   <section id="module-bpp.air_systems.zone_hvac">
 <span id="bpp-air-systems-zone-hvac-module"></span><h1>bpp.air_systems.zone_hvac module<a class="headerlink" href="#module-bpp.air_systems.zone_hvac" title="Permalink to this heading"></a></h1>
 <p>Module for generating the secondary Zone HVAC systems.</p>
-<section id="routine-listings">
-<h2>Routine Listings<a class="headerlink" href="#routine-listings" title="Permalink to this heading"></a></h2>
-<p>class ZoneHVAC
-class ReheatTerminal(ZoneHVAC)
-class TerminalFanCoilUnit(ZoneHVAC)
-class ChilledBeam(ZoneHVAC)
-class WaterSourceHeatPump(ZoneHVAC)
-class BaseboardHeater(ZoneHVAC)
-method write_zone_hvac
-method define_zone_hvac_types_to_override_reheat_terminal_default</p>
-</section>
 <dl class="py class">
 <dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.BaseboardHeater">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.zone_hvac.</span></span><span class="sig-name descname"><span class="pre">BaseboardHeater</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'41c182c3-83a8-46df-bb05-340b159b65ac'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.BaseboardHeater" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.zone_hvac.</span></span><span class="sig-name descname"><span class="pre">BaseboardHeater</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'f065fe3b-fc60-4048-a769-037e6fc93ca7'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.BaseboardHeater" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#bpp.air_systems.zone_hvac.ZoneHVAC" title="bpp.air_systems.zone_hvac.ZoneHVAC"><code class="xref py py-class docutils literal notranslate"><span class="pre">ZoneHVAC</span></code></a></p>
 <p>An object class for a baseboard heater that inherits from <cite>ZoneHVAC</cite></p>
 <p>See attributes of <cite>ZoneHVAC</cite> class.</p>
@@ -228,7 +216,7 @@ or openstudio.model.ZoneHVACBaseboardRadiantConvectiveElectric</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.ChilledBeam">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.zone_hvac.</span></span><span class="sig-name descname"><span class="pre">ChilledBeam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'0fa0e446-e5af-4c5b-b442-48b9a62ed946'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.ChilledBeam" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.zone_hvac.</span></span><span class="sig-name descname"><span class="pre">ChilledBeam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'5ec5c029-b7a8-4d7e-b8d2-1d00b54aa5ea'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.ChilledBeam" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#bpp.air_systems.zone_hvac.ZoneHVAC" title="bpp.air_systems.zone_hvac.ZoneHVAC"><code class="xref py py-class docutils literal notranslate"><span class="pre">ZoneHVAC</span></code></a></p>
 <p>An object class for a chilled beam that inherits from <cite>ZoneHVAC</cite></p>
 <p>See attributes of <cite>ZoneHVAC</cite> class.</p>
@@ -336,7 +324,7 @@ or openstudio.model.ZoneHVACBaseboardRadiantConvectiveElectric</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.ReheatTerminal">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.zone_hvac.</span></span><span class="sig-name descname"><span class="pre">ReheatTerminal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'26de88c9-f150-4336-8f6b-8ad3d2ef0949'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.ReheatTerminal" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.zone_hvac.</span></span><span class="sig-name descname"><span class="pre">ReheatTerminal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'423df7a8-5267-4525-8f2e-3173b6fd91a4'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.ReheatTerminal" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#bpp.air_systems.zone_hvac.ZoneHVAC" title="bpp.air_systems.zone_hvac.ZoneHVAC"><code class="xref py py-class docutils literal notranslate"><span class="pre">ZoneHVAC</span></code></a></p>
 <p>An object class for a reheat terminal that inherits from <cite>ZoneHVAC</cite></p>
 <p>See attributes of <cite>ZoneHVAC</cite> class.</p>
@@ -440,7 +428,7 @@ or openstudio.model.ZoneHVACBaseboardRadiantConvectiveElectric</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.TerminalFanCoilUnit">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.zone_hvac.</span></span><span class="sig-name descname"><span class="pre">TerminalFanCoilUnit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'6a37355e-2815-4fb5-b653-9e73bfc1a690'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.TerminalFanCoilUnit" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.zone_hvac.</span></span><span class="sig-name descname"><span class="pre">TerminalFanCoilUnit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'56034954-eaa6-4c03-a04f-4ddcb92fc930'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.TerminalFanCoilUnit" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#bpp.air_systems.zone_hvac.ZoneHVAC" title="bpp.air_systems.zone_hvac.ZoneHVAC"><code class="xref py py-class docutils literal notranslate"><span class="pre">ZoneHVAC</span></code></a></p>
 <p>An object class for a terminal fan coil unit that inherits from <cite>ZoneHVAC</cite></p>
 <p>See attributes of <cite>ZoneHVAC</cite> class.</p>
@@ -547,7 +535,7 @@ or openstudio.model.ZoneHVACBaseboardRadiantConvectiveElectric</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.WaterSourceHeatPump">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.zone_hvac.</span></span><span class="sig-name descname"><span class="pre">WaterSourceHeatPump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'a8a3cd50-66b5-4aa9-a096-78166fc5e4a7'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.WaterSourceHeatPump" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.zone_hvac.</span></span><span class="sig-name descname"><span class="pre">WaterSourceHeatPump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'78cd42e4-112c-47d4-9d22-99fcd8698485'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.WaterSourceHeatPump" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#bpp.air_systems.zone_hvac.ZoneHVAC" title="bpp.air_systems.zone_hvac.ZoneHVAC"><code class="xref py py-class docutils literal notranslate"><span class="pre">ZoneHVAC</span></code></a></p>
 <p>An object class for a water source heat pump that inherits from <cite>ZoneHVAC</cite></p>
 <p>See attributes of <cite>ZoneHVAC</cite> class.</p>
@@ -662,7 +650,7 @@ or openstudio.model.ZoneHVACBaseboardRadiantConvectiveElectric</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.ZoneHVAC">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.zone_hvac.</span></span><span class="sig-name descname"><span class="pre">ZoneHVAC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'b32a54d4-fd65-4695-8668-4bc8883a92bb'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.ZoneHVAC" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.zone_hvac.</span></span><span class="sig-name descname"><span class="pre">ZoneHVAC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'e8e4c146-0346-45ed-947d-450c244689e8'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.ZoneHVAC" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>An object class to represent Zone HVAC systems.</p>
 <p>_extended_summary_</p>
@@ -786,7 +774,7 @@ or openstudio.model.ZoneHVACBaseboardRadiantConvectiveElectric</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="bpp.air_systems.zone_hvac.write_zone_hvac">
-<span class="sig-prename descclassname"><span class="pre">bpp.air_systems.zone_hvac.</span></span><span class="sig-name descname"><span class="pre">write_zone_hvac</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'358bae0e-3e3f-43a7-9a4c-445aa3fc22fe'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.write_zone_hvac" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">bpp.air_systems.zone_hvac.</span></span><span class="sig-name descname"><span class="pre">write_zone_hvac</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'48d743b3-6af7-4702-9a50-140dda860c17'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.zone_hvac.write_zone_hvac" title="Permalink to this definition"></a></dt>
 <dd><p>Determines which child class to write based on the type</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

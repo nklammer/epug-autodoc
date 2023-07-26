@@ -1,0 +1,26 @@
+bpp.architecture package
+========================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bpp.architecture.construction
+   bpp.architecture.construction_set
+   bpp.architecture.create_baseline_construction_set
+   bpp.architecture.create_default_constructions
+   bpp.architecture.material
+   bpp.architecture.shading_surface
+   bpp.architecture.sub_surface
+   bpp.architecture.sub_surface_construction
+   bpp.architecture.surface
+
+Module contents
+---------------
+
+.. automodule:: bpp.architecture
+   :members:
+   :undoc-members:
+   :show-inheritance:

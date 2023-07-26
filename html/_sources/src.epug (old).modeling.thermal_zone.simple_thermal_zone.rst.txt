@@ -1,7 +1,0 @@
-src.epug \(old\).modeling.thermal\_zone.simple\_thermal\_zone module
-====================================================================
-
-.. automodule:: src.epug (old).modeling.thermal_zone.simple_thermal_zone
-   :members:
-   :undoc-members:
-   :show-inheritance:

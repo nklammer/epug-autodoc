@@ -1,7 +1,0 @@
-src.bpp.reporting.output\_variables module
-==========================================
-
-.. automodule:: src.bpp.reporting.output_variables
-   :members:
-   :undoc-members:
-   :show-inheritance:

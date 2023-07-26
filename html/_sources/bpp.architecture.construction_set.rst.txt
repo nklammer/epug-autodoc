@@ -1,0 +1,7 @@
+bpp.architecture.construction\_set module
+=========================================
+
+.. automodule:: bpp.architecture.construction_set
+   :members:
+   :undoc-members:
+   :show-inheritance:

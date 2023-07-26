@@ -1,7 +1,0 @@
-zone\_hvac module
-=================
-
-.. automodule:: zone_hvac
-   :members:
-   :undoc-members:
-   :show-inheritance:

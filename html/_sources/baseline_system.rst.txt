@@ -1,7 +1,0 @@
-baseline\_system module
-=======================
-
-.. automodule:: baseline_system
-   :members:
-   :undoc-members:
-   :show-inheritance:

@@ -40,7 +40,6 @@
               <!-- Local TOC -->
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">bpp.air_systems.primary_air_system module</a><ul>
-<li><a class="reference internal" href="#routine-listings">Routine Listings</a></li>
 <li><a class="reference internal" href="#bpp.air_systems.primary_air_system.FanCoilUnit"><code class="docutils literal notranslate"><span class="pre">FanCoilUnit</span></code></a><ul>
 <li><a class="reference internal" href="#bpp.air_systems.primary_air_system.FanCoilUnit.all_air"><code class="docutils literal notranslate"><span class="pre">FanCoilUnit.all_air()</span></code></a></li>
 <li><a class="reference internal" href="#bpp.air_systems.primary_air_system.FanCoilUnit.set_values"><code class="docutils literal notranslate"><span class="pre">FanCoilUnit.set_values()</span></code></a></li>
@@ -103,21 +102,12 @@
   <section id="module-bpp.air_systems.primary_air_system">
 <span id="bpp-air-systems-primary-air-system-module"></span><h1>bpp.air_systems.primary_air_system module<a class="headerlink" href="#module-bpp.air_systems.primary_air_system" title="Permalink to this heading"></a></h1>
 <p>Module for generating the primary HVAC system.</p>
-<section id="routine-listings">
-<h2>Routine Listings<a class="headerlink" href="#routine-listings" title="Permalink to this heading"></a></h2>
-<p>class PrimaryAirSystem
-class VAVSystem(PrimaryAirSystem)
-class PackagedSingleZone(PrimaryAirSystem)
-class FanCoilUnit(PrimaryAirSystem)
-class UnitHeater(PrimaryAirSystem)
-method write_primary_air_system</p>
 <p class="rubric">Notes</p>
 <p>Reference: openstudio prototype systems:
 <a class="reference external" href="https://github.com/NREL/openstudio-standards/blob/ce0d0f9b005fc17c22204acab366be4caf7ef79f/lib/openstudio-standards/prototypes/common/objects/Prototype.hvac_systems.rb">https://github.com/NREL/openstudio-standards/blob/ce0d0f9b005fc17c22204acab366be4caf7ef79f/lib/openstudio-standards/prototypes/common/objects/Prototype.hvac_systems.rb</a></p>
-</section>
 <dl class="py class">
 <dt class="sig sig-object py" id="bpp.air_systems.primary_air_system.FanCoilUnit">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.primary_air_system.</span></span><span class="sig-name descname"><span class="pre">FanCoilUnit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'57ba333f-eede-4c8c-bf91-40ccb481a679'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.primary_air_system.FanCoilUnit" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.primary_air_system.</span></span><span class="sig-name descname"><span class="pre">FanCoilUnit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'4119e05a-265b-465c-b425-ec73cf5f8430'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.primary_air_system.FanCoilUnit" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#bpp.air_systems.primary_air_system.PrimaryAirSystem" title="bpp.air_systems.primary_air_system.PrimaryAirSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrimaryAirSystem</span></code></a></p>
 <p>An object class for fan coil units. Inherits from <cite>PrimaryAirSystem</cite> class.</p>
 <p>See <cite>PrimaryAirSystem</cite> class attributes.</p>
@@ -290,7 +280,7 @@ method write_primary_air_system</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="bpp.air_systems.primary_air_system.PrimaryAirSystem">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.primary_air_system.</span></span><span class="sig-name descname"><span class="pre">PrimaryAirSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'64bbc7bd-f5e9-419e-a453-5193d9830d16'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.primary_air_system.PrimaryAirSystem" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.primary_air_system.</span></span><span class="sig-name descname"><span class="pre">PrimaryAirSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'5be54390-548e-4f94-abe7-20916e7ca3dd'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.primary_air_system.PrimaryAirSystem" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Object class to represent the primary air system of the building.</p>
 <p>_extended_summary_</p>
@@ -603,7 +593,7 @@ method write_primary_air_system</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="bpp.air_systems.primary_air_system.write_primary_air_system">
-<span class="sig-prename descclassname"><span class="pre">bpp.air_systems.primary_air_system.</span></span><span class="sig-name descname"><span class="pre">write_primary_air_system</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'d8d196a3-21db-4ad3-ae01-76043bdbc61b'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.primary_air_system.write_primary_air_system" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">bpp.air_systems.primary_air_system.</span></span><span class="sig-name descname"><span class="pre">write_primary_air_system</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ae3e9b80-4c04-402a-8928-30ca0bc22783'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.primary_air_system.write_primary_air_system" title="Permalink to this definition"></a></dt>
 <dd><p>Determines which child class to write based on the <cite>type</cite></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

@@ -40,7 +40,6 @@
               <!-- Local TOC -->
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">bpp.air_systems.baseline_system module</a><ul>
-<li><a class="reference internal" href="#routine-listings">Routine Listings</a></li>
 <li><a class="reference internal" href="#bpp.air_systems.baseline_system.BaselineSystem"><code class="docutils literal notranslate"><span class="pre">BaselineSystem</span></code></a><ul>
 <li><a class="reference internal" href="#bpp.air_systems.baseline_system.BaselineSystem.set_values"><code class="docutils literal notranslate"><span class="pre">BaselineSystem.set_values()</span></code></a></li>
 <li><a class="reference internal" href="#bpp.air_systems.baseline_system.BaselineSystem.system_number"><code class="docutils literal notranslate"><span class="pre">BaselineSystem.system_number</span></code></a></li>
@@ -84,10 +83,6 @@
   <section id="module-bpp.air_systems.baseline_system">
 <span id="bpp-air-systems-baseline-system-module"></span><h1>bpp.air_systems.baseline_system module<a class="headerlink" href="#module-bpp.air_systems.baseline_system" title="Permalink to this heading"></a></h1>
 <p>Module for making the baseline system of Appendix G.</p>
-<section id="routine-listings">
-<h2>Routine Listings<a class="headerlink" href="#routine-listings" title="Permalink to this heading"></a></h2>
-<p>class BaselineSystem
-class System2</p>
 <p class="rubric">Notes</p>
 <p>Baseline system descriptions[<a href="#id3"><span class="problematic" id="id4">1_</span></a>]</p>
 <p class="rubric">References</p>
@@ -98,10 +93,9 @@ for Buildings Except Low-Rise Residential Buildings. American
 Society of Heating, Refrigerating, and Air-Conditioning Engineers.</p>
 </dd>
 </dl>
-</section>
 <dl class="py class">
 <dt class="sig sig-object py" id="bpp.air_systems.baseline_system.BaselineSystem">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.baseline_system.</span></span><span class="sig-name descname"><span class="pre">BaselineSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'464fc086-2f62-46c7-b568-b7d8e71640b3'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.baseline_system.BaselineSystem" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.air_systems.baseline_system.</span></span><span class="sig-name descname"><span class="pre">BaselineSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'9ecec821-7b5a-442a-9457-9986c6245954'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.air_systems.baseline_system.BaselineSystem" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>ASHRAE 90.1 Appendix G helper and utility methods.</p>
 <p>_extended_summary_</p>
@@ -116,6 +110,8 @@ Society of Heating, Refrigerating, and Air-Conditioning Engineers.</p>
 <dd class="field-even"><dl class="simple">
 <dt><strong>name</strong><span class="classifier">str</span></dt><dd></dd>
 <dt><strong>system_number_name</strong><span class="classifier">str</span></dt><dd><p>The name associated to the system number.</p>
+</dd>
+<dt><strong>system_number</strong><span class="classifier">int</span></dt><dd><p>The ASHRAE 90.1 App G system number. See notes for the class.</p>
 </dd>
 <dt><strong>supply_airflow</strong><span class="classifier">float</span></dt><dd><p>The supply airflow in units of {ft^3/min}.</p>
 </dd>

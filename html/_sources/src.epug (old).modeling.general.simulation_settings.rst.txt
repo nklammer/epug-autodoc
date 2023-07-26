@@ -1,7 +1,0 @@
-src.epug \(old\).modeling.general.simulation\_settings module
-=============================================================
-
-.. automodule:: src.epug (old).modeling.general.simulation_settings
-   :members:
-   :undoc-members:
-   :show-inheritance:

@@ -1,0 +1,7 @@
+bpp.architecture.create\_baseline\_construction\_set module
+===========================================================
+
+.. automodule:: bpp.architecture.create_baseline_construction_set
+   :members:
+   :undoc-members:
+   :show-inheritance:
