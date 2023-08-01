@@ -1,0 +1,7 @@
+bpp.modeling.write\_individual\_model\_json module
+==================================================
+
+.. automodule:: bpp.modeling.write_individual_model_json
+   :members:
+   :undoc-members:
+   :show-inheritance:

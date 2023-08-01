@@ -78,7 +78,7 @@
 <p>Module for creating subsurface objects for the model.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="bpp.architecture.sub_surface.SubSurface">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.architecture.sub_surface.</span></span><span class="sig-name descname"><span class="pre">SubSurface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2120cb82-b57b-47be-9001-cb38ec3d7a33'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.sub_surface.SubSurface" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.architecture.sub_surface.</span></span><span class="sig-name descname"><span class="pre">SubSurface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'be2239ed-55b3-433d-b5ae-5f1bfa222862'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.sub_surface.SubSurface" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A class object to represent the EnergyPlus <cite>SubSurface</cite> object</p>
 <p>_extended_summary_</p>
@@ -91,31 +91,30 @@
 </dd>
 <dt class="field-even">Attributes</dt>
 <dd class="field-even"><dl class="simple">
-<dt><strong>name</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd></dd>
+<dt><strong>uuid</strong><span class="classifier">str</span></dt><dd><p>A unique GUID string.</p>
 </dd>
-<dt><strong>uuid</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
-</dd>
-<dt><strong>type</strong><span class="classifier">str</span></dt><dd><p>One of [‘Window’, ‘Skylight’, ‘Door’, …]</p>
+<dt><strong>type</strong><span class="classifier">str</span></dt><dd><p>Type of SubSurface`. One of [‘Window’, ‘Skylight’, ‘Door’, …]</p>
 </dd>
 <dt><strong>sub_surface_construction_name</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
 </dd>
 <dt><strong>sub_surface_construction</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
 </dd>
-<dt><strong>operable</strong><span class="classifier">bool</span></dt><dd><p>defaults to False</p>
+<dt><strong>operable</strong><span class="classifier">bool</span></dt><dd><p>True/False: Is the window operable?, defaults to False</p>
 </dd>
-<dt><strong>surface_name</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>surface_name</strong><span class="classifier">str</span></dt><dd><p>A <cite>SubSurface</cite> must be hosted by a <cite>Surface</cite>. Name to get the host surface in the openstudio model, defaults to ‘’</p>
 </dd>
-<dt><strong>surface</strong><span class="classifier">str</span></dt><dd><p>defaults to None</p>
+<dt><strong>surface</strong><span class="classifier">str</span></dt><dd><p>A <cite>SubSurface</cite> must be hosted by a <cite>Surface</cite>, defaults to None</p>
 </dd>
-<dt><strong>coordinates</strong><span class="classifier">list</span></dt><dd><p>_description_</p>
+<dt><strong>coordinates</strong><span class="classifier">list</span></dt><dd><p>_description_ todo. Units of {ft}</p>
 </dd>
-<dt><strong>x</strong><span class="classifier">float</span></dt><dd><p>Units of {ft}</p>
+<dt><strong>x</strong><span class="classifier">float</span></dt><dd><p>Units of {ft}, defaults to 0</p>
 </dd>
-<dt><strong>y</strong><span class="classifier">float</span></dt><dd><p>Units of {ft}</p>
+<dt><strong>y</strong><span class="classifier">float</span></dt><dd><p>Units of {ft}, defaults to 0</p>
 </dd>
-<dt><strong>width</strong><span class="classifier">float</span></dt><dd><p>Units of {ft}</p>
+<dt><strong>width</strong><span class="classifier">float</span></dt><dd><p>Units of {ft}, defaults to 0</p>
 </dd>
-<dt><strong>height</strong><span class="classifier">float</span></dt><dd><p>Units of {ft}</p>
+<dt><strong>height</strong><span class="classifier">float</span></dt><dd><p>Units of {ft}, defaults to 0</p>
 </dd>
 </dl>
 </dd>
@@ -165,6 +164,8 @@
 <dl class="simple">
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.Point3d</span></code></dt><dd></dd>
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.SubSurface</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.convert</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.getConstructionByName</span></code></dt><dd></dd>
 </dl>
 </div>
 <p class="rubric">Notes</p>

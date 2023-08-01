@@ -1,0 +1,7 @@
+bpp.modeling.os\_modeling module
+================================
+
+.. automodule:: bpp.modeling.os_modeling
+   :members:
+   :undoc-members:
+   :show-inheritance:

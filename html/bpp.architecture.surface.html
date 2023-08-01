@@ -78,7 +78,7 @@
 <p>Module for creating surface objects for the model.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="bpp.architecture.surface.Surface">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.architecture.surface.</span></span><span class="sig-name descname"><span class="pre">Surface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'463382fb-4679-4743-bb8e-1df006519695'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.surface.Surface" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.architecture.surface.</span></span><span class="sig-name descname"><span class="pre">Surface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'672b939f-6816-42cb-b4d9-511901b629b3'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.surface.Surface" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A class object to represent the EnergyPlus <cite>Surface</cite> object</p>
 <p>_extended_summary_</p>
@@ -91,33 +91,32 @@
 </dd>
 <dt class="field-even">Attributes</dt>
 <dd class="field-even"><dl class="simple">
-<dt><strong>name</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd></dd>
+<dt><strong>uuid</strong><span class="classifier">str</span></dt><dd><p>A unique GUID string.</p>
 </dd>
-<dt><strong>uuid</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>type</strong><span class="classifier">str</span></dt><dd><p>The type of <cite>Surface</cite>. One of [‘Wall’, ‘Floor’, …]</p>
 </dd>
-<dt><strong>type</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>construction_name</strong><span class="classifier">str</span></dt><dd><p>_description_, defaults to ‘’</p>
 </dd>
-<dt><strong>construction_name</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
-</dd>
-<dt><strong>construction</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>construction</strong><span class="classifier">str</span></dt><dd><p>_description_, defaults to None</p>
 </dd>
 <dt><strong>boundary_condition</strong><span class="classifier">str</span></dt><dd><p>One of [‘Adiabatic’, ‘Exterior’, ‘Ground’, ‘Matched’], defaults to ‘Adiabatic’</p>
 </dd>
-<dt><strong>sun_exposure</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>sun_exposure</strong><span class="classifier">bool</span></dt><dd><p>True/False: the surface is incident to solar radiation, defaults to False</p>
 </dd>
-<dt><strong>wind_exposure</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>wind_exposure</strong><span class="classifier">bool</span></dt><dd><p>True/False: the surface experiences wind convection, defaults to False</p>
 </dd>
-<dt><strong>matched_surface_name</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>matched_surface_name</strong><span class="classifier">str</span></dt><dd><p>_description_, defaults to ‘’</p>
 </dd>
-<dt><strong>matched_surface</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>matched_surface</strong><span class="classifier">str</span></dt><dd><p>_description_, defaults to None</p>
 </dd>
-<dt><strong>infiltration</strong><span class="classifier">float</span></dt><dd><p>Units of {}</p>
+<dt><strong>infiltration</strong><span class="classifier">float</span></dt><dd><p>Units of {}, defaults to 0</p>
 </dd>
-<dt><strong>zone_name</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>zone_name</strong><span class="classifier">str</span></dt><dd><p>_description_, defaults to ‘’</p>
 </dd>
 <dt><strong>zone</strong><span class="classifier">str</span></dt><dd><p>defaults to None</p>
 </dd>
-<dt><strong>coordinates</strong><span class="classifier">list of float</span></dt><dd><p>_description_</p>
+<dt><strong>coordinates</strong><span class="classifier">list of _type_</span></dt><dd><p>_description_, defaults to []</p>
 </dd>
 </dl>
 </dd>
@@ -167,6 +166,7 @@
 <dl class="simple">
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.Point3d</span></code></dt><dd></dd>
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.Surface</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.convert</span></code></dt><dd></dd>
 </dl>
 </div>
 <p class="rubric">Notes</p>

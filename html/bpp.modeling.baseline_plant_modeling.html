@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bpp.modeling.baseline_plant_modeling module &mdash; EPUG air_systems test 0.0.2 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> EPUG air_systems test
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">bpp.modeling.baseline_plant_modeling module</a><ul>
+<li><a class="reference internal" href="#bpp.modeling.baseline_plant_modeling.baseline_leaving_condenser_water_temperature"><code class="docutils literal notranslate"><span class="pre">baseline_leaving_condenser_water_temperature()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.modeling.baseline_plant_modeling.get_baseline_year"><code class="docutils literal notranslate"><span class="pre">get_baseline_year()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.modeling.baseline_plant_modeling.write_baseline_chilled_water_loop_to_json"><code class="docutils literal notranslate"><span class="pre">write_baseline_chilled_water_loop_to_json()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.modeling.baseline_plant_modeling.write_baseline_condenser_loop_to_json"><code class="docutils literal notranslate"><span class="pre">write_baseline_condenser_loop_to_json()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.modeling.baseline_plant_modeling.write_baseline_hot_water_loop_to_json"><code class="docutils literal notranslate"><span class="pre">write_baseline_hot_water_loop_to_json()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">EPUG air_systems test</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>bpp.modeling.baseline_plant_modeling module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/bpp.modeling.baseline_plant_modeling.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-bpp.modeling.baseline_plant_modeling">
+<span id="bpp-modeling-baseline-plant-modeling-module"></span><h1>bpp.modeling.baseline_plant_modeling module<a class="headerlink" href="#module-bpp.modeling.baseline_plant_modeling" title="Permalink to this heading"></a></h1>
+<p>Module for articulating baseline plant system for the ASHRAE 90.1 baseline model.</p>
+<p class="rubric">Notes</p>
+<p>_description_ citation[<a href="#id3"><span class="problematic" id="id4">1_</span></a>]</p>
+<p class="rubric">References</p>
+<dl class="citation">
+<dt class="label" id="r19493cdcf759-1"><span class="brackets">1</span></dt>
+<dd><p>ANSI/ASHRAE/IES Standard 90.1-2016. (2016). Energy Standard
+for Buildings Except Low-Rise Residential Buildings. American
+Society of Heating, Refrigerating, and Air-Conditioning Engineers.</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.modeling.baseline_plant_modeling.baseline_leaving_condenser_water_temperature">
+<span class="sig-prename descclassname"><span class="pre">bpp.modeling.baseline_plant_modeling.</span></span><span class="sig-name descname"><span class="pre">baseline_leaving_condenser_water_temperature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">design_oa_wb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.modeling.baseline_plant_modeling.baseline_leaving_condenser_water_temperature" title="Permalink to this definition"></a></dt>
+<dd><p>Define the leaving condenser water temperature for loop design.</p>
+<p>_extended_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>design_oa_wb</strong><span class="classifier">float, optional</span></dt><dd><p>The cooling design condition outdoor air wetbulb temperature.
+Units of {°F}, by default None</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>leaving_cw_temperature</strong><span class="classifier">float</span></dt><dd><p>The leaving condenser water temperature. Units of {°F}</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Derived from 90.1 equation “Approach (10°F Range) = 25.72 - (0.24 x WB)”
+G3.1.3.11 - CW supply temperature shall be evaluated at 0.4% evaporative design OA wb
+55°F &lt;= OA WB &lt;= 90°F source[<a href="#id5"><span class="problematic" id="id6">1_</span></a>]</p>
+<p>todo Lookup design OA WB</p>
+<p class="rubric">References</p>
+<dl class="citation">
+<dt class="label" id="r642fad3f2013-1"><span class="brackets">1</span></dt>
+<dd><p>ANSI/ASHRAE/IES Standard 90.1-2016. (2016). Energy Standard
+for Buildings Except Low-Rise Residential Buildings. American
+Society of Heating, Refrigerating, and Air-Conditioning Engineers.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.modeling.baseline_plant_modeling.get_baseline_year">
+<span class="sig-prename descclassname"><span class="pre">bpp.modeling.baseline_plant_modeling.</span></span><span class="sig-name descname"><span class="pre">get_baseline_year</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">baseline_json_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.modeling.baseline_plant_modeling.get_baseline_year" title="Permalink to this definition"></a></dt>
+<dd><p>Get year from entered baseline code.</p>
+<p>Get entered baseline code (i.e. ‘90.1-2010 Appendix G’).
+Get a string with only the 90.1 code year.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>baseline_json_data</strong><span class="classifier">dict</span></dt><dd><p>_description_</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>baseline_code_year</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>_description_</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.modeling.baseline_plant_modeling.write_baseline_chilled_water_loop_to_json">
+<span class="sig-prename descclassname"><span class="pre">bpp.modeling.baseline_plant_modeling.</span></span><span class="sig-name descname"><span class="pre">write_baseline_chilled_water_loop_to_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">baseline_json_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">district_cooling_loop_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.modeling.baseline_plant_modeling.write_baseline_chilled_water_loop_to_json" title="Permalink to this definition"></a></dt>
+<dd><p>Write chilled water loop to baseline json.</p>
+<p>Write chilled water loop to baseline json. If district
+cooling, use proposed loop temperatures; otherwise, use 90.1 values.
+Write chilled water pump to baseline json. Write condenser loop,
+condenser pump, and cooling tower to baseline json. Write water-cooled
+chiller(s) to baseline json.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>baseline_json_data</strong><span class="classifier">dict</span></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>district_cooling_loop_data</strong><span class="classifier">dict, optional</span></dt><dd><p>_description_, by default None</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>baseline_json_data, chw_loop_uuid</strong><span class="classifier">tuple of dict and str</span></dt><dd><p>_description_</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>todo chw_pump[‘head’] = None  # todo Get from proposed somehow!!!!!</p>
+<p>todo chw_pump[‘turndown’] = None  # todo check?</p>
+<p>todo chiller[‘turndown’] = None  # todo</p>
+<p>todo chiller[‘entered_efficiency_value’] = 0.56  # todo Make this a lookup!!!!!!</p>
+<p>todo chiller[‘condenser_loop’] = condenser_loop_uuid  # todo write condenser loop</p>
+<p>todo chiller[‘performance’] = ??? #todo</p>
+<p>todo Determine chiller quantity based on total cooling load from a sizing run.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.modeling.baseline_plant_modeling.write_baseline_condenser_loop_to_json">
+<span class="sig-prename descclassname"><span class="pre">bpp.modeling.baseline_plant_modeling.</span></span><span class="sig-name descname"><span class="pre">write_baseline_condenser_loop_to_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">baseline_json_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.modeling.baseline_plant_modeling.write_baseline_condenser_loop_to_json" title="Permalink to this definition"></a></dt>
+<dd><p>Write condenser loop to baseline json.</p>
+<p>Write condenser loop to baseline json. Write
+condenser pump to baseline json. Write cooling
+tower to baseline json. Determine cooling tower
+efficiency (gpm/hp) based on baseline code year.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>baseline_json_data</strong><span class="classifier">dict</span></dt><dd><p>_description_</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>baseline_json_data, condenser_loop_uuid</strong><span class="classifier">tuple of dict and str</span></dt><dd><p>Returns the __dict__ of the <cite>baseline_json_data</cite> and the
+unique GUID string of the condenser loop.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Determine cooling tower efficiency (gpm/hp) based on baseline code year.
+source[<a href="#id7"><span class="problematic" id="id8">1_</span></a>]</p>
+<p class="rubric">References</p>
+<dl class="citation">
+<dt class="label" id="rb70662b116c2-1"><span class="brackets">1</span></dt>
+<dd><p>ANSI/ASHRAE/IES Standard 90.1-2016. (2016). Energy Standard
+for Buildings Except Low-Rise Residential Buildings. American
+Society of Heating, Refrigerating, and Air-Conditioning Engineers.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.modeling.baseline_plant_modeling.write_baseline_hot_water_loop_to_json">
+<span class="sig-prename descclassname"><span class="pre">bpp.modeling.baseline_plant_modeling.</span></span><span class="sig-name descname"><span class="pre">write_baseline_hot_water_loop_to_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">baseline_json_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">district_heating_loop_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.modeling.baseline_plant_modeling.write_baseline_hot_water_loop_to_json" title="Permalink to this definition"></a></dt>
+<dd><p>write hot water loop to baseline json</p>
+<p>If district heating, use proposed loop temperatures;
+otherwise, use 90.1 values.
+Write hot_water pump to baseline json.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>baseline_json_data</strong><span class="classifier">dict</span></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>district_heating_loop_data</strong><span class="classifier">dict, optional</span></dt><dd><p>_description_, by default None</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>baseline_json_data, hw_loop_uuid</strong><span class="classifier">tuple of dict and str</span></dt><dd><p>Returns the __dict__ of the <cite>baseline_json_data</cite> and the
+unique GUID string of the loop.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>_description_</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Noah K.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

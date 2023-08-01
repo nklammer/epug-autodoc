@@ -78,7 +78,7 @@
 <p>Module for creating subsurface constructions for the model.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="bpp.architecture.sub_surface_construction.SubSurfaceConstruction">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.architecture.sub_surface_construction.</span></span><span class="sig-name descname"><span class="pre">SubSurfaceConstruction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'d5ff04d3-3439-4c7d-880f-a0a5c592943c'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.sub_surface_construction.SubSurfaceConstruction" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.architecture.sub_surface_construction.</span></span><span class="sig-name descname"><span class="pre">SubSurfaceConstruction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'55383434-f74a-4ae3-bbb0-bd0cc0c4ed38'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.sub_surface_construction.SubSurfaceConstruction" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A class object to represent subsurface constructions</p>
 <p>_extended_summary_</p>
@@ -91,31 +91,30 @@
 </dd>
 <dt class="field-even">Attributes</dt>
 <dd class="field-even"><dl class="simple">
-<dt><strong>name</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd></dd>
+<dt><strong>uuid</strong><span class="classifier">str</span></dt><dd><p>A unique GUID string.</p>
 </dd>
-<dt><strong>uuid</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>type</strong><span class="classifier">str</span></dt><dd><p>The type of subsurface. One of [‘Window’, ‘Door’, …]</p>
 </dd>
-<dt><strong>type</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>center_of_glass_u_value</strong><span class="classifier">float</span></dt><dd><p>The u-value for the insulated glass unit at the center of glass (COG). Units of {Btu/ft2-h-°F}</p>
 </dd>
-<dt><strong>center_of_glass_u_value</strong><span class="classifier">float</span></dt><dd><p>_description_</p>
+<dt><strong>assembly_u_value</strong><span class="classifier">str</span></dt><dd><p>The u-value for the entire glazing assembly. Includes center-of-glass, edge-of-glass, and frame. Units of {Btu/ft2-h-°F}</p>
 </dd>
-<dt><strong>assembly_u_value</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>solar_heat_gain_coefficient</strong><span class="classifier">float</span></dt><dd><p>Units of {%}</p>
 </dd>
-<dt><strong>solar_heat_gain_coefficient</strong><span class="classifier">float</span></dt><dd><p>_description_</p>
+<dt><strong>visible_light_transmittance</strong><span class="classifier">float</span></dt><dd><p>Units of {%}</p>
 </dd>
-<dt><strong>visible_light_transmittance</strong><span class="classifier">float</span></dt><dd><p>_description_</p>
+<dt><strong>frame_material</strong><span class="classifier">str</span></dt><dd><p>The frame material. One of [‘’, …]</p>
 </dd>
-<dt><strong>frame_material</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>frame_width</strong><span class="classifier">float</span></dt><dd><p>The width of the frame. Units of {ft}</p>
 </dd>
-<dt><strong>frame_width</strong><span class="classifier">float</span></dt><dd><p>Units of {ft}</p>
+<dt><strong>frame_conductance</strong><span class="classifier">float</span></dt><dd><p>Units of {?}</p>
 </dd>
-<dt><strong>frame_conductance</strong><span class="classifier">type</span></dt><dd><p>Units of {}</p>
+<dt><strong>material_layers</strong><span class="classifier">list</span></dt><dd><p>An ordered list of material layers.</p>
 </dd>
-<dt><strong>material_layers</strong><span class="classifier">list</span></dt><dd><p>_description_</p>
+<dt><strong>material_layer_names</strong><span class="classifier">list of str</span></dt><dd><p>_description_</p>
 </dd>
-<dt><strong>material_layer_names</strong><span class="classifier">list</span></dt><dd><p>_description_</p>
-</dd>
-<dt><strong>material_thicknesses</strong><span class="classifier">list</span></dt><dd><p>Units of {inches}</p>
+<dt><strong>material_thicknesses</strong><span class="classifier">list of float</span></dt><dd><p>Units of {inches}</p>
 </dd>
 </dl>
 </dd>
@@ -169,6 +168,7 @@ add to a materials vector? distinguish between opaque and other layers?</p>
 <dl class="simple">
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.SimpleGlazing</span></code></dt><dd></dd>
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.Construction</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.getMaterials</span></code></dt><dd></dd>
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.MaterialVector</span></code></dt><dd></dd>
 </dl>
 </div>

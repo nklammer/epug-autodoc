@@ -78,7 +78,7 @@
 <p>Module for creating “shading surface” objects for the model.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="bpp.architecture.shading_surface.ShadingSurface">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.architecture.shading_surface.</span></span><span class="sig-name descname"><span class="pre">ShadingSurface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'23554a57-5b45-4d90-a25d-4865758730ea'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.shading_surface.ShadingSurface" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.architecture.shading_surface.</span></span><span class="sig-name descname"><span class="pre">ShadingSurface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'33a81ec2-50a2-4235-ad0e-97f151c56692'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.shading_surface.ShadingSurface" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A class object to represent the EnergyPlus <cite>ShadingSurface</cite> object</p>
 <p>_extended_summary_</p>
@@ -91,11 +91,10 @@
 </dd>
 <dt class="field-even">Attributes</dt>
 <dd class="field-even"><dl class="simple">
-<dt><strong>name</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd></dd>
+<dt><strong>uuid</strong><span class="classifier">str</span></dt><dd><p>A unique GUID string.</p>
 </dd>
-<dt><strong>uuid</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
-</dd>
-<dt><strong>coordinates</strong><span class="classifier">list</span></dt><dd><p>_description_</p>
+<dt><strong>coordinates</strong><span class="classifier">list of openstudio.Point3d objects</span></dt><dd><p>A list of <cite>openstudio.Point3d</cite> objects that defines a polygon.</p>
 </dd>
 </dl>
 </dd>
@@ -129,13 +128,13 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>model</strong><span class="classifier">openstudio.model.model</span></dt><dd><p>_description_</p>
+<dt><strong>model</strong><span class="classifier">openstudio.model.model</span></dt><dd><p>The openstudio model in memory.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><strong>shading_surface</strong><span class="classifier">openstudio.model.ShadingSurface</span></dt><dd><p>_description_</p>
+<dt><strong>shading_surface</strong><span class="classifier">openstudio.model.ShadingSurface</span></dt><dd><p>An OpenStudio <cite>OS:ShadingSurface</cite> object</p>
 </dd>
 </dl>
 </dd>
@@ -145,6 +144,7 @@
 <dl class="simple">
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.ShadingSurface</span></code></dt><dd></dd>
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.Point3d</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.convert</span></code></dt><dd></dd>
 </dl>
 </div>
 <p class="rubric">Notes</p>

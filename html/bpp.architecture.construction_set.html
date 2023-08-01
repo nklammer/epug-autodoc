@@ -79,7 +79,7 @@
 <p>Module for creating construction sets for the model.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="bpp.architecture.construction_set.ConstructionSet">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.architecture.construction_set.</span></span><span class="sig-name descname"><span class="pre">ConstructionSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'b94c4df5-6a6f-49f8-9a23-61b582afecf2'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.construction_set.ConstructionSet" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.architecture.construction_set.</span></span><span class="sig-name descname"><span class="pre">ConstructionSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'9c41b1a3-6304-4093-9a2f-24d2a37ec106'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.construction_set.ConstructionSet" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>An object class to twin the OpenStudio <cite>ConstructionSet</cite></p>
 <p>_extended_summary_</p>
@@ -92,31 +92,30 @@
 </dd>
 <dt class="field-even">Attributes</dt>
 <dd class="field-even"><dl class="simple">
-<dt><strong>name</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd></dd>
+<dt><strong>uuid</strong><span class="classifier">str</span></dt><dd><p>A unique GUID string.</p>
 </dd>
-<dt><strong>uuid</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>exterior_wall_construction</strong><span class="classifier">str</span></dt><dd><p>The <cite>!- Name</cite> of the exterior wall construction in the openstudio model.</p>
 </dd>
-<dt><strong>exterior_wall_construction</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>roof_construction</strong><span class="classifier">str</span></dt><dd><p>The <cite>!- Name</cite> of the roof construction in the openstudio model.</p>
 </dd>
-<dt><strong>roof_construction</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>exposed_floor_construction</strong><span class="classifier">str</span></dt><dd><p>The <cite>!- Name</cite> of the exposed floor construction in the openstudio model. AKA a floor construction with the <cite>!- Outdoors</cite> boundary condition.</p>
 </dd>
-<dt><strong>exposed_floor_construction</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>window_construction</strong><span class="classifier">str</span></dt><dd><p>The <cite>!- Name</cite> of the roof construction in the openstudio model.</p>
 </dd>
-<dt><strong>window_construction</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>skylight_construction</strong><span class="classifier">str</span></dt><dd><p>The <cite>!- Name</cite> of the skylight construction in the openstudio model.</p>
 </dd>
-<dt><strong>skylight_construction</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>door_construction</strong><span class="classifier">str</span></dt><dd><p>The <cite>!- Name</cite> of the door construction in the openstudio model.</p>
 </dd>
-<dt><strong>door_construction</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>interior_wall_construction</strong><span class="classifier">str</span></dt><dd><p>The <cite>!- Name</cite> of the interior wall construction in the openstudio model.</p>
 </dd>
-<dt><strong>interior_wall_construction</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>interior_ceiling_construction</strong><span class="classifier">str</span></dt><dd><p>The <cite>!- Name</cite> of the interior ceiling construction in the openstudio model.</p>
 </dd>
-<dt><strong>interior_ceiling_construction</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>interior_floor_construction</strong><span class="classifier">str</span></dt><dd><p>The <cite>!- Name</cite> of the floor construction in the openstudio model.</p>
 </dd>
-<dt><strong>interior_floor_construction</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>slab_construction</strong><span class="classifier">str</span></dt><dd><p>The <cite>!- Name</cite> of the ground-contact floor construction in the openstudio model.</p>
 </dd>
-<dt><strong>slab_construction</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
-</dd>
-<dt><strong>basement_wall_construction</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>basement_wall_construction</strong><span class="classifier">str</span></dt><dd><p>The <cite>!- Name</cite> of the ground-contact wall construction in the openstudio model.</p>
 </dd>
 </dl>
 </dd>

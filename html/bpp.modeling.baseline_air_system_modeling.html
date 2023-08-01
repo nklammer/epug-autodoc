@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bpp.modeling.baseline_air_system_modeling module &mdash; EPUG air_systems test 0.0.2 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> EPUG air_systems test
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">bpp.modeling.baseline_air_system_modeling module</a><ul>
+<li><a class="reference internal" href="#bpp.modeling.baseline_air_system_modeling.assign_baseline_zones_to_air_systems"><code class="docutils literal notranslate"><span class="pre">assign_baseline_zones_to_air_systems()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.modeling.baseline_air_system_modeling.calculate_fan_power"><code class="docutils literal notranslate"><span class="pre">calculate_fan_power()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.modeling.baseline_air_system_modeling.write_baseline_system_to_json"><code class="docutils literal notranslate"><span class="pre">write_baseline_system_to_json()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">EPUG air_systems test</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>bpp.modeling.baseline_air_system_modeling module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/bpp.modeling.baseline_air_system_modeling.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-bpp.modeling.baseline_air_system_modeling">
+<span id="bpp-modeling-baseline-air-system-modeling-module"></span><h1>bpp.modeling.baseline_air_system_modeling module<a class="headerlink" href="#module-bpp.modeling.baseline_air_system_modeling" title="Permalink to this heading"></a></h1>
+<p>Module for articulating baseline air system for the ASHRAE 90.1 baseline model.</p>
+<p class="rubric">Notes</p>
+<p>_description_ citation[<a href="#id1"><span class="problematic" id="id2">1_</span></a>]</p>
+<p class="rubric">References</p>
+<dl class="citation">
+<dt class="label" id="reef32b8f1ffe-1"><span class="brackets">1</span></dt>
+<dd><p>ANSI/ASHRAE/IES Standard 90.1-2016. (2016). Energy Standard
+for Buildings Except Low-Rise Residential Buildings. American
+Society of Heating, Refrigerating, and Air-Conditioning Engineers.</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.modeling.baseline_air_system_modeling.assign_baseline_zones_to_air_systems">
+<span class="sig-prename descclassname"><span class="pre">bpp.modeling.baseline_air_system_modeling.</span></span><span class="sig-name descname"><span class="pre">assign_baseline_zones_to_air_systems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">baseline_json_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.modeling.baseline_air_system_modeling.assign_baseline_zones_to_air_systems" title="Permalink to this definition"></a></dt>
+<dd><p>Edit the zone json data to include system assignments.</p>
+<p>Make a dictionary with each space type’s baseline
+category (for labs and vivaria). Make a dictionary
+referencing zones to their space types. Create a
+dictionary with each relevant zone_group_name as …
+Run through baseline systems to assign zones. Add
+remaining zone lists associated with building stories
+to master list. Run through all zone lists to assign
+each zone to its baseline system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>baseline_json_data</strong><span class="classifier">dict</span></dt><dd><p>_description_</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>baseline_json_data</strong><span class="classifier">dict</span></dt><dd><p>_description_</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>_description_</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.modeling.baseline_air_system_modeling.calculate_fan_power">
+<span class="sig-prename descclassname"><span class="pre">bpp.modeling.baseline_air_system_modeling.</span></span><span class="sig-name descname"><span class="pre">calculate_fan_power</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpp.modeling.baseline_air_system_modeling.calculate_fan_power" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates the fan power.</p>
+<p>todo write this with the same logic as in Excel so that it hardcoded in Python.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fan_power</strong><span class="classifier">float</span></dt><dd><p>defaults to None</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>_description_</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.modeling.baseline_air_system_modeling.write_baseline_system_to_json">
+<span class="sig-prename descclassname"><span class="pre">bpp.modeling.baseline_air_system_modeling.</span></span><span class="sig-name descname"><span class="pre">write_baseline_system_to_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">baseline_json_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system_uuid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cooling_loop_uuid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">heating_loop_uuid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.modeling.baseline_air_system_modeling.write_baseline_system_to_json" title="Permalink to this definition"></a></dt>
+<dd><p>Construct the json data for a primary air system based on the baseline system data.</p>
+<p>Read baseline system from baseline data. Write air
+system to baseline json with the same uuid as the
+baseline system. Use VAV system types and 90.1 fan
+curve if System 5-8. Set economizer. Set energy
+recovery type and effectiveness. Add baseline fan powers.
+Add airflow information. Define heating coil and
+humidification based on baseline system heating type.
+Define cooling coil based on baseline system cooling type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>baseline_json_data</strong><span class="classifier">dict</span></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>system_uuid</strong><span class="classifier">str</span></dt><dd><p>A unique GUID string.</p>
+</dd>
+<dt><strong>cooling_loop_uuid</strong><span class="classifier">str, optional</span></dt><dd><p>A unique GUID string, by default None</p>
+</dd>
+<dt><strong>heating_loop_uuid</strong><span class="classifier">str, optional</span></dt><dd><p>A unique GUID string, by default None</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>baseline_json_data</strong><span class="classifier">dict</span></dt><dd><p>_description_</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>_description_</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Noah K.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

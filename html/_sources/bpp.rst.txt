@@ -9,6 +9,7 @@ Subpackages
 
    bpp.air_systems
    bpp.architecture
+   bpp.modeling
    bpp.reporting
    bpp.schedules
 

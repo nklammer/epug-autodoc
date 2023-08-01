@@ -1,0 +1,7 @@
+bpp.modeling.object\_generation module
+======================================
+
+.. automodule:: bpp.modeling.object_generation
+   :members:
+   :undoc-members:
+   :show-inheritance:

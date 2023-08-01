@@ -78,7 +78,7 @@
 <p>Module for creating material objects for the model.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="bpp.architecture.material.Material">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.architecture.material.</span></span><span class="sig-name descname"><span class="pre">Material</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'e46fcc1c-dc21-4b96-b415-a1755ac20e06'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.material.Material" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.architecture.material.</span></span><span class="sig-name descname"><span class="pre">Material</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'d56c247a-f404-40c3-bfb9-765e9fb4339c'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.material.Material" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A class object to represent the EnergyPlus <cite>Material</cite> object</p>
 <p>_extended_summary_</p>
@@ -95,15 +95,14 @@
 <dl class="field-list simple">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>name</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd></dd>
+<dt><strong>uuid</strong><span class="classifier">str</span></dt><dd><p>A unique GUID string.</p>
 </dd>
-<dt><strong>uuid</strong><span class="classifier">str</span></dt><dd><p>_description_</p>
+<dt><strong>roughness</strong><span class="classifier">str</span></dt><dd><p>The qualitative description of material surface roughness. one of [‘Rough’, ‘Smooth’, …], defaults to ‘Rough’</p>
 </dd>
-<dt><strong>roughness</strong><span class="classifier">str</span></dt><dd><p>defaults to ‘Rough’</p>
+<dt><strong>thickness</strong><span class="classifier">float</span></dt><dd><p>The thickness of the material. Units of {inches}</p>
 </dd>
-<dt><strong>thickness</strong><span class="classifier">float</span></dt><dd><p>Units of {inches}</p>
-</dd>
-<dt><strong>conductivity</strong><span class="classifier">float</span></dt><dd><p>Units of {Btu⋅in/h-ft^2-°F}</p>
+<dt><strong>conductivity</strong><span class="classifier">float</span></dt><dd><p>The thermal conductivity. Units of {Btu⋅in/h-ft^2-°F}</p>
 </dd>
 <dt><strong>density</strong><span class="classifier">str</span></dt><dd><p>Units of {lbm/ft^3}</p>
 </dd>
@@ -115,11 +114,11 @@
 </dd>
 <dt><strong>visible_absorptance</strong><span class="classifier">float</span></dt><dd><p>Units of {%}</p>
 </dd>
-<dt><strong>air_layer</strong><span class="classifier">bool</span></dt><dd><p>Defaults to False</p>
+<dt><strong>air_layer</strong><span class="classifier">bool</span></dt><dd><p>True/False: is the material an air layer? Defaults to False</p>
 </dd>
-<dt><strong>no_mass</strong><span class="classifier">bool</span></dt><dd><p>Defaults to False</p>
+<dt><strong>no_mass</strong><span class="classifier">bool</span></dt><dd><p>True/False: is the material massless? Aka no thermal capacitance. Defaults to False</p>
 </dd>
-<dt><strong>thermal_resistance</strong><span class="classifier">float</span></dt><dd><p>Units of {ft2-h-°F/Btu}, defaults to None</p>
+<dt><strong>thermal_resistance</strong><span class="classifier">float</span></dt><dd><p>AKA R-value. Units of {ft2-h-°F/Btu}, defaults to None</p>
 </dd>
 </dl>
 </dd>
@@ -153,9 +152,9 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>model</strong><span class="classifier">openstudio.model.model</span></dt><dd><p>_description_</p>
+<dt><strong>model</strong><span class="classifier">openstudio.model.model</span></dt><dd><p>The openstudio model in memory to write to</p>
 </dd>
-<dt><strong>thickness</strong><span class="classifier">float, optional</span></dt><dd><p>units of {inches}, by default None</p>
+<dt><strong>thickness</strong><span class="classifier">float, optional</span></dt><dd><p>The thickess of the material. units of {inches}, by default None</p>
 </dd>
 </dl>
 </dd>
@@ -176,10 +175,11 @@
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.AirGap</span></code></dt><dd></dd>
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.MasslessOpaqueMaterial</span></code></dt><dd></dd>
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.StandardOpaqueMaterial</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.convert</span></code></dt><dd></dd>
 </dl>
 </div>
 <p class="rubric">Notes</p>
-<p>_description_</p>
+<p>The return behavior is odd.</p>
 </dd></dl>
 
 </dd></dl>
