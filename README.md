@@ -84,6 +84,24 @@ So for example that looks like this:
 $ C:\Users\puggy\Documents\GitHub\epug\documentation\web_docs>sphinx-apidoc --force --separate -o ./source ../../src/bpp
 ```
 
+Output:
+```
+(epug) C:\Users\nklammer\Documents\GitHub\epug\documentation\web_docs>sphinx-apidoc -o ./source ../../src/bpp
+Creating file ./source\bpp.rst.
+Creating file ./source\bpp.air_systems.rst. 
+Creating file ./source\bpp.architecture.rst.
+Creating file ./source\bpp.modeling.rst.
+Creating file ./source\bpp.plant.rst.
+Creating file ./source\bpp.program.rst.
+Creating file ./source\bpp.project.rst.
+Creating file ./source\bpp.reporting.rst.
+Creating file ./source\bpp.reporting.QC.rst.
+Creating file ./source\bpp.schedules.rst.
+Creating file ./source\bpp.ui_functions.rst.
+Creating file ./source\bpp.weather.rst.
+Creating file ./source\modules.rst.
+```
+
 #### `auto*::` directives = `autodoc`
 
 However, `sphinx-apidoc` merely generates "stubs" for each of your modules. The stubs contain `automodule::` ReST directives which in turn inform `sphinx-build` (aliased through `make html`) to invoke `autodoc` to do the heavy lifting of actually generating the API documentation from the docstrings of a particular module. I've found that out of the box, I just get a screenful of `ImportError`'s from `autodoc` during `sphinx-build`.
