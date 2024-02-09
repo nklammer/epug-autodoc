@@ -120,7 +120,7 @@ $ C:\Users\puggy\Documents\GitHub\epug\documentation\web_docs>make html
 ```
 # An important note for larger repository structures
 
-If you have a complicated repository structure, you may need to explicitly place `__init__.py` files at the level of the subpackage. Even though `__init__.py` files are no longer required in Python 3.X, Sphinx still uses them to find your modules that you want documented.
+If you have a complicated repository structure, you may need to explicitly place `__init__.py` files at the level of the subpackage and parent package (e.g., at ./src and at ./src/bpp). Even though `__init__.py` files are no longer required in Python 3.X, Sphinx still uses them to find your modules that you want documented.
 
 # To-do
 
