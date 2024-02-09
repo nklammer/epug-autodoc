@@ -41,7 +41,7 @@ This will be your Sphinx Root Directory.
 $ C:\Users\puggy\Documents\GitHub\epug\documentation\web_docs>sphinx-quickstart
 ```
 
-Just enter through all the default arguments. The Sphinx Root Directory now looks like this
+Enter through all the arguments (Project Name, Author, "Y" to separate source and build directories). The Sphinx Root Directory now looks like this:
 
 ```
 web_docs
