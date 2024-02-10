@@ -125,15 +125,25 @@ While using sphinx.ext.autodoc makes keeping the code and the documentation in s
 
 Pay attention to which `*.rst` files have the `.. autosummary::` directive!
 
+*Troubleshoot:* if the build has the tree of modules and submodules, then apidoc is working but autodoc is not working.
+
 ### building the html documentation
 
 Run the `Makefile` that comes from using the `sphinx-quickstart` command. This is an
 alias for `sphinx-build -b html`. [Citation](https://www.sphinx-doc.org/en/master/man/sphinx-build.html)
 
 ```
-$ C:\Users\puggy\Documents\GitHub\epug\documentation\web_docs>make clean
-$ C:\Users\puggy\Documents\GitHub\epug\documentation\web_docs>make html
+$ C:\Users\puggy\Documents\GitHub\epug\documentation>cd sphinx_root
+$ C:\Users\puggy\Documents\GitHub\epug\documentation\sphinx_root>make clean
+$ C:\Users\puggy\Documents\GitHub\epug\documentation\sphinx_root>make html
 ```
+
+Troubleshoot/debug
+```
+$ C:\Users\puggy\Documents\GitHub\epug\documentation\sphinx_root>set SPHINXOPTS "-vvv"
+$ C:\Users\puggy\Documents\GitHub\epug\documentation\sphinx_root>make html
+```
+
 # An important note for larger repository structures
 
 If you have a complicated repository structure, you may need to explicitly place `__init__.py` files at the level of the subpackage and parent package (e.g., at ./src and at ./src/bpp). Even though `__init__.py` files are no longer required in Python 3.X, Sphinx still uses them to find your modules that you want documented.
