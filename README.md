@@ -140,7 +140,7 @@ $ C:\Users\puggy\Documents\GitHub\epug\documentation\sphinx_root>make html
 
 Troubleshoot/debug
 ```
-$ C:\Users\puggy\Documents\GitHub\epug\documentation\sphinx_root>set SPHINXOPTS "-vvv"
+$ C:\Users\puggy\Documents\GitHub\epug\documentation\sphinx_root>set SPHINXOPTS "-vvv -W"
 $ C:\Users\puggy\Documents\GitHub\epug\documentation\sphinx_root>make html
 ```
 
