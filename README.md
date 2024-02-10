@@ -29,22 +29,21 @@ results in
 ### Make directory and navigate to
 
 ```
-$ C:\Users\puggy\Documents\GitHub\epug\documentation>mkdir web_docs
-$ C:\Users\puggy\Documents\GitHub\epug\documentation>cd web_docs
-$ C:\Users\puggy\Documents\GitHub\epug\documentation\web_docs>
+$ C:\Users\puggy\Documents\GitHub\epug\documentation>mkdir sphinx_root
+$ C:\Users\puggy\Documents\GitHub\epug\documentation>
 ```
-This will be your Sphinx Root Directory.
+"sphinx_root" will be your Sphinx Root Directory.
 
 ### Run `sphinx-quickstart`
 
 ```
-$ C:\Users\puggy\Documents\GitHub\epug\documentation\web_docs>sphinx-quickstart
+$ C:\Users\puggy\Documents\GitHub\epug\documentation\web_docs>sphinx-quickstart sphinx_root
 ```
 
 Enter through all the arguments (Project Name, Author, "Y" to separate source and build directories). The Sphinx Root Directory now looks like this:
 
 ```
-web_docs
+sphinx_root
   |
   |__build
   |__source
@@ -54,6 +53,11 @@ web_docs
   |__make.bat
   |__Makefile
 ```
+### Check Step: Build the skeleton index.rst
+```
+$ sphinx-build -M html sphinx_root/source/ sphinx_root/build/
+```
+
 
 ### Edit the `source\conf.py` file
 
@@ -72,7 +76,7 @@ See the code block at the bottom of this guide.
 
 ### sphinx-apidoc [(link)](https://www.sphinx-doc.org/en/master/man/sphinx-apidoc.html#sphinx-apidoc)
 
-sphinx-apidoc is a tool for automatic generation of Sphinx sources that, using the autodoc extension, documents a whole package in the style of other automatic API documentation tools. sphinx-apidoc generates source files that use `sphinx.ext.autodoc` to document all found modules.  Use `--separate` option for more pages. Use the `--force` option for overriding the stubs. Note that the MODULE_PATH arg is relative to the Sphinx wdir in `/docs/` 
+sphinx-apidoc is a tool for automatic generation of Sphinx sources that, using the autodoc extension, documents a whole package in the style of other automatic API documentation tools. sphinx-apidoc generates source files that use `sphinx.ext.autodoc` to document all found modules.  Use `--separate` option for more pages. Use the `--force` option for overriding the stubs. Use the `--implicit-namespaces` option to look for namespace packages (vs. regular packages, the primary distinction is the inclusion of the `__init__.py`). Note that the MODULE_PATH arg is relative to the Sphinx wdir in `/docs/` 
 
 ```
 sphinx-apidoc -o <OUTPUT> <SOURCE_FILES>
@@ -81,7 +85,7 @@ sphinx-apidoc -o <OUTPUT> <SOURCE_FILES>
 So for example that looks like this:
 
 ```
-$ C:\Users\puggy\Documents\GitHub\epug\documentation\web_docs>sphinx-apidoc --force --separate -o ./source ../../src/bpp
+$ C:\Users\puggy\Documents\GitHub\epug\documentation\web_docs>sphinx-apidoc --force --implicit-namespaces --separate -o ./source ../../src/bpp
 ```
 
 Output:
@@ -102,30 +106,30 @@ Creating file ./source\bpp.weather.rst.
 Creating file ./source\modules.rst.
 ```
 
-#### `auto*::` directives = `autodoc`
-
-However, `sphinx-apidoc` merely generates "stubs" for each of your modules. The stubs contain `automodule::` ReST directives which in turn inform `sphinx-build` (aliased through `make html`) to invoke `autodoc` to do the heavy lifting of actually generating the API documentation from the docstrings of a particular module. I've found that out of the box, I just get a screenful of `ImportError`'s from `autodoc` during `sphinx-build`.
+#### `sphinx-apidoc`
+This CLI command generates "stubs" for each of your modules. The stubs contain `automodule::` ReST directives which in turn inform `sphinx-build` (aliased through `make html`) to invoke `autodoc` to do the heavy lifting of actually generating the API documentation from the docstrings of a particular module. I've found that out of the box, I just get a screenful of `ImportError`'s from `autodoc` during `sphinx-build`.
 
 To ensure that `sphinx-build` can import your package and generate some lovely API documentation (and that all important module index; `py-modindex`), simply uncommment this line near the top of the `conf.py` and those warnings should disappear.
 
 ### sphinx.ext.autodoc
-Continuing, if we want Sphinx to autogenerate documentation from the comments of our code using the `autodoc` extension, we have to point Sphinx to the directory in which our Python source codes reside. 
+Continuing, if we want Sphinx to autogenerate documentation from the docstrings of our code, we can use the `autodoc` extension. 
+
+we have to point Sphinx to the directory in which our Python source codes reside. 
 ```
 sys.path.insert(0, os.path.abspath('../../air_systems'))
 print(str(sys.path))
 ```
+**Still not there yet!**  the sphinx.ext.autodoc can only read and understand RST instructions in the comments. We have to use sphinx.ext.napoleon to take our numpydoc docstrings and turn it into RST format that sphinx.ext.autodoc can read.
+
 
 Now let’s see how we can auto-generate documentation from the docstrings in our Python source files. The `sphinx-apidoc` command can be used to auto-generate some .rst files for our Python module.
  https://sphinx-rtd-tutorial.readthedocs.io/en/latest/build-the-docs.html#generating-documentation-from-docstrings
 
 
-While using sphinx.ext.autodoc makes keeping the code and
-the documentation in sync much easier, it still requires
-you to write an auto* directive for every object you want to
-document. Sphinx provides yet another level of automation: the [`autosummary`](https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html
-) extension.
-
 ### sphinx.ext.autosummary
+While using sphinx.ext.autodoc makes keeping the code and the documentation in sync much easier, it still requires you to write an auto* (`automodule::`, `autofunction::`, `etc.`) directive for every object you want to document. Sphinx provides yet another level of automation: the **autosummary** extension.
+
+Pay attention to which `*.rst` files have the `.. autosummary::` directive!
 
 ### building the html documentation
 
