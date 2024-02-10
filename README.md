@@ -30,14 +30,13 @@ results in
 
 ```
 $ C:\Users\puggy\Documents\GitHub\epug\documentation>mkdir sphinx_root
-$ C:\Users\puggy\Documents\GitHub\epug\documentation>
 ```
 "sphinx_root" will be your Sphinx Root Directory.
 
 ### Run `sphinx-quickstart`
 
 ```
-$ C:\Users\puggy\Documents\GitHub\epug\documentation\web_docs>sphinx-quickstart sphinx_root
+$ C:\Users\puggy\Documents\GitHub\epug\documentation>sphinx-quickstart sphinx_root
 ```
 
 Enter through all the arguments (Project Name, Author, "Y" to separate source and build directories). The Sphinx Root Directory now looks like this:
@@ -61,7 +60,7 @@ $ sphinx-build -M html sphinx_root/source/ sphinx_root/build/
 
 ### Edit the `source\conf.py` file
 
-See the code block at the bottom of this guide.
+See the code block at the bottom of this guide. One thing to note is that the os.path.abspath is read from the calling python file, meaning that the relative path has to be in relation to the conf.py file. This is different that passing path arguments to the command line where the relative path is in relation to the working directory.
 
 * `import os, sys`
 * `sys.path.insert(0, os.path.abspath('../../../src'))`
@@ -85,25 +84,20 @@ sphinx-apidoc -o <OUTPUT> <SOURCE_FILES>
 So for example that looks like this:
 
 ```
-$ C:\Users\puggy\Documents\GitHub\epug\documentation\web_docs>sphinx-apidoc --force --implicit-namespaces --separate -o ./source ../../src/bpp
+$ C:\Users\puggy\Documents\GitHub\epug\documentation>sphinx-apidoc --force --implicit-namespaces --separate -o sphinx_root/source ../src/bpp/air_systems
 ```
 
 Output:
 ```
-(epug) C:\Users\nklammer\Documents\GitHub\epug\documentation\web_docs>sphinx-apidoc -o ./source ../../src/bpp
-Creating file ./source\bpp.rst.
-Creating file ./source\bpp.air_systems.rst. 
-Creating file ./source\bpp.architecture.rst.
-Creating file ./source\bpp.modeling.rst.
-Creating file ./source\bpp.plant.rst.
-Creating file ./source\bpp.program.rst.
-Creating file ./source\bpp.project.rst.
-Creating file ./source\bpp.reporting.rst.
-Creating file ./source\bpp.reporting.QC.rst.
-Creating file ./source\bpp.schedules.rst.
-Creating file ./source\bpp.ui_functions.rst.
-Creating file ./source\bpp.weather.rst.
-Creating file ./source\modules.rst.
+Creating file web_docs/source\air_systems.rst.
+Creating file web_docs/source\air_systems.fan.rst.
+Creating file web_docs/source\air_systems.fancurve.rst.
+Creating file web_docs/source\air_systems.primary_air_system.rst.
+Creating file web_docs/source\air_systems.vrf_system.rst.
+Creating file web_docs/source\air_systems.zone_hvac.rst.
+Creating file web_docs/source\air_systems.tests.rst.
+Creating file web_docs/source\air_systems.tests.test_air_systems.rst.
+Creating file web_docs/source\modules.rst.
 ```
 
 #### `sphinx-apidoc`
