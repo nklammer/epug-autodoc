@@ -1,0 +1,7 @@
+bpp.reporting.inputs\_summary\_tables module
+============================================
+
+.. automodule:: bpp.reporting.inputs_summary_tables
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+bpp.reporting.QC.ConversionFunctions module
+===========================================
+
+.. automodule:: bpp.reporting.QC.ConversionFunctions
+   :members:
+   :undoc-members:
+   :show-inheritance:

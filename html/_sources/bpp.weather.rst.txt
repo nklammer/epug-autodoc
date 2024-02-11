@@ -1,0 +1,12 @@
+bpp.weather namespace
+=====================
+
+.. py:module:: bpp.weather
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bpp.weather.design_days

@@ -1,5 +1,15 @@
-bpp.reporting package
-=====================
+bpp.reporting namespace
+=======================
+
+.. py:module:: bpp.reporting
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bpp.reporting.QC
 
 Submodules
 ----------
@@ -12,13 +22,9 @@ Submodules
    bpp.reporting.PCI
    bpp.reporting.UtilityRates
    bpp.reporting.ZoneComponentLoadReport
-   bpp.reporting.model
+   bpp.reporting.energy_costs
+   bpp.reporting.energy_use
+   bpp.reporting.inputs_summary_tables
    bpp.reporting.output_variables
-
-Module contents
----------------
-
-.. automodule:: bpp.reporting
-   :members:
-   :undoc-members:
-   :show-inheritance:
+   bpp.reporting.simulation
+   bpp.reporting.sql_to_json

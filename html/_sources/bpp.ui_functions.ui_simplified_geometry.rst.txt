@@ -1,0 +1,7 @@
+bpp.ui\_functions.ui\_simplified\_geometry module
+=================================================
+
+.. automodule:: bpp.ui_functions.ui_simplified_geometry
+   :members:
+   :undoc-members:
+   :show-inheritance:

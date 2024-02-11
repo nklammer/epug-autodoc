@@ -1,0 +1,7 @@
+bpp.reporting.energy\_costs module
+==================================
+
+.. automodule:: bpp.reporting.energy_costs
+   :members:
+   :undoc-members:
+   :show-inheritance:

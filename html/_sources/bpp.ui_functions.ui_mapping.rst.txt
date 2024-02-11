@@ -1,0 +1,7 @@
+bpp.ui\_functions.ui\_mapping module
+====================================
+
+.. automodule:: bpp.ui_functions.ui_mapping
+   :members:
+   :undoc-members:
+   :show-inheritance:

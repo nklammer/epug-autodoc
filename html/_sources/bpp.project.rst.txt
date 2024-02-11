@@ -1,0 +1,12 @@
+bpp.project namespace
+=====================
+
+.. py:module:: bpp.project
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bpp.project.project

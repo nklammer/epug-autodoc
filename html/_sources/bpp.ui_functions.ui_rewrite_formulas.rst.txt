@@ -1,0 +1,7 @@
+bpp.ui\_functions.ui\_rewrite\_formulas module
+==============================================
+
+.. automodule:: bpp.ui_functions.ui_rewrite_formulas
+   :members:
+   :undoc-members:
+   :show-inheritance:

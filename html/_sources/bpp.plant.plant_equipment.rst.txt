@@ -1,0 +1,7 @@
+bpp.plant.plant\_equipment module
+=================================
+
+.. automodule:: bpp.plant.plant_equipment
+   :members:
+   :undoc-members:
+   :show-inheritance:

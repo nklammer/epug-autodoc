@@ -1,0 +1,7 @@
+bpp.program.process\_equipment module
+=====================================
+
+.. automodule:: bpp.program.process_equipment
+   :members:
+   :undoc-members:
+   :show-inheritance:

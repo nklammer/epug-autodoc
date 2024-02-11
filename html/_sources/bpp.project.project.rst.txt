@@ -1,0 +1,7 @@
+bpp.project.project module
+==========================
+
+.. automodule:: bpp.project.project
+   :members:
+   :undoc-members:
+   :show-inheritance:

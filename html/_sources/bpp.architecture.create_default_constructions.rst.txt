@@ -1,7 +1,0 @@
-bpp.architecture.create\_default\_constructions module
-======================================================
-
-.. automodule:: bpp.architecture.create_default_constructions
-   :members:
-   :undoc-members:
-   :show-inheritance:

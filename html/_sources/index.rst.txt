@@ -1,15 +1,24 @@
-.. AEI EPUG documentation master file, created by
-   sphinx-quickstart on Wed Jul 19 16:05:53 2023.
+.. Model Hub documentation master file, created by
+   sphinx-quickstart on Sat Feb 10 09:55:29 2024.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to AEI EPUG's documentation!
-====================================
+Welcome to Model Hub's documentation!
+=====================================
+
+This documentation provides an overview of the API for the Model Hub project. Model Hub is a project that aims to provide a programmatic way of generating and simulating building energy models based on company best practices and building design information accessed through the DesignHub API.
+
+To get started, please refer to the following sections:
+
+- :ref:`genindex` - General index of all available models.
+- :ref:`modindex` - Index of modules and packages used in the project.
+- :ref:`search` - Search functionality to find specific models or topics.
+
+For more information about the project and to contribute, please visit our GitHub repository: `Model Hub on GitHub <https://github.com/aeieng/epug>`_.
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-
 
 
 Indices and tables

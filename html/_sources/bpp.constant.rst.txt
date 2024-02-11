@@ -1,7 +1,0 @@
-bpp.constant module
-===================
-
-.. automodule:: bpp.constant
-   :members:
-   :undoc-members:
-   :show-inheritance:

@@ -1,5 +1,7 @@
-bpp package
-===========
+bpp namespace
+=============
+
+.. py:module:: bpp
 
 Subpackages
 -----------
@@ -9,9 +11,15 @@ Subpackages
 
    bpp.air_systems
    bpp.architecture
+   bpp.archive
    bpp.modeling
+   bpp.plant
+   bpp.program
+   bpp.project
    bpp.reporting
    bpp.schedules
+   bpp.ui_functions
+   bpp.weather
 
 Submodules
 ----------
@@ -21,11 +29,3 @@ Submodules
 
    bpp.constant
    bpp.entry
-
-Module contents
----------------
-
-.. automodule:: bpp
-   :members:
-   :undoc-members:
-   :show-inheritance:

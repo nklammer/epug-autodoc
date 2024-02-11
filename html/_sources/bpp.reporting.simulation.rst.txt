@@ -1,0 +1,7 @@
+bpp.reporting.simulation module
+===============================
+
+.. automodule:: bpp.reporting.simulation
+   :members:
+   :undoc-members:
+   :show-inheritance:

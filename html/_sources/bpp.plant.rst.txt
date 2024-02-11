@@ -1,0 +1,14 @@
+bpp.plant namespace
+===================
+
+.. py:module:: bpp.plant
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bpp.plant.plant_equipment
+   bpp.plant.plant_loop
+   bpp.plant.pump

@@ -1,0 +1,7 @@
+bpp.reporting.sql\_to\_json module
+==================================
+
+.. automodule:: bpp.reporting.sql_to_json
+   :members:
+   :undoc-members:
+   :show-inheritance:

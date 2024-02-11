@@ -1,5 +1,7 @@
-bpp.schedules package
-=====================
+bpp.schedules namespace
+=======================
+
+.. py:module:: bpp.schedules
 
 Submodules
 ----------
@@ -11,11 +13,3 @@ Submodules
    bpp.schedules.schedule_functions
    bpp.schedules.schedule_library
    bpp.schedules.schedules
-
-Module contents
----------------
-
-.. automodule:: bpp.schedules
-   :members:
-   :undoc-members:
-   :show-inheritance:

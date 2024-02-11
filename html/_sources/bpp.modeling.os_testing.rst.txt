@@ -1,7 +1,0 @@
-bpp.modeling.os\_testing module
-===============================
-
-.. automodule:: bpp.modeling.os_testing
-   :members:
-   :undoc-members:
-   :show-inheritance:

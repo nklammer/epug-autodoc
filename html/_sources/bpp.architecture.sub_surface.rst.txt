@@ -1,7 +1,0 @@
-bpp.architecture.sub\_surface module
-====================================
-
-.. automodule:: bpp.architecture.sub_surface
-   :members:
-   :undoc-members:
-   :show-inheritance:

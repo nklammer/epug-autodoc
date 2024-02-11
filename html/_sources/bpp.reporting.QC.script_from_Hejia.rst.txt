@@ -1,0 +1,7 @@
+bpp.reporting.QC.script\_from\_Hejia module
+===========================================
+
+.. automodule:: bpp.reporting.QC.script_from_Hejia
+   :members:
+   :undoc-members:
+   :show-inheritance:

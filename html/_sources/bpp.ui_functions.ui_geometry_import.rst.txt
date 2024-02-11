@@ -1,0 +1,7 @@
+bpp.ui\_functions.ui\_geometry\_import module
+=============================================
+
+.. automodule:: bpp.ui_functions.ui_geometry_import
+   :members:
+   :undoc-members:
+   :show-inheritance:

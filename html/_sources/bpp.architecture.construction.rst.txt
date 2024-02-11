@@ -1,7 +1,0 @@
-bpp.architecture.construction module
-====================================
-
-.. automodule:: bpp.architecture.construction
-   :members:
-   :undoc-members:
-   :show-inheritance:

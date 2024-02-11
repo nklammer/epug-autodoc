@@ -1,0 +1,7 @@
+bpp.weather.design\_days module
+===============================
+
+.. automodule:: bpp.weather.design_days
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,14 @@
+bpp.reporting.QC namespace
+==========================
+
+.. py:module:: bpp.reporting.QC
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bpp.reporting.QC.ConversionFunctions
+   bpp.reporting.QC.qc
+   bpp.reporting.QC.script_from_Hejia

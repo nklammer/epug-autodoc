@@ -1,7 +1,0 @@
-bpp.modeling.baseline\_plant\_modeling module
-=============================================
-
-.. automodule:: bpp.modeling.baseline_plant_modeling
-   :members:
-   :undoc-members:
-   :show-inheritance:

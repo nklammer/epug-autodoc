@@ -1,0 +1,770 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2024-02-11T15:52:22-05:00" /><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
+
+    <!-- Generated with Sphinx 7.1.2 and Furo 2024.01.29 -->
+        <title>bpp.plant.plant_equipment module - Model Hub @ AEI 0.0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=36a5483c" />
+    <link rel="stylesheet" type="text/css" href="_static/aei_colors.css?v=8c2954af" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">Model Hub @ AEI 0.0.3 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="_static/aei_logo.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Model Hub @ AEI 0.0.3 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="module-bpp.plant.plant_equipment">
+<span id="bpp-plant-plant-equipment-module"></span><h1>bpp.plant.plant_equipment module<a class="headerlink" href="#module-bpp.plant.plant_equipment" title="Permalink to this heading">#</a></h1>
+<p>Module for modeling plant-side equipment.</p>
+<p class="rubric">Notes</p>
+<p>description citation <a class="reference internal" href="#r864fbe802bff-1" id="id1">[1]</a></p>
+<p class="rubric">References</p>
+<div role="list" class="citation-list">
+<div class="citation" id="r864fbe802bff-1" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>ANSI/ASHRAE/IES Standard 90.1-2016. (2016). Energy Standard
+for Buildings Except Low-Rise Residential Buildings. American
+Society of Heating, Refrigerating, and Air-Conditioning Engineers.</p>
+</div>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="bpp.plant.plant_equipment.Boiler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.plant.plant_equipment.</span></span><span class="sig-name descname"><span class="pre">Boiler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'70a080e5-f97e-4bfd-bd97-1fc0a34b0013'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.plant.plant_equipment.Boiler" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bpp.plant.plant_equipment.PlantEquipment" title="bpp.plant.plant_equipment.PlantEquipment"><code class="xref py py-class docutils literal notranslate"><span class="pre">PlantEquipment</span></code></a></p>
+<p>An object class to represent a boiler on a plant loop.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>id</strong><span class="classifier">str, optional</span></dt><dd><p>The UUID of the object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.plant.plant_equipment.Boiler.convert_capacity_and_efficiency" title="bpp.plant.plant_equipment.Boiler.convert_capacity_and_efficiency"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_capacity_and_efficiency</span></code></a>()</p></td>
+<td><p>Method to convert standard capacities and efficiencies</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#bpp.plant.plant_equipment.Boiler.set_values" title="bpp.plant.plant_equipment.Boiler.set_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_values</span></code></a>(input_values)</p></td>
+<td><p>Updates the <cite>__dict__</cite> of the class object and runs the unit conversion</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.plant.plant_equipment.Boiler.write_to_os" title="bpp.plant.plant_equipment.Boiler.write_to_os"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_to_os</span></code></a>(model)</p></td>
+<td><p>Method to write Boiler object to the model in memory</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.plant.plant_equipment.Boiler.convert_capacity_and_efficiency">
+<span class="sig-name descname"><span class="pre">convert_capacity_and_efficiency</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpp.plant.plant_equipment.Boiler.convert_capacity_and_efficiency" title="Permalink to this definition">#</a></dt>
+<dd><p>Method to convert standard capacities and efficiencies</p>
+<p>Writes attributes from other attributes. Todo: is this the best way to manipulate data?</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.convert</span></code></dt><dd><p>unit conversion utility from OpenStudio SDK</p>
+</dd>
+</dl>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.plant.plant_equipment.Boiler.set_values">
+<span class="sig-name descname"><span class="pre">set_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.plant.plant_equipment.Boiler.set_values" title="Permalink to this definition">#</a></dt>
+<dd><p>Updates the <cite>__dict__</cite> of the class object and runs the unit conversion</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.plant.plant_equipment.Boiler.write_to_os">
+<span class="sig-name descname"><span class="pre">write_to_os</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.plant.plant_equipment.Boiler.write_to_os" title="Permalink to this definition">#</a></dt>
+<dd><p>Method to write Boiler object to the model in memory</p>
+<p>_extended_description</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.openstudiomodelstraightcomponent.BoilerHotWater</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.getPlantLoopByName</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">plant_loop.addSupplyBranchForComponent</span></code></dt><dd></dd>
+</dl>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="bpp.plant.plant_equipment.Chiller">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.plant.plant_equipment.</span></span><span class="sig-name descname"><span class="pre">Chiller</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'4763b99c-16c8-410b-832e-a5e5b85875ea'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.plant.plant_equipment.Chiller" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bpp.plant.plant_equipment.PlantEquipment" title="bpp.plant.plant_equipment.PlantEquipment"><code class="xref py py-class docutils literal notranslate"><span class="pre">PlantEquipment</span></code></a></p>
+<p>An object class to represent a chiller on a plant loop.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>id</strong><span class="classifier">str, optional</span></dt><dd><p>The UUID of the object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.plant.plant_equipment.Chiller.convert_capacity_and_efficiency" title="bpp.plant.plant_equipment.Chiller.convert_capacity_and_efficiency"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_capacity_and_efficiency</span></code></a>()</p></td>
+<td><p>Method to convert standard capacities and efficiencies</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#bpp.plant.plant_equipment.Chiller.set_values" title="bpp.plant.plant_equipment.Chiller.set_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_values</span></code></a>(input_values)</p></td>
+<td><p>Updates the <cite>__dict__</cite> of the class object and runs the unit conversion</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.plant.plant_equipment.Chiller.write_to_os" title="bpp.plant.plant_equipment.Chiller.write_to_os"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_to_os</span></code></a>(model)</p></td>
+<td><p>Method to write chiller object to the model in memory</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.plant.plant_equipment.Chiller.convert_capacity_and_efficiency">
+<span class="sig-name descname"><span class="pre">convert_capacity_and_efficiency</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpp.plant.plant_equipment.Chiller.convert_capacity_and_efficiency" title="Permalink to this definition">#</a></dt>
+<dd><p>Method to convert standard capacities and efficiencies</p>
+<p>Writes attributes from other attributes. Todo: is this the best way to manipulate data?</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.convert</span></code></dt><dd><p>unit conversion utility from OpenStudio SDK</p>
+</dd>
+</dl>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.plant.plant_equipment.Chiller.set_values">
+<span class="sig-name descname"><span class="pre">set_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.plant.plant_equipment.Chiller.set_values" title="Permalink to this definition">#</a></dt>
+<dd><p>Updates the <cite>__dict__</cite> of the class object and runs the unit conversion</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.plant.plant_equipment.Chiller.write_to_os">
+<span class="sig-name descname"><span class="pre">write_to_os</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.plant.plant_equipment.Chiller.write_to_os" title="Permalink to this definition">#</a></dt>
+<dd><p>Method to write chiller object to the model in memory</p>
+<p>_extended_description</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>model</strong><span class="classifier">openstudio.model.model</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.openstudiomodelhvac.ChillerElectricEIR</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.getPlantLoopByName</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">plant_loop.addDemandBranchForComponent</span></code></dt><dd></dd>
+</dl>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="bpp.plant.plant_equipment.CoolingTower">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.plant.plant_equipment.</span></span><span class="sig-name descname"><span class="pre">CoolingTower</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'a9105fc4-92c1-4919-ae22-eb1fa7163353'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.plant.plant_equipment.CoolingTower" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bpp.plant.plant_equipment.PlantEquipment" title="bpp.plant.plant_equipment.PlantEquipment"><code class="xref py py-class docutils literal notranslate"><span class="pre">PlantEquipment</span></code></a></p>
+<p>An object class to represent a cooling tower on a plant loop.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>id</strong><span class="classifier">str, optional</span></dt><dd><p>The UUID of the object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.plant.plant_equipment.CoolingTower.convert_capacity_and_efficiency" title="bpp.plant.plant_equipment.CoolingTower.convert_capacity_and_efficiency"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_capacity_and_efficiency</span></code></a>()</p></td>
+<td><p>Method to convert standard capacities and efficiencies</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#bpp.plant.plant_equipment.CoolingTower.set_values" title="bpp.plant.plant_equipment.CoolingTower.set_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_values</span></code></a>(input_values)</p></td>
+<td><p>Updates the <cite>__dict__</cite> of the class object and runs the unit conversion</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.plant.plant_equipment.CoolingTower.write_to_os" title="bpp.plant.plant_equipment.CoolingTower.write_to_os"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_to_os</span></code></a>(model)</p></td>
+<td><p>Method to write chiller object to the model in memory</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.plant.plant_equipment.CoolingTower.convert_capacity_and_efficiency">
+<span class="sig-name descname"><span class="pre">convert_capacity_and_efficiency</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpp.plant.plant_equipment.CoolingTower.convert_capacity_and_efficiency" title="Permalink to this definition">#</a></dt>
+<dd><p>Method to convert standard capacities and efficiencies</p>
+<p>Writes attributes from other attributes. Todo: is this the best way to manipulate data?</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.convert</span></code></dt><dd><p>unit conversion utility from OpenStudio SDK</p>
+</dd>
+</dl>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.plant.plant_equipment.CoolingTower.set_values">
+<span class="sig-name descname"><span class="pre">set_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.plant.plant_equipment.CoolingTower.set_values" title="Permalink to this definition">#</a></dt>
+<dd><p>Updates the <cite>__dict__</cite> of the class object and runs the unit conversion</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.plant.plant_equipment.CoolingTower.write_to_os">
+<span class="sig-name descname"><span class="pre">write_to_os</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.plant.plant_equipment.CoolingTower.write_to_os" title="Permalink to this definition">#</a></dt>
+<dd><p>Method to write chiller object to the model in memory</p>
+<p>_extended_description</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>model</strong><span class="classifier">openstudio.model.model</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.openstudiomodelstraightcomponent.CoolingTowerVariableSpeed</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.getPlantLoopByName</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">plant_loop.addSupplyBranchForComponent</span></code></dt><dd></dd>
+</dl>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="bpp.plant.plant_equipment.DryCooler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.plant.plant_equipment.</span></span><span class="sig-name descname"><span class="pre">DryCooler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'f2cd9b32-a0c0-49c7-ab52-b2a4a5d35218'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.plant.plant_equipment.DryCooler" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bpp.plant.plant_equipment.PlantEquipment" title="bpp.plant.plant_equipment.PlantEquipment"><code class="xref py py-class docutils literal notranslate"><span class="pre">PlantEquipment</span></code></a></p>
+<p>An object class to represent a dry cooler on a plant loop.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>id</strong><span class="classifier">str, optional</span></dt><dd><p>The UUID of the object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.plant.plant_equipment.DryCooler.convert_capacity_and_efficiency" title="bpp.plant.plant_equipment.DryCooler.convert_capacity_and_efficiency"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_capacity_and_efficiency</span></code></a>()</p></td>
+<td><p>Method to convert standard capacities and efficiencies</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#bpp.plant.plant_equipment.DryCooler.set_values" title="bpp.plant.plant_equipment.DryCooler.set_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_values</span></code></a>(input_values)</p></td>
+<td><p>Updates the <cite>__dict__</cite> of the class object and runs the unit conversion</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.plant.plant_equipment.DryCooler.write_to_os" title="bpp.plant.plant_equipment.DryCooler.write_to_os"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_to_os</span></code></a>(model)</p></td>
+<td><p>Method to write the dry cooler object to the model in memory</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.plant.plant_equipment.DryCooler.convert_capacity_and_efficiency">
+<span class="sig-name descname"><span class="pre">convert_capacity_and_efficiency</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpp.plant.plant_equipment.DryCooler.convert_capacity_and_efficiency" title="Permalink to this definition">#</a></dt>
+<dd><p>Method to convert standard capacities and efficiencies</p>
+<p>Writes attributes from other attributes. Todo: is this the best way to manipulate data?</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.convert</span></code></dt><dd><p>unit conversion utility from OpenStudio SDK</p>
+</dd>
+</dl>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.plant.plant_equipment.DryCooler.set_values">
+<span class="sig-name descname"><span class="pre">set_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.plant.plant_equipment.DryCooler.set_values" title="Permalink to this definition">#</a></dt>
+<dd><p>Updates the <cite>__dict__</cite> of the class object and runs the unit conversion</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.plant.plant_equipment.DryCooler.write_to_os">
+<span class="sig-name descname"><span class="pre">write_to_os</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.plant.plant_equipment.DryCooler.write_to_os" title="Permalink to this definition">#</a></dt>
+<dd><p>Method to write the dry cooler object to the model in memory</p>
+<p>_extended_description</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>model</strong><span class="classifier">openstudio.model.model</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.openstudiomodelstraightcomponent.EvaporativeFluidCoolerTwoSpeed</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.model.getPlantLoopByName</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">plant_loop.addSupplyBranchForComponent</span></code></dt><dd></dd>
+</dl>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="bpp.plant.plant_equipment.HotWaterHeater">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.plant.plant_equipment.</span></span><span class="sig-name descname"><span class="pre">HotWaterHeater</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ef855f74-bf93-453f-90e7-99239d821f1a'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.plant.plant_equipment.HotWaterHeater" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bpp.plant.plant_equipment.PlantEquipment" title="bpp.plant.plant_equipment.PlantEquipment"><code class="xref py py-class docutils literal notranslate"><span class="pre">PlantEquipment</span></code></a></p>
+<p>An object class to represent a hot water heater on a plant loop.</p>
+<p>Todo: clarify if this is a water consuming plant loop versus an HVAC plant loop</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>id</strong><span class="classifier">str, optional</span></dt><dd><p>The UUID of the object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.plant.plant_equipment.HotWaterHeater.convert_capacity_and_efficiency" title="bpp.plant.plant_equipment.HotWaterHeater.convert_capacity_and_efficiency"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_capacity_and_efficiency</span></code></a>()</p></td>
+<td><p>Method to convert standard capacities and efficiencies</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#bpp.plant.plant_equipment.HotWaterHeater.set_values" title="bpp.plant.plant_equipment.HotWaterHeater.set_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_values</span></code></a>(input_values)</p></td>
+<td><p>Updates the <cite>__dict__</cite> of the class object and runs the unit conversion</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.plant.plant_equipment.HotWaterHeater.write_to_os" title="bpp.plant.plant_equipment.HotWaterHeater.write_to_os"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_to_os</span></code></a>(model)</p></td>
+<td><p>writes the class object to the model in memory</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.plant.plant_equipment.HotWaterHeater.convert_capacity_and_efficiency">
+<span class="sig-name descname"><span class="pre">convert_capacity_and_efficiency</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpp.plant.plant_equipment.HotWaterHeater.convert_capacity_and_efficiency" title="Permalink to this definition">#</a></dt>
+<dd><p>Method to convert standard capacities and efficiencies</p>
+<p>Writes attributes from other attributes. Todo: is this the best way to manipulate data?</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.convert</span></code></dt><dd><p>unit conversion utility from OpenStudio SDK</p>
+</dd>
+</dl>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.plant.plant_equipment.HotWaterHeater.set_values">
+<span class="sig-name descname"><span class="pre">set_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.plant.plant_equipment.HotWaterHeater.set_values" title="Permalink to this definition">#</a></dt>
+<dd><p>Updates the <cite>__dict__</cite> of the class object and runs the unit conversion</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.plant.plant_equipment.HotWaterHeater.write_to_os">
+<span class="sig-name descname"><span class="pre">write_to_os</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.plant.plant_equipment.HotWaterHeater.write_to_os" title="Permalink to this definition">#</a></dt>
+<dd><p>writes the class object to the model in memory</p>
+<p>todo: implement</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="bpp.plant.plant_equipment.PlantEquipment">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.plant.plant_equipment.</span></span><span class="sig-name descname"><span class="pre">PlantEquipment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'d184452b-dd26-4233-b630-e615dad3aa4b'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.plant.plant_equipment.PlantEquipment" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A generic object class to represent various types of plant equipment.</p>
+<p>_extended_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>id</strong><span class="classifier">str, optional</span></dt><dd><p>The UUID of the object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>_description_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd></dd>
+<dt><strong>uuid</strong><span class="classifier">str</span></dt><dd><p>A unique GUID string.</p>
+</dd>
+<dt><strong>equipment_family</strong><span class="classifier">type, default None</span></dt><dd><p>The family of equipment.</p>
+</dd>
+<dt><strong>type</strong><span class="classifier">str, {None, ‘Air Cooled Chiller’, ‘Water Cooled Chiller’, ‘Heat Recovery Chiller’, ‘Ground Source Heat Pump’}</span></dt><dd><p>The type of equipment.</p>
+</dd>
+<dt><strong>plant_loop_name</strong><span class="classifier">str, default ‘’</span></dt><dd><p>The name of the plant loop in the model.</p>
+</dd>
+<dt><strong>plant_loop</strong><span class="classifier">PlantLoop(), default None</span></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>quantity</strong><span class="classifier">int, default 1</span></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>entered_capacity_value</strong><span class="classifier">int, default None</span></dt><dd><p>The numerical value of the equipment capacity. Must be accompanied by the next field <cite>entered_capacity_units</cite></p>
+</dd>
+<dt><strong>entered_capacity_units</strong><span class="classifier">str, default ‘’</span></dt><dd><p>The units of the entered capacity.</p>
+</dd>
+<dt><strong>capacity</strong><span class="classifier">type, default None</span></dt><dd><p>_description_, in units of {Btu/h}</p>
+</dd>
+<dt><strong>sizing_factor</strong><span class="classifier">float, default 1.0</span></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>turndown</strong><span class="classifier">float, default 0.2</span></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>entered_efficiency_value</strong><span class="classifier">type, default None</span></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>entered_efficiency_units</strong><span class="classifier">str, default ‘’</span></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>efficiency</strong><span class="classifier">float, default 1.0</span></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>performance</strong><span class="classifier">type, default ‘’</span></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>condenser_loop_name</strong><span class="classifier">str, default ‘’</span></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>condenser_loop</strong><span class="classifier">type, default None</span></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>heat_recovery_loop_name</strong><span class="classifier">str, default ‘’</span></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>heat_recovery_loop</strong><span class="classifier">type, default None</span></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>source_loop_name</strong><span class="classifier">str, default ‘’</span></dt><dd><p>_description_</p>
+</dd>
+<dt><strong>source_loop</strong><span class="classifier">type, default None</span></dt><dd><p>_description_</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.plant.plant_equipment.PlantEquipment.convert_capacity_and_efficiency" title="bpp.plant.plant_equipment.PlantEquipment.convert_capacity_and_efficiency"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_capacity_and_efficiency</span></code></a>()</p></td>
+<td><p>Method to convert standard capacities and efficiencies</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#bpp.plant.plant_equipment.PlantEquipment.set_values" title="bpp.plant.plant_equipment.PlantEquipment.set_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_values</span></code></a>(input_values)</p></td>
+<td><p>Updates the <cite>__dict__</cite> of the class object and runs the unit conversion</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bpp.plant.plant_equipment.PlantEquipment.write_to_os" title="bpp.plant.plant_equipment.PlantEquipment.write_to_os"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_to_os</span></code></a>(model)</p></td>
+<td><p>writes the class object to the model in memory</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.plant.plant_equipment.PlantEquipment.convert_capacity_and_efficiency">
+<span class="sig-name descname"><span class="pre">convert_capacity_and_efficiency</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpp.plant.plant_equipment.PlantEquipment.convert_capacity_and_efficiency" title="Permalink to this definition">#</a></dt>
+<dd><p>Method to convert standard capacities and efficiencies</p>
+<p>Writes attributes from other attributes. Todo: is this the best way to manipulate data?</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">openstudio.convert</span></code></dt><dd><p>unit conversion utility from OpenStudio SDK</p>
+</dd>
+</dl>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.plant.plant_equipment.PlantEquipment.set_values">
+<span class="sig-name descname"><span class="pre">set_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.plant.plant_equipment.PlantEquipment.set_values" title="Permalink to this definition">#</a></dt>
+<dd><p>Updates the <cite>__dict__</cite> of the class object and runs the unit conversion</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.plant.plant_equipment.PlantEquipment.write_to_os">
+<span class="sig-name descname"><span class="pre">write_to_os</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.plant.plant_equipment.PlantEquipment.write_to_os" title="Permalink to this definition">#</a></dt>
+<dd><p>writes the class object to the model in memory</p>
+<p>todo: implement</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.plant.plant_equipment.write_plant_equipment">
+<span class="sig-prename descclassname"><span class="pre">bpp.plant.plant_equipment.</span></span><span class="sig-name descname"><span class="pre">write_plant_equipment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'485a6994-90b3-49d0-872f-e995286e64fd'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.plant.plant_equipment.write_plant_equipment" title="Permalink to this definition">#</a></dt>
+<dd><p>Determines which child class to write based on the type</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>plant_equipment</strong><span class="classifier">various</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, Noah K
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            <div class="last-updated">
+              Last updated on Feb 11, 2024</div>
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">bpp.plant.plant_equipment module</a><ul>
+<li><a class="reference internal" href="#bpp.plant.plant_equipment.Boiler"><code class="docutils literal notranslate"><span class="pre">Boiler</span></code></a><ul>
+<li><a class="reference internal" href="#bpp.plant.plant_equipment.Boiler.convert_capacity_and_efficiency"><code class="docutils literal notranslate"><span class="pre">Boiler.convert_capacity_and_efficiency()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.plant.plant_equipment.Boiler.set_values"><code class="docutils literal notranslate"><span class="pre">Boiler.set_values()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.plant.plant_equipment.Boiler.write_to_os"><code class="docutils literal notranslate"><span class="pre">Boiler.write_to_os()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bpp.plant.plant_equipment.Chiller"><code class="docutils literal notranslate"><span class="pre">Chiller</span></code></a><ul>
+<li><a class="reference internal" href="#bpp.plant.plant_equipment.Chiller.convert_capacity_and_efficiency"><code class="docutils literal notranslate"><span class="pre">Chiller.convert_capacity_and_efficiency()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.plant.plant_equipment.Chiller.set_values"><code class="docutils literal notranslate"><span class="pre">Chiller.set_values()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.plant.plant_equipment.Chiller.write_to_os"><code class="docutils literal notranslate"><span class="pre">Chiller.write_to_os()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bpp.plant.plant_equipment.CoolingTower"><code class="docutils literal notranslate"><span class="pre">CoolingTower</span></code></a><ul>
+<li><a class="reference internal" href="#bpp.plant.plant_equipment.CoolingTower.convert_capacity_and_efficiency"><code class="docutils literal notranslate"><span class="pre">CoolingTower.convert_capacity_and_efficiency()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.plant.plant_equipment.CoolingTower.set_values"><code class="docutils literal notranslate"><span class="pre">CoolingTower.set_values()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.plant.plant_equipment.CoolingTower.write_to_os"><code class="docutils literal notranslate"><span class="pre">CoolingTower.write_to_os()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bpp.plant.plant_equipment.DryCooler"><code class="docutils literal notranslate"><span class="pre">DryCooler</span></code></a><ul>
+<li><a class="reference internal" href="#bpp.plant.plant_equipment.DryCooler.convert_capacity_and_efficiency"><code class="docutils literal notranslate"><span class="pre">DryCooler.convert_capacity_and_efficiency()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.plant.plant_equipment.DryCooler.set_values"><code class="docutils literal notranslate"><span class="pre">DryCooler.set_values()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.plant.plant_equipment.DryCooler.write_to_os"><code class="docutils literal notranslate"><span class="pre">DryCooler.write_to_os()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bpp.plant.plant_equipment.HotWaterHeater"><code class="docutils literal notranslate"><span class="pre">HotWaterHeater</span></code></a><ul>
+<li><a class="reference internal" href="#bpp.plant.plant_equipment.HotWaterHeater.convert_capacity_and_efficiency"><code class="docutils literal notranslate"><span class="pre">HotWaterHeater.convert_capacity_and_efficiency()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.plant.plant_equipment.HotWaterHeater.set_values"><code class="docutils literal notranslate"><span class="pre">HotWaterHeater.set_values()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.plant.plant_equipment.HotWaterHeater.write_to_os"><code class="docutils literal notranslate"><span class="pre">HotWaterHeater.write_to_os()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bpp.plant.plant_equipment.PlantEquipment"><code class="docutils literal notranslate"><span class="pre">PlantEquipment</span></code></a><ul>
+<li><a class="reference internal" href="#bpp.plant.plant_equipment.PlantEquipment.convert_capacity_and_efficiency"><code class="docutils literal notranslate"><span class="pre">PlantEquipment.convert_capacity_and_efficiency()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.plant.plant_equipment.PlantEquipment.set_values"><code class="docutils literal notranslate"><span class="pre">PlantEquipment.set_values()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.plant.plant_equipment.PlantEquipment.write_to_os"><code class="docutils literal notranslate"><span class="pre">PlantEquipment.write_to_os()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bpp.plant.plant_equipment.write_plant_equipment"><code class="docutils literal notranslate"><span class="pre">write_plant_equipment()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=65a4545c"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/scripts/furo.js?v=32e29ea5"></script>
+    </body>
+</html>

@@ -1,0 +1,7 @@
+bpp.reporting.QC.qc module
+==========================
+
+.. automodule:: bpp.reporting.QC.qc
+   :members:
+   :undoc-members:
+   :show-inheritance:

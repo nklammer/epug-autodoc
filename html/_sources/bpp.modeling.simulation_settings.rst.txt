@@ -1,7 +1,0 @@
-bpp.modeling.simulation\_settings module
-========================================
-
-.. automodule:: bpp.modeling.simulation_settings
-   :members:
-   :undoc-members:
-   :show-inheritance:
