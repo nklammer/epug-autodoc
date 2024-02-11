@@ -138,9 +138,10 @@ $ C:\Users\puggy\Documents\GitHub\epug\documentation\sphinx_root>make clean
 $ C:\Users\puggy\Documents\GitHub\epug\documentation\sphinx_root>make html
 ```
 
-Troubleshoot/debug
+### Troubleshoot/debug
+The -v option makes the output verbose. The -w file option prints the output to a warning file.
 ```
-$ C:\Users\puggy\Documents\GitHub\epug\documentation\sphinx_root>set SPHINXOPTS "-vvv -W"
+$ C:\Users\puggy\Documents\GitHub\epug\documentation\sphinx_root>set SPHINXOPTS="-w out.log -vvv"
 $ C:\Users\puggy\Documents\GitHub\epug\documentation\sphinx_root>make html
 ```
 
