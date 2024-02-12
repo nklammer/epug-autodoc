@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta property="article:modified_time" content="2024-02-11T15:38:27-05:00" /><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
+    <meta property="article:modified_time" content="2024-02-12T13:14:46-05:00" /><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
 
     <!-- Generated with Sphinx 7.1.2 and Furo 2024.01.29 -->
         <title>bpp.ui_functions.ui_geometry_import module - Model Hub @ AEI 0.0.3 documentation</title>
@@ -136,7 +136,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -186,14 +186,172 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          <section id="bpp-ui-functions-ui-geometry-import-module">
-<h1>bpp.ui_functions.ui_geometry_import module<a class="headerlink" href="#bpp-ui-functions-ui-geometry-import-module" title="Permalink to this heading">#</a></h1>
+          <section id="module-bpp.ui_functions.ui_geometry_import">
+<span id="bpp-ui-functions-ui-geometry-import-module"></span><h1>bpp.ui_functions.ui_geometry_import module<a class="headerlink" href="#module-bpp.ui_functions.ui_geometry_import" title="Permalink to this heading">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.ui_functions.ui_geometry_import.add_object_name_references_from_uuids">
+<span class="sig-prename descclassname"><span class="pre">bpp.ui_functions.ui_geometry_import.</span></span><span class="sig-name descname"><span class="pre">add_object_name_references_from_uuids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_dictionary</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.ui_functions.ui_geometry_import.add_object_name_references_from_uuids" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.ui_functions.ui_geometry_import.calculate_polygon_area">
+<span class="sig-prename descclassname"><span class="pre">bpp.ui_functions.ui_geometry_import.</span></span><span class="sig-name descname"><span class="pre">calculate_polygon_area</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.ui_functions.ui_geometry_import.calculate_polygon_area" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>coordinates</strong><span class="classifier">array-like of array-like</span></dt><dd><p>array-like of array-like containing coordinates in 3D
+Ex: [[1,3,4],[1,3,5],[4,6,7]]
+Ex: [[1,3,4],[1,3,5],[4,6,7],[7,4,2]]</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>area</strong><span class="classifier">float</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.ui_functions.ui_geometry_import.calculate_window_to_wall_ratio">
+<span class="sig-prename descclassname"><span class="pre">bpp.ui_functions.ui_geometry_import.</span></span><span class="sig-name descname"><span class="pre">calculate_window_to_wall_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geometry_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.ui_functions.ui_geometry_import.calculate_window_to_wall_ratio" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.ui_functions.ui_geometry_import.geometry_osm_from_old_sketchup_workflow">
+<span class="sig-prename descclassname"><span class="pre">bpp.ui_functions.ui_geometry_import.</span></span><span class="sig-name descname"><span class="pre">geometry_osm_from_old_sketchup_workflow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.ui_functions.ui_geometry_import.geometry_osm_from_old_sketchup_workflow" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.ui_functions.ui_geometry_import.get_os_optional">
+<span class="sig-prename descclassname"><span class="pre">bpp.ui_functions.ui_geometry_import.</span></span><span class="sig-name descname"><span class="pre">get_os_optional</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.ui_functions.ui_geometry_import.get_os_optional" title="Permalink to this definition">#</a></dt>
+<dd><p>helper function for handling SWIG optional objects returned by openstudio SDK functions and methods</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>obj</strong><span class="classifier">Optional Object</span></dt><dd><p>Optional object from openstudio sdk function. Many openstudio functions return optional objects because they use SWIG</p>
+</dd>
+<dt><strong>return: object or None</strong></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.ui_functions.ui_geometry_import.get_os_optional_name">
+<span class="sig-prename descclassname"><span class="pre">bpp.ui_functions.ui_geometry_import.</span></span><span class="sig-name descname"><span class="pre">get_os_optional_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.ui_functions.ui_geometry_import.get_os_optional_name" title="Permalink to this definition">#</a></dt>
+<dd><p>helper function for handling SWIG optional objects returned by openstudio SDK functions and methods</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>obj</strong><span class="classifier">Optional Object</span></dt><dd><p>Optional object from openstudio sdk function. Many openstudio functions return optional objects because they use SWIG</p>
+</dd>
+<dt><strong>return: string or None</strong></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.ui_functions.ui_geometry_import.get_os_optional_uuid">
+<span class="sig-prename descclassname"><span class="pre">bpp.ui_functions.ui_geometry_import.</span></span><span class="sig-name descname"><span class="pre">get_os_optional_uuid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.ui_functions.ui_geometry_import.get_os_optional_uuid" title="Permalink to this definition">#</a></dt>
+<dd><p>helper function for handling SWIG optional objects returned by openstudio SDK functions and methods</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>obj</strong><span class="classifier">Optional Object</span></dt><dd><p>Optional object from openstudio sdk function. Many openstudio functions return optional objects because they use SWIG</p>
+</dd>
+<dt><strong>return: string or None</strong></dt><dd><p>string would be uuid</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.ui_functions.ui_geometry_import.get_space_type_name_lookup">
+<span class="sig-prename descclassname"><span class="pre">bpp.ui_functions.ui_geometry_import.</span></span><span class="sig-name descname"><span class="pre">get_space_type_name_lookup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wb</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.ui_functions.ui_geometry_import.get_space_type_name_lookup" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.ui_functions.ui_geometry_import.get_sub_surface_width_and_height">
+<span class="sig-prename descclassname"><span class="pre">bpp.ui_functions.ui_geometry_import.</span></span><span class="sig-name descname"><span class="pre">get_sub_surface_width_and_height</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.ui_functions.ui_geometry_import.get_sub_surface_width_and_height" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>coordinates</strong><span class="classifier">array-like of array-like</span></dt><dd><p>array-like of array-like containing coordinates in 3D
+Ex. [[1,3,4],[1,3,5],[4,6,7]]
+Ex. [[1,3,4],[1,3,5],[4,6,7],[7,4,2]]</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>(width, height)</strong><span class="classifier">tuple of floats</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.ui_functions.ui_geometry_import.import_geometry">
+<span class="sig-prename descclassname"><span class="pre">bpp.ui_functions.ui_geometry_import.</span></span><span class="sig-name descname"><span class="pre">import_geometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modeling_environment</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_environment</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project_title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.ui_functions.ui_geometry_import.import_geometry" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.ui_functions.ui_geometry_import.import_geometry_from_python_ide">
+<span class="sig-prename descclassname"><span class="pre">bpp.ui_functions.ui_geometry_import.</span></span><span class="sig-name descname"><span class="pre">import_geometry_from_python_ide</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpp.ui_functions.ui_geometry_import.import_geometry_from_python_ide" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.ui_functions.ui_geometry_import.import_geometry_in_ui">
+<span class="sig-prename descclassname"><span class="pre">bpp.ui_functions.ui_geometry_import.</span></span><span class="sig-name descname"><span class="pre">import_geometry_in_ui</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geometry_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.ui_functions.ui_geometry_import.import_geometry_in_ui" title="Permalink to this definition">#</a></dt>
+<dd><p>Top most function for geometry import.</p>
+<p>Called from vba in excel UI. VBA passes osm file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>geometry_file</strong><span class="classifier">osm file</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.ui_functions.ui_geometry_import.write_geometry_data_to_json_file">
+<span class="sig-prename descclassname"><span class="pre">bpp.ui_functions.ui_geometry_import.</span></span><span class="sig-name descname"><span class="pre">write_geometry_data_to_json_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">osm_file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">osm_file_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.ui_functions.ui_geometry_import.write_geometry_data_to_json_file" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.ui_functions.ui_geometry_import.write_geometry_osm_to_json_data">
+<span class="sig-prename descclassname"><span class="pre">bpp.ui_functions.ui_geometry_import.</span></span><span class="sig-name descname"><span class="pre">write_geometry_osm_to_json_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.ui_functions.ui_geometry_import.write_geometry_osm_to_json_data" title="Permalink to this definition">#</a></dt>
+<dd><p>It appears that it is possible for an osm to have constructions listed in a construction set (OS:DefaultConstructionSet) that don’t actually exist; this is a problem.</p>
+<p class="rubric">Notes</p>
+<p><a class="reference external" href="https://s3.amazonaws.com/openstudio-sdk-documentation/cpp/OpenStudio-3.2.1-doc/model/html/classopenstudio_1_1model_1_1_standards_information_construction.html">Ext Link</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.ui_functions.ui_geometry_import.write_json_file_from_osm">
+<span class="sig-prename descclassname"><span class="pre">bpp.ui_functions.ui_geometry_import.</span></span><span class="sig-name descname"><span class="pre">write_json_file_from_osm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">osm_file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">osm_file_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.ui_functions.ui_geometry_import.write_json_file_from_osm" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.ui_functions.ui_geometry_import.write_wwr_to_ui">
+<span class="sig-prename descclassname"><span class="pre">bpp.ui_functions.ui_geometry_import.</span></span><span class="sig-name descname"><span class="pre">write_wwr_to_ui</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geometry_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wb</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.ui_functions.ui_geometry_import.write_wwr_to_ui" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.ui_functions.ui_geometry_import.write_zone_space_type_names_from_geometry_space_tags">
+<span class="sig-prename descclassname"><span class="pre">bpp.ui_functions.ui_geometry_import.</span></span><span class="sig-name descname"><span class="pre">write_zone_space_type_names_from_geometry_space_tags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geometry_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zone_uuid_column</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.ui_functions.ui_geometry_import.write_zone_space_type_names_from_geometry_space_tags" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
 </section>
 
         </article>
@@ -207,13 +365,13 @@
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2023, Noah K
+                Copyright &#169; 2024, project contributors
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Feb 11, 2024</div>
+              Last updated on Feb 12, 2024</div>
           </div>
           <div class="right-details">
             
@@ -222,8 +380,43 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">bpp.ui_functions.ui_geometry_import module</a><ul>
+<li><a class="reference internal" href="#bpp.ui_functions.ui_geometry_import.add_object_name_references_from_uuids"><code class="docutils literal notranslate"><span class="pre">add_object_name_references_from_uuids()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.ui_functions.ui_geometry_import.calculate_polygon_area"><code class="docutils literal notranslate"><span class="pre">calculate_polygon_area()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.ui_functions.ui_geometry_import.calculate_window_to_wall_ratio"><code class="docutils literal notranslate"><span class="pre">calculate_window_to_wall_ratio()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.ui_functions.ui_geometry_import.geometry_osm_from_old_sketchup_workflow"><code class="docutils literal notranslate"><span class="pre">geometry_osm_from_old_sketchup_workflow()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.ui_functions.ui_geometry_import.get_os_optional"><code class="docutils literal notranslate"><span class="pre">get_os_optional()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.ui_functions.ui_geometry_import.get_os_optional_name"><code class="docutils literal notranslate"><span class="pre">get_os_optional_name()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.ui_functions.ui_geometry_import.get_os_optional_uuid"><code class="docutils literal notranslate"><span class="pre">get_os_optional_uuid()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.ui_functions.ui_geometry_import.get_space_type_name_lookup"><code class="docutils literal notranslate"><span class="pre">get_space_type_name_lookup()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.ui_functions.ui_geometry_import.get_sub_surface_width_and_height"><code class="docutils literal notranslate"><span class="pre">get_sub_surface_width_and_height()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.ui_functions.ui_geometry_import.import_geometry"><code class="docutils literal notranslate"><span class="pre">import_geometry()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.ui_functions.ui_geometry_import.import_geometry_from_python_ide"><code class="docutils literal notranslate"><span class="pre">import_geometry_from_python_ide()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.ui_functions.ui_geometry_import.import_geometry_in_ui"><code class="docutils literal notranslate"><span class="pre">import_geometry_in_ui()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.ui_functions.ui_geometry_import.write_geometry_data_to_json_file"><code class="docutils literal notranslate"><span class="pre">write_geometry_data_to_json_file()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.ui_functions.ui_geometry_import.write_geometry_osm_to_json_data"><code class="docutils literal notranslate"><span class="pre">write_geometry_osm_to_json_data()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.ui_functions.ui_geometry_import.write_json_file_from_osm"><code class="docutils literal notranslate"><span class="pre">write_json_file_from_osm()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.ui_functions.ui_geometry_import.write_wwr_to_ui"><code class="docutils literal notranslate"><span class="pre">write_wwr_to_ui()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.ui_functions.ui_geometry_import.write_zone_space_type_names_from_geometry_space_tags"><code class="docutils literal notranslate"><span class="pre">write_zone_space_type_names_from_geometry_space_tags()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

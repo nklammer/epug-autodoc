@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Model Hub's documentation!
+Welcome to Model Hub's Documentation!
 =====================================
 
 This documentation provides an overview of the API for the Model Hub project. Model Hub is a project that aims to provide a programmatic way of generating and simulating building energy models based on company best practices and building design information accessed through the DesignHub API.

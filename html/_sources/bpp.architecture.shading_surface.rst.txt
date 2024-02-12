@@ -1,0 +1,7 @@
+bpp.architecture.shading\_surface module
+========================================
+
+.. automodule:: bpp.architecture.shading_surface
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta property="article:modified_time" content="2024-02-11T15:38:27-05:00" /><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
+    <meta property="article:modified_time" content="2024-02-12T13:14:46-05:00" /><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
 
     <!-- Generated with Sphinx 7.1.2 and Furo 2024.01.29 -->
         <title>bpp.ui_functions.json_to_ui module - Model Hub @ AEI 0.0.3 documentation</title>
@@ -136,7 +136,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -186,14 +186,84 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          <section id="bpp-ui-functions-json-to-ui-module">
-<h1>bpp.ui_functions.json_to_ui module<a class="headerlink" href="#bpp-ui-functions-json-to-ui-module" title="Permalink to this heading">#</a></h1>
+          <section id="module-bpp.ui_functions.json_to_ui">
+<span id="bpp-ui-functions-json-to-ui-module"></span><h1>bpp.ui_functions.json_to_ui module<a class="headerlink" href="#module-bpp.ui_functions.json_to_ui" title="Permalink to this heading">#</a></h1>
+<p>json_to_ui.py module contains functions that write data from json format into Excel UI</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.ui_functions.json_to_ui.import_data_into_ui_table">
+<span class="sig-prename descclassname"><span class="pre">bpp.ui_functions.json_to_ui.</span></span><span class="sig-name descname"><span class="pre">import_data_into_ui_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">class_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wb</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.ui_functions.json_to_ui.import_data_into_ui_table" title="Permalink to this definition">#</a></dt>
+<dd><p>Function that take json data and writes to excel UI</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>json_data</strong><span class="classifier">dictionary</span></dt><dd></dd>
+<dt><strong>class_name</strong><span class="classifier">string</span></dt><dd><p>Ex: Project, Zone,…</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>uuid_column</strong><span class="classifier">list of strings</span></dt><dd><p>list of strings of uuids</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.ui_functions.json_to_ui.import_data_into_ui_tables">
+<span class="sig-prename descclassname"><span class="pre">bpp.ui_functions.json_to_ui.</span></span><span class="sig-name descname"><span class="pre">import_data_into_ui_tables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wb</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.ui_functions.json_to_ui.import_data_into_ui_tables" title="Permalink to this definition">#</a></dt>
+<dd><p>Function that calls: import_project_class_data_into_ui, import_data_into_ui_table</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>json_data</strong><span class="classifier">dictionary</span></dt><dd></dd>
+<dt><strong>wb</strong><span class="classifier">xlwings excel object</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.ui_functions.json_to_ui.import_project_class_data_into_ui">
+<span class="sig-prename descclassname"><span class="pre">bpp.ui_functions.json_to_ui.</span></span><span class="sig-name descname"><span class="pre">import_project_class_data_into_ui</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wb</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.ui_functions.json_to_ui.import_project_class_data_into_ui" title="Permalink to this definition">#</a></dt>
+<dd><p>Function that writes Project info from json to excel UI</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>json_data</strong><span class="classifier">dictionary</span></dt><dd></dd>
+<dt><strong>wb</strong><span class="classifier">xlwings excel object</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.ui_functions.json_to_ui.import_simulation_settings_class_data_into_ui">
+<span class="sig-prename descclassname"><span class="pre">bpp.ui_functions.json_to_ui.</span></span><span class="sig-name descname"><span class="pre">import_simulation_settings_class_data_into_ui</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wb</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.ui_functions.json_to_ui.import_simulation_settings_class_data_into_ui" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.ui_functions.json_to_ui.pull_inputs_json_into_ui">
+<span class="sig-prename descclassname"><span class="pre">bpp.ui_functions.json_to_ui.</span></span><span class="sig-name descname"><span class="pre">pull_inputs_json_into_ui</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs_json_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.ui_functions.json_to_ui.pull_inputs_json_into_ui" title="Permalink to this definition">#</a></dt>
+<dd><p>Function called from UI to import existing Inputs.json data into UI if, for example, the UI template is updated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>inputs_json_file</strong><span class="classifier">json file</span></dt><dd></dd>
+<dt><strong>wb</strong><span class="classifier">xlwings excel object</span></dt><dd><p>Excel UI</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 
         </article>
@@ -207,13 +277,13 @@
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2023, Noah K
+                Copyright &#169; 2024, project contributors
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Feb 11, 2024</div>
+              Last updated on Feb 12, 2024</div>
           </div>
           <div class="right-details">
             
@@ -222,8 +292,31 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">bpp.ui_functions.json_to_ui module</a><ul>
+<li><a class="reference internal" href="#bpp.ui_functions.json_to_ui.import_data_into_ui_table"><code class="docutils literal notranslate"><span class="pre">import_data_into_ui_table()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.ui_functions.json_to_ui.import_data_into_ui_tables"><code class="docutils literal notranslate"><span class="pre">import_data_into_ui_tables()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.ui_functions.json_to_ui.import_project_class_data_into_ui"><code class="docutils literal notranslate"><span class="pre">import_project_class_data_into_ui()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.ui_functions.json_to_ui.import_simulation_settings_class_data_into_ui"><code class="docutils literal notranslate"><span class="pre">import_simulation_settings_class_data_into_ui()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.ui_functions.json_to_ui.pull_inputs_json_into_ui"><code class="docutils literal notranslate"><span class="pre">pull_inputs_json_into_ui()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

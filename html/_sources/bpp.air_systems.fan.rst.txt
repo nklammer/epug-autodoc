@@ -1,0 +1,7 @@
+bpp.air\_systems.fan module
+===========================
+
+.. automodule:: bpp.air_systems.fan
+   :members:
+   :undoc-members:
+   :show-inheritance:

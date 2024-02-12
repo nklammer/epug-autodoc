@@ -1,0 +1,422 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2024-02-12T15:27:25-05:00" /><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
+
+    <!-- Generated with Sphinx 7.1.2 and Furo 2024.01.29 -->
+        <title>bpp.architecture.surface module - Model Hub @ AEI 0.0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=36a5483c" />
+    <link rel="stylesheet" type="text/css" href="_static/aei_colors.css?v=8c2954af" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">Model Hub @ AEI 0.0.3 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="_static/aei_logo.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Model Hub @ AEI 0.0.3 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="module-bpp.architecture.surface">
+<span id="bpp-architecture-surface-module"></span><h1>bpp.architecture.surface module<a class="headerlink" href="#module-bpp.architecture.surface" title="Permalink to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="bpp.architecture.surface.Surface">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bpp.architecture.surface.</span></span><span class="sig-name descname"><span class="pre">Surface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'0ff14e7e-aa95-44f7-a8ba-8adc0bfcd217'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.surface.Surface" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents a surface in a building energy model.</p>
+<p>A surface can be a wall, roof/ceiling, or floor. It has attributes such as type, construction, boundary condition,
+sun exposure, wind exposure, and coordinates. It also has methods to calculate its azimuth and height, and to write
+itself to an OpenStudio model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd><p>The name of the surface.</p>
+</dd>
+<dt><strong>uuid</strong><span class="classifier">str</span></dt><dd><p>The unique identifier of the surface.</p>
+</dd>
+<dt><strong>type</strong><span class="classifier">str</span></dt><dd><p>The type of the surface (Wall, Roof/Ceiling, Floor).</p>
+</dd>
+<dt><strong>construction_name</strong><span class="classifier">str</span></dt><dd><p>The name of the construction assigned to the surface.</p>
+</dd>
+<dt><strong>construction</strong><span class="classifier">Construction</span></dt><dd><p>The construction assigned to the surface.</p>
+</dd>
+<dt><strong>boundary_condition</strong><span class="classifier">str</span></dt><dd><p>The boundary condition of the surface (Exterior, Ground, Adiabatic, Matched).</p>
+</dd>
+<dt><strong>sun_exposure</strong><span class="classifier">bool</span></dt><dd><p>Whether the surface is exposed to the sun.</p>
+</dd>
+<dt><strong>wind_exposure</strong><span class="classifier">bool</span></dt><dd><p>Whether the surface is exposed to the wind.</p>
+</dd>
+<dt><strong>matched_surface_name</strong><span class="classifier">str</span></dt><dd><p>The name of the surface that this surface is matched with (if any).</p>
+</dd>
+<dt><strong>matched_surface</strong><span class="classifier">Surface</span></dt><dd><p>The surface that this surface is matched with (if any).</p>
+</dd>
+<dt><strong>infiltration</strong><span class="classifier">float</span></dt><dd><p>The infiltration rate of the surface.</p>
+</dd>
+<dt><strong>zone_name</strong><span class="classifier">str</span></dt><dd><p>The name of the zone that the surface is in.</p>
+</dd>
+<dt><strong>zone</strong><span class="classifier">Zone</span></dt><dd><p>The zone that the surface is in.</p>
+</dd>
+<dt><strong>coordinates</strong><span class="classifier">list of list of float</span></dt><dd><p>The coordinates of the vertices of the surface.</p>
+</dd>
+<dt><strong>azimuth</strong><span class="classifier">float</span></dt><dd><p>The azimuth of the surface (in degrees, relative to true north).</p>
+</dd>
+<dt><strong>project</strong><span class="classifier">Project</span></dt><dd><p>The project that the surface is part of.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>lookup_default_construction()</strong></p></td>
+<td><p>Assigns a default construction to the surface based on its type and boundary condition.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>set_values(input_values)</strong></p></td>
+<td><p>Updates the attributes of the Surface object based on the provided input values.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>calculate_azimuth()</strong></p></td>
+<td><p>Calculates the azimuth of the surface.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>calculate_height()</strong></p></td>
+<td><p>Calculates the height of the surface.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>write_to_os(model)</strong></p></td>
+<td><p>Writes the surface to an OpenStudio model.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.architecture.surface.Surface.calculate_azimuth">
+<span class="sig-name descname"><span class="pre">calculate_azimuth</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.surface.Surface.calculate_azimuth" title="Permalink to this definition">#</a></dt>
+<dd><p>Calculates the azimuth of the surface.</p>
+<p>The azimuth is the angle between the north direction and the direction towards which the surface is facing,
+measured clockwise. The method assumes that the vertices of the surface are ordered counterclockwise when
+viewed from the outside of the surface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt>float</dt><dd><p>The azimuth of the surface in degrees, relative to true north.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.architecture.surface.Surface.calculate_height">
+<span class="sig-name descname"><span class="pre">calculate_height</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.surface.Surface.calculate_height" title="Permalink to this definition">#</a></dt>
+<dd><p>Calculates the height of the surface.</p>
+<p>The height is calculated as the difference between the maximum and minimum z-values of the surface’s coordinates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt>float</dt><dd><p>The height of the surface.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.architecture.surface.Surface.lookup_default_construction">
+<span class="sig-name descname"><span class="pre">lookup_default_construction</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.surface.Surface.lookup_default_construction" title="Permalink to this definition">#</a></dt>
+<dd><p>Assigns a default construction to the surface based on its type and boundary condition.</p>
+<p>This method checks if the surface already has a construction assigned to it. If not, it assigns a default
+construction based on the surface’s type (Wall, Roof/Ceiling, Floor) and boundary condition (Exterior, Ground,
+Adiabatic, Matched). The default constructions are retrieved from the project’s default construction set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt>None</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.architecture.surface.Surface.set_values">
+<span class="sig-name descname"><span class="pre">set_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.surface.Surface.set_values" title="Permalink to this definition">#</a></dt>
+<dd><p>Updates the attributes of the Surface object based on the provided input values.</p>
+<p>This method takes a dictionary of attribute-value pairs and updates the Surface object’s attributes accordingly.
+If an attribute in the input_values dictionary does not exist in the Surface object, it will be added to the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>input_values</strong><span class="classifier">dict</span></dt><dd><p>A dictionary where the keys are attribute names and the values are the corresponding values to set.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>None</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bpp.architecture.surface.Surface.write_to_os">
+<span class="sig-name descname"><span class="pre">write_to_os</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.architecture.surface.Surface.write_to_os" title="Permalink to this definition">#</a></dt>
+<dd><p>Writes the surface to an OpenStudio model.</p>
+<p>This method converts the surface’s attributes to OpenStudio notations and writes them to the provided OpenStudio model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>model</strong><span class="classifier">openstudio.model.Model</span></dt><dd><p>The OpenStudio model to which the surface will be written.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>openstudio.model.Surface</dt><dd><p>The surface written to the OpenStudio model.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2024, project contributors
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            <div class="last-updated">
+              Last updated on Feb 12, 2024</div>
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">bpp.architecture.surface module</a><ul>
+<li><a class="reference internal" href="#bpp.architecture.surface.Surface"><code class="docutils literal notranslate"><span class="pre">Surface</span></code></a><ul>
+<li><a class="reference internal" href="#bpp.architecture.surface.Surface.calculate_azimuth"><code class="docutils literal notranslate"><span class="pre">Surface.calculate_azimuth()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.architecture.surface.Surface.calculate_height"><code class="docutils literal notranslate"><span class="pre">Surface.calculate_height()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.architecture.surface.Surface.lookup_default_construction"><code class="docutils literal notranslate"><span class="pre">Surface.lookup_default_construction()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.architecture.surface.Surface.set_values"><code class="docutils literal notranslate"><span class="pre">Surface.set_values()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.architecture.surface.Surface.write_to_os"><code class="docutils literal notranslate"><span class="pre">Surface.write_to_os()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=65a4545c"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/scripts/furo.js?v=32e29ea5"></script>
+    </body>
+</html>

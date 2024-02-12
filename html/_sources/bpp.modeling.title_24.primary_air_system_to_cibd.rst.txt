@@ -1,0 +1,7 @@
+bpp.modeling.title\_24.primary\_air\_system\_to\_cibd module
+============================================================
+
+.. automodule:: bpp.modeling.title_24.primary_air_system_to_cibd
+   :members:
+   :undoc-members:
+   :show-inheritance:

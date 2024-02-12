@@ -1,0 +1,7 @@
+bpp.architecture.sub\_surface\_construction module
+==================================================
+
+.. automodule:: bpp.architecture.sub_surface_construction
+   :members:
+   :undoc-members:
+   :show-inheritance:

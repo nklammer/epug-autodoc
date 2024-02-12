@@ -1,0 +1,7 @@
+bpp.architecture.material module
+================================
+
+.. automodule:: bpp.architecture.material
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+bpp.modeling.title\_24.cbecc\_com\_modeling module
+==================================================
+
+.. automodule:: bpp.modeling.title_24.cbecc_com_modeling
+   :members:
+   :undoc-members:
+   :show-inheritance:

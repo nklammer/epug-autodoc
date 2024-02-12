@@ -1,0 +1,7 @@
+bpp.modeling.write\_individual\_simulation\_inputs\_json module
+===============================================================
+
+.. automodule:: bpp.modeling.write_individual_simulation_inputs_json
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+bpp.modeling.get\_geometry\_data module
+=======================================
+
+.. automodule:: bpp.modeling.get_geometry_data
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta property="article:modified_time" content="2024-02-11T15:38:27-05:00" /><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
+    <meta property="article:modified_time" content="2024-02-12T10:25:36-05:00" /><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
 
     <!-- Generated with Sphinx 7.1.2 and Furo 2024.01.29 -->
         <title>bpp.schedules.schedules module - Model Hub @ AEI 0.0.3 documentation</title>
@@ -242,7 +242,7 @@
 <dd><p>Bases: <a class="reference internal" href="#bpp.schedules.schedules.Schedule" title="bpp.schedules.schedules.Schedule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Schedule</span></code></a></p>
 <p>Creates a RuleSet schedule.</p>
 <p>Consists of Dayschedule objects and WeekSchedule objects (basically an annual schedule)</p>
-<p>Ex Usage:
+<p>Example Usage
 year_schedule = YearSchedule(name, ‘Fraction’)
 year_schedule.week_schedules = [week_schedule]
 year_schedule.summer_design_day_value = 1.0
@@ -276,17 +276,17 @@ year_schedule.winter_design_day_value = 0.0</p>
 <dt class="sig sig-object py" id="bpp.schedules.schedules.ScheduleRuleSet.eflh">
 <span class="sig-name descname"><span class="pre">eflh</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpp.schedules.schedules.ScheduleRuleSet.eflh" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculates effective load hours (EFLHs)</p>
-<p>Ex Usage:
+<p>Ex Usage
 YearSchedule()</p>
-<dl class="field-list">
+<dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><blockquote>
-<div></div></blockquote>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>self</strong></dt><dd></dd>
+</dl>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
-<dt>type</dt><dd><p>float</p>
-</dd>
+<dt><strong>eflh</strong><span class="classifier">float</span></dt><dd></dd>
 </dl>
 </dd>
 </dl>
@@ -323,18 +323,17 @@ YearSchedule()</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>model: Model</strong></dt><dd><p>type openstudio.model.Model</p>
+<dt><strong>model</strong><span class="classifier">Model</span></dt><dd><p>type openstudio.model.Model</p>
 </dd>
-<dt><strong>ruleset: ScheduleRule</strong></dt><dd><p>openstudio.model.ScheduleRule</p>
+<dt><strong>ruleset</strong><span class="classifier">ScheduleRule</span></dt><dd><p>openstudio.model.ScheduleRule</p>
 </dd>
-<dt><strong>dayOfTheWeek: string</strong></dt><dd><p>Monday, Tuesday, Wednesday, etc</p>
+<dt><strong>dayOfTheWeek</strong><span class="classifier">string</span></dt><dd><p>Monday, Tuesday, Wednesday, etc</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
-<dt>Tuple</dt><dd><p>(os.model.DaySchedule, os.model.RuleSchedule)</p>
-</dd>
+<dt><strong>(os.model.DaySchedule, os.model.RuleSchedule)</strong><span class="classifier">tuple</span></dt><dd></dd>
 </dl>
 </dd>
 </dl>
@@ -419,13 +418,13 @@ YearSchedule()</p>
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2023, Noah K
+                Copyright &#169; 2024, project contributors
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Feb 11, 2024</div>
+              Last updated on Feb 12, 2024</div>
           </div>
           <div class="right-details">
             

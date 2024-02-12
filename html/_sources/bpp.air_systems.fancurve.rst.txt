@@ -1,0 +1,7 @@
+bpp.air\_systems.fancurve module
+================================
+
+.. automodule:: bpp.air_systems.fancurve
+   :members:
+   :undoc-members:
+   :show-inheritance:

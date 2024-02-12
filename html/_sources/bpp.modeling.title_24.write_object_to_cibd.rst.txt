@@ -1,0 +1,7 @@
+bpp.modeling.title\_24.write\_object\_to\_cibd module
+=====================================================
+
+.. automodule:: bpp.modeling.title_24.write_object_to_cibd
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,24 @@
+bpp.air\_systems namespace
+==========================
+
+.. py:module:: bpp.air_systems
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bpp.air_systems.tests
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bpp.air_systems.fan
+   bpp.air_systems.fancurve
+   bpp.air_systems.primary_air_system
+   bpp.air_systems.vrf_system
+   bpp.air_systems.zone_hvac

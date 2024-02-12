@@ -1,0 +1,7 @@
+bpp.architecture.surface module
+===============================
+
+.. automodule:: bpp.architecture.surface
+   :members:
+   :undoc-members:
+   :show-inheritance:

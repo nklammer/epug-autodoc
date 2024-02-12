@@ -1,0 +1,30 @@
+bpp.modeling namespace
+======================
+
+.. py:module:: bpp.modeling
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bpp.modeling.title_24
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bpp.modeling.baseline_air_system_modeling
+   bpp.modeling.baseline_plant_modeling
+   bpp.modeling.baseline_system
+   bpp.modeling.get_geometry_data
+   bpp.modeling.object_generation
+   bpp.modeling.os_modeling
+   bpp.modeling.os_testing
+   bpp.modeling.run_energyplus_model
+   bpp.modeling.simulation_settings
+   bpp.modeling.write_baseline_json
+   bpp.modeling.write_individual_simulation_inputs_json

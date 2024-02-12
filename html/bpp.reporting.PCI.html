@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta property="article:modified_time" content="2024-02-11T15:38:27-05:00" /><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
+    <meta property="article:modified_time" content="2024-02-12T14:31:01-05:00" /><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
 
     <!-- Generated with Sphinx 7.1.2 and Furo 2024.01.29 -->
         <title>bpp.reporting.PCI module - Model Hub @ AEI 0.0.3 documentation</title>
@@ -136,7 +136,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -186,14 +186,34 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          <section id="bpp-reporting-pci-module">
-<h1>bpp.reporting.PCI module<a class="headerlink" href="#bpp-reporting-pci-module" title="Permalink to this heading">#</a></h1>
+          <section id="module-bpp.reporting.PCI">
+<span id="bpp-reporting-pci-module"></span><h1>bpp.reporting.PCI module<a class="headerlink" href="#module-bpp.reporting.PCI" title="Permalink to this heading">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.reporting.PCI.get_PCI_values">
+<span class="sig-prename descclassname"><span class="pre">bpp.reporting.PCI.</span></span><span class="sig-name descname"><span class="pre">get_PCI_values</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpp.reporting.PCI.get_PCI_values" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.reporting.PCI.get_regulated_unregulated">
+<span class="sig-prename descclassname"><span class="pre">bpp.reporting.PCI.</span></span><span class="sig-name descname"><span class="pre">get_regulated_unregulated</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enduse_df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.reporting.PCI.get_regulated_unregulated" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.reporting.PCI.get_row_PCI_value">
+<span class="sig-prename descclassname"><span class="pre">bpp.reporting.PCI.</span></span><span class="sig-name descname"><span class="pre">get_row_PCI_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reg_unreg_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baseline_carbon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baseline_energy_cost</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bpf</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.reporting.PCI.get_row_PCI_value" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bpp.reporting.PCI.get_table_as_dataframe">
+<span class="sig-prename descclassname"><span class="pre">bpp.reporting.PCI.</span></span><span class="sig-name descname"><span class="pre">get_table_as_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sheetname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tablename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpp.reporting.PCI.get_table_as_dataframe" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
 </section>
 
         </article>
@@ -207,13 +227,13 @@
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2023, Noah K
+                Copyright &#169; 2024, project contributors
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             <div class="last-updated">
-              Last updated on Feb 11, 2024</div>
+              Last updated on Feb 12, 2024</div>
           </div>
           <div class="right-details">
             
@@ -222,8 +242,30 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">bpp.reporting.PCI module</a><ul>
+<li><a class="reference internal" href="#bpp.reporting.PCI.get_PCI_values"><code class="docutils literal notranslate"><span class="pre">get_PCI_values()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.reporting.PCI.get_regulated_unregulated"><code class="docutils literal notranslate"><span class="pre">get_regulated_unregulated()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.reporting.PCI.get_row_PCI_value"><code class="docutils literal notranslate"><span class="pre">get_row_PCI_value()</span></code></a></li>
+<li><a class="reference internal" href="#bpp.reporting.PCI.get_table_as_dataframe"><code class="docutils literal notranslate"><span class="pre">get_table_as_dataframe()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

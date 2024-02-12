@@ -1,0 +1,7 @@
+bpp.modeling.title\_24.plant\_to\_cibd module
+=============================================
+
+.. automodule:: bpp.modeling.title_24.plant_to_cibd
+   :members:
+   :undoc-members:
+   :show-inheritance:
